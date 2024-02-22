@@ -1,0 +1,104 @@
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files (x86)\Java\jdk1.8.0_202\jre
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_202-b08
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\logging.properties
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dhttp.nonProxyHosts=localhost|127.0.0.1|ABHISHEK
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+23-Jan-2024 18:41:42.742 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\temp
+23-Jan-2024 18:41:42.759 WARNING [main] org.apache.catalina.core.AprLifecycleListener.init The Apache Tomcat Native library failed to load. The error reported was [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform]
+	java.lang.UnsatisfiedLinkError: D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\bin\tcnative-1.dll: Can't load AMD 64-bit .dll on a IA 32-bit platform
+		at java.lang.ClassLoader$NativeLibrary.load(Native Method)
+		at java.lang.ClassLoader.loadLibrary0(ClassLoader.java:1941)
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1824)
+		at java.lang.Runtime.load0(Runtime.java:809)
+		at java.lang.System.load(System.java:1086)
+		at org.apache.tomcat.jni.Library.<init>(Library.java:42)
+		at org.apache.tomcat.jni.Library.initialize(Library.java:235)
+		at org.apache.catalina.core.AprLifecycleListener.init(AprLifecycleListener.java:194)
+		at org.apache.catalina.core.AprLifecycleListener.lifecycleEvent(AprLifecycleListener.java:132)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:126)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:724)
+		at org.apache.catalina.startup.Catalina.load(Catalina.java:746)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:307)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:477)
+23-Jan-2024 18:41:42.962 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jan-2024 18:41:42.979 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [348] milliseconds
+23-Jan-2024 18:41:42.996 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+23-Jan-2024 18:41:42.996 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+23-Jan-2024 18:41:42.996 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs]
+23-Jan-2024 18:41:43.372 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [234] milliseconds.
+23-Jan-2024 18:41:43.408 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs] has finished in [412] ms
+23-Jan-2024 18:41:43.408 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples]
+23-Jan-2024 18:41:43.657 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples] has finished in [249] ms
+23-Jan-2024 18:41:43.657 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager]
+23-Jan-2024 18:41:43.690 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager] has finished in [33] ms
+23-Jan-2024 18:41:43.690 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager]
+23-Jan-2024 18:41:43.690 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager] has finished in [0] ms
+23-Jan-2024 18:41:43.705 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT]
+23-Jan-2024 18:41:43.705 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT] has finished in [15] ms
+23-Jan-2024 18:41:43.705 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jan-2024 18:41:43.721 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [747] milliseconds
+23-Jan-2024 18:41:47.587 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml]
+23-Jan-2024 18:41:47.587 WARNING [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication2] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has been ignored
+23-Jan-2024 18:41:47.595 INFO [http-nio-8080-exec-9] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has finished in [8] ms
+23-Jan-2024 18:41:47.611 INFO [http-nio-8080-exec-10] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/WebApplication2]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 18:50:47.429 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:50:47.449 INFO [http-nio-8080-exec-3] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 18:50:52.950 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:50:52.963 INFO [http-nio-8080-exec-4] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 18:51:15.134 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:51:15.138 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 18:51:18.386 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:51:18.397 INFO [http-nio-8080-exec-2] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 18:53:04.443 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:53:04.458 INFO [http-nio-8080-exec-16] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 18:53:47.749 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] has started
+23-Jan-2024 18:53:47.760 INFO [http-nio-8080-exec-20] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/WebApplication2] is completed
+23-Jan-2024 19:07:28.697 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+23-Jan-2024 19:07:28.697 WARNING [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+23-Jan-2024 19:07:28.712 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [15] ms
+23-Jan-2024 19:07:28.719 INFO [http-nio-8080-exec-36] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mavenproject1]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 19:17:00.227 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/mavenproject1]
+23-Jan-2024 19:17:00.236 INFO [http-nio-8080-exec-36] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+23-Jan-2024 19:17:00.236 WARNING [http-nio-8080-exec-36] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+23-Jan-2024 19:17:00.243 INFO [http-nio-8080-exec-36] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [7] ms
+23-Jan-2024 19:17:00.243 INFO [http-nio-8080-exec-39] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mavenproject1]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 19:18:00.883 INFO [http-nio-8080-exec-42] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/mavenproject1]
+23-Jan-2024 19:18:00.899 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+23-Jan-2024 19:18:00.901 WARNING [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+23-Jan-2024 19:18:00.901 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [2] ms
+23-Jan-2024 19:18:00.914 INFO [http-nio-8080-exec-43] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mavenproject1]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 19:18:25.148 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/mavenproject1]
+23-Jan-2024 19:18:25.163 INFO [http-nio-8080-exec-44] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+23-Jan-2024 19:18:25.163 WARNING [http-nio-8080-exec-44] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+23-Jan-2024 19:18:25.167 INFO [http-nio-8080-exec-44] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [4] ms
+23-Jan-2024 19:18:25.179 INFO [http-nio-8080-exec-31] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mavenproject1]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 19:19:05.118 INFO [http-nio-8080-exec-49] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/mavenproject1]
+23-Jan-2024 19:19:05.126 INFO [http-nio-8080-exec-51] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+23-Jan-2024 19:19:05.126 WARNING [http-nio-8080-exec-51] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+23-Jan-2024 19:19:05.135 INFO [http-nio-8080-exec-51] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [D:\Software\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [9] ms
+23-Jan-2024 19:19:05.135 INFO [http-nio-8080-exec-31] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/mavenproject1]] after start() had already been called. The second call will be ignored.
+23-Jan-2024 19:31:16.877 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+23-Jan-2024 19:31:16.877 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+23-Jan-2024 19:31:17.123 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+23-Jan-2024 19:31:17.136 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+23-Jan-2024 19:31:17.154 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

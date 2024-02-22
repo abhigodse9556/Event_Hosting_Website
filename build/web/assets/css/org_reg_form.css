@@ -1,0 +1,38 @@
+
+.registration-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+.reg-form {
+    width: 400px; /* Adjust for desired width */
+    margin-top: 100px;
+    margin: 30px auto; /* Center the form and add spacing */
+    padding: 30px;
+    border-radius: 15px; /* Soften edges */
+    background-color: #fff; /* Clean white background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+}
