@@ -6,13 +6,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event Organizer Dashboard</title>
-    <link rel="stylesheet" href="assets/css/organizer.css">
+    <link rel="stylesheet" href="assets/css/organizerpage.css">
+    <link rel="stylesheet" href="assets/css/post_event_form.css">
     <script src="assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    
+    
 </head>
 
 <body class="org-container">
     <script src="script.js"></script>
     
+    <div class="org__images">
+                    <img src="assets/img/img-3000.jpg" alt="image" class="org__img-4">
+                    <img src="assets/img/img-3.png" alt="image" class="home__img-3">
+                    <img src="assets/img/img-2.png" alt="image" class="home__img-2">
+                    <img src="assets/img/img-11.png" alt="image" class="home__img-1">
+                </div>
     
     <div class="sidebar">
         <h2>Welcome, <%= loggedInUsername %>!</h2><br>
@@ -25,43 +36,144 @@
     <div class="content">
         <!-- Initial Image Section -->
         <section id="initial-image">
-            <img src="initial_image.jpg" alt="Initial Image">
+            
         </section>
 
         <!-- Organizer Profile Section -->
         <section id="organizer-profile" style="display: none;">
-            <!-- Organizer profile content goes here -->
-            <h2>Organizer Profile</h2>
-            <!-- Add relevant content for organizer profile -->
-            <p>Organizer details go here.</p>
-            
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <h2>organizer profile</h2>
+            <%
+        // Display organizer details if available in request attributes
+        String organizerName = (String) request.getAttribute("organizerName");
+        String organizerOrg = (String) request.getAttribute("organizerOrg");
+        String organizerEmail = (String) request.getAttribute("organizerEmail");
+        String organizerMobile = (String) request.getAttribute("organizerMobile");
 
-            <label for="organizaion">Organization Name:</label>
-            <input type="text" id="organizaion" name="organizaion" required><br>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" oninput="autofillUsername()" required><br>
-
-            <label for="mobileNo">Mobile No:</label>
-            <input type="text" id="mobileNo" name="mobileNo" required><br>
-            
+        if (organizerName != null && organizerEmail != null) {
+    %>
+            <p>Name: <%= organizerName %></p>
+            <p>Organization: <%= organizerOrg %></p>
+            <p>Email: <%= organizerEmail %></p>
+            <p>Mobile No: <%= organizerMobile %></p>
+    <%
+        }
+    %>
         </section>
 
         <!-- Post an Event Section -->
         <section id="event-form" style="display: none;">
-            <h2>Post an Event</h2>
-            <!-- Form for posting an event goes here -->
-            <form>
-                <!-- Add input fields for event details -->
-                <label for="eventName">Event Name:</label>
-                <input type="text" id="eventName" name="eventName" required>
-                <!-- Add more input fields as needed -->
-
-                <!-- Post Event Button -->
-                <button type="submit">Post Event</button>
-            </form>
+            
+      <div class="testbox">
+      <form action="Servlet?id=postevent" method="post" enctype="multipart/form-data">
+          <div class="banner" >
+              <img src="assets/img/post_event_form.jpg" class="banner_img">
+          <h1>Event Posting Form</h1>
+        </div>
+        <div class="item">
+          <p>Name of Event</p>
+          <input type="text" name="eventname" />
+        </div>
+          <div class="item">
+          <p>Type of Event</p>
+          <select name="event_type">
+            <option value=""></option>
+            <option value="Please select" selected>*Please select from below options*</option>
+            <option value="Sports">Sports</option>
+            <option value="Trekking / Adventures">Trekking / Adventures</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Musical / DJ">Musical / DJ</option>
+            <option value="Business">Business</option>
+            <option value="Educational">Educational</option>
+            <option value="Promos">Promos</option>
+            <option value="Expos">Expos</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Date of Event</p>
+          <input type="text" name="bdate" placeholder="dd-mm-yyyy"/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Time of Event</p>
+          <input type="text" name="event_time" />
+          <i class="fas fa-clock"></i>
+        </div>
+          <div class="item">
+          <p>Set Duration</p>
+          <input type="text" name="duration"/>
+        </div>
+        <div class="item">
+          <p>Special Attraction</p>
+          <input type="text" name="specialAttraction"/>
+        </div>
+        <div class="item">
+          <p>Description of Event</p>
+          <textarea rows="3" name="description"></textarea>
+        </div>
+        <div class="item">
+          <p>Organizer's Name</p>
+          <input type="text" name="promoter"/>
+        </div>
+        <div class="item">
+          <p>Venue Name</p>
+          <input type="text" name="venue_name"/>
+        </div>
+        <div class="item">
+          <p>Venue Address</p>
+          <input type="text" name="add1" placeholder="Street address" />
+          <input type="text" name="add2" placeholder="Street address line 2" />
+          <div class="city-item">
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="state" placeholder="State/Region" />
+            <input type="text" name="pin" placeholder="Postal / Zip code" />
+            <input type="text" name="country" placeholder="Country" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Available Tickets</p>
+          <input type="text" name="ticket_count"/>
+        </div>
+        
+        
+        <div class="item">
+          <p>Contact Person</p>
+          <div class="name-item">
+            <input type="text" name="firstname" placeholder="First" />
+            <input type="text" name="lastname" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Contact Email</p>
+          <input type="text" name="email"/>
+        </div>
+        <div class="item">
+          <p>Contact Number</p>
+          <input type="text" name="con_num"/>
+        </div>
+          <div>
+           <label for="poster">Upload Event Poster</label>
+           <input type="file" id="poster" name="poster" accept="image/*" />
+         </div>
+        <div class="question">
+          <p>Will this event be recorded?</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="Yes" id="radio_1" name="recorded" />
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+            </div>
+            <div>
+              <input type="radio" value="No" id="radio_2" name="recorded" />
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="btn-block">
+          <button type="submit">POST EVENT</button>
+        </div>
+      </form>
+    </div>
+            
         </section>
 
         <!-- Event History Section -->
@@ -91,9 +203,17 @@
 </body>
 
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
+<% Boolean eventPostSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
 <% if (loginSuccess != null) { %>
     <script>
         var message = <%= loginSuccess ? "'Login successful!'" : "'Error in login. Please try again.'" %>;
+        alert(message);
+    </script>
+<% } %>
+
+<% if (eventPostSuccess != null) { %>
+    <script>
+        var message = <%= eventPostSuccess ? "'Event posted successfully!'" : "'Error in posting. Please try again.'" %>;
         alert(message);
     </script>
 <% } %>

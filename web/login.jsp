@@ -158,7 +158,7 @@ button{
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% if (loginSuccess != null) { %>
     <script>
-        var message = <%= loginSuccess ? "'Login successful!'" : "'Error in login. Please try again.'" %>;
+        var message = <%= loginSuccess ? "'Login successful!'" : "'Please login again.'" %>;
         alert(message);
     </script>
 <% } %>

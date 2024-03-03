@@ -12,7 +12,7 @@
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
-      <title>Responsive camping website - Bedimcode</title>
+      <title>Event Management Website</title>
    </head>
    <body>
    <!--==================== HEADER ====================-->
