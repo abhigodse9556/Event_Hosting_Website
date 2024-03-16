@@ -14,7 +14,7 @@
 
       <title>Event Management Website</title>
    </head>
-   <body>
+   
    <!--==================== HEADER ====================-->
       <header class="header" id="header">
         <nav class="nav container">
@@ -29,15 +29,15 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Pricing</a>
-                    </li>
-
-                    <li class="nav__item">
                         <a href="#" class="nav__link">Events</a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Contact</a>
+                        <a href="about.jsp" class="nav__link">About</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="contact.jsp" class="nav__link">Contact</a>
                     </li>
                 </ul>
                 <div class="nav__buttons">
@@ -59,4 +59,3 @@
          
       </header>
    
-   </body>

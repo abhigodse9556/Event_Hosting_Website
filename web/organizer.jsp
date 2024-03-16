@@ -20,7 +20,7 @@
     
     <div class="org__images">
                     <img src="assets/img/img-3000.jpg" alt="image" class="org__img-4">
-                    <img src="assets/img/img-3.png" alt="image" class="home__img-3">
+                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1;">
                     <img src="assets/img/img-2.png" alt="image" class="home__img-2">
                     <img src="assets/img/img-11.png" alt="image" class="home__img-1">
                 </div>
@@ -40,8 +40,8 @@
         </section>
 
         <!-- Organizer Profile Section -->
-        <section id="organizer-profile" style="display: none;">
-            <h2>organizer profile</h2>
+        <section id="organizer-profile" style="display: none; background-color: lightgray;">
+            <h2>Organizer Profile</h2>
             <%
         // Display organizer details if available in request attributes
         String organizerName = (String) request.getAttribute("organizerName");

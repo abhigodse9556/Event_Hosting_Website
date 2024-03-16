@@ -53,3 +53,4 @@ function showDetailedEvent(eventId) {
     document.getElementById("detailed-event").style.display = "block";
             // Use the eventId to fetch and display detailed event information
 }
+

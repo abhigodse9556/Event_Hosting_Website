@@ -1,7 +1,7 @@
 
 .registration-container {
     max-width: 400px;
-    margin: 50px auto;
+    margin: 50px 30px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -30,9 +30,8 @@ input[type="submit"]:hover {
 .reg-form {
     width: 400px; /* Adjust for desired width */
     margin-top: 100px;
-    margin: 30px auto; /* Center the form and add spacing */
+    margin: 30px 1000px; /* Center the form and add spacing */
     padding: 30px;
     border-radius: 15px; /* Soften edges */
-    background-color: #fff; /* Clean white background */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More prominent shadow */
 }

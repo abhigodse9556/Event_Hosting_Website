@@ -105,3 +105,5 @@ Stacktrace:] with root cause
 03-Mar-2024 13:28:44.904 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextInitialized()
 03-Mar-2024 13:28:44.904 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextInitialized()
 03-Mar-2024 13:28:44.906 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: attributeAdded('StockTicker', 'async.Stockticker@2cde651b')
+03-Mar-2024 14:37:18.276 INFO [main] org.apache.catalina.core.ApplicationContext.log SessionListener: contextDestroyed()
+03-Mar-2024 14:37:18.276 INFO [main] org.apache.catalina.core.ApplicationContext.log ContextListener: contextDestroyed()

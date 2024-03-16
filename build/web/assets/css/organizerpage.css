@@ -265,3 +265,7 @@ button:hover {
         width: calc(50% - 8px);
     }
 }
+
+#organizer-profile{
+    background-color: lightgray; 
+}
