@@ -1,11 +1,11 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="head.jsp" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
- 
+    <title>Event Management Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
@@ -134,7 +134,59 @@ button{
 
     </style>
 </head>
+
+<header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.svg" alt="logo">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.jsp" class="nav__link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Events</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="about.jsp" class="nav__link">About</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="contact.jsp" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__buttons">
+                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                </div>
+
+                <!--close button-->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!--toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+         
+      </header>
+
 <body>
+    
+    <div class="home__images">
+            <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
+                </div>
+    
     <div class="background">
         <div class="shape"></div>
         <div class="shape"></div>
@@ -162,4 +214,12 @@ button{
         alert(message);
     </script>
 <% } %>
+
+<script src="assets/js/gsap.min.js"></script>
+
+<!-- MAIN JS -->
+<script src="assets/js/main.js"></script>
+
+<script src="script.js"></script>
+
 </html>

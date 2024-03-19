@@ -1,3 +1,12 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 19-Mar-2024, 11:15:42 pm
+    Author     : abhig
+*/
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -39,7 +48,7 @@ body {
 .content {
     flex: 1;
     padding: 20px;
-    margin-left: 250px;
+    margin-left: 280px;
 }
 
 .event-overview {
@@ -59,9 +68,11 @@ body {
 form {
     width: 100%;
     padding: 20px;
-    border-radius: 6px;
-    background: #fff;
+    border-radius: 16px;
+    color: #fefefe;
     box-shadow: 0 0 20px 0 #a82877;
+    font-size: large;
+    font-weight: bold;
 }
 
 .banner {
@@ -267,5 +278,5 @@ button:hover {
 }
 
 #organizer-profile{
-    background-color: lightgray; 
+    background-color: rgba(0,0,0,0.5);
 }

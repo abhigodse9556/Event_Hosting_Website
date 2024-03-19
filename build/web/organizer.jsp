@@ -1,31 +1,74 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ include file="head.jsp" %>
-<% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+     <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Organizer Dashboard</title>
-    <link rel="stylesheet" href="assets/css/organizerpage.css">
-    <link rel="stylesheet" href="assets/css/post_event_form.css">
-    <script src="assets/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
-    
-    
-</head>
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+      
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <link rel="stylesheet" href="assets/css/organizer.css">
+
+      <title>Event Organizer Dashboard</title>
+   </head>
+   
+   <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="assets/img/logo.svg" alt="logo">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.jsp" class="nav__link">Home</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link">Events</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="about.jsp" class="nav__link">About</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="contact.jsp" class="nav__link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav__buttons">
+                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                </div>
+
+                <!--close button-->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <!--toggle button-->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+         
+      </header>
 
 <body class="org-container">
     <script src="script.js"></script>
     
-    <div class="org__images">
-                    <img src="assets/img/img-3000.jpg" alt="image" class="org__img-4">
-                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1;">
-                    <img src="assets/img/img-2.png" alt="image" class="home__img-2">
-                    <img src="assets/img/img-11.png" alt="image" class="home__img-1">
-                </div>
+    
     
     <div class="sidebar">
+        <% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %>
         <h2>Welcome, <%= loggedInUsername %>!</h2><br>
         <!-- Left Sidebar with options -->
         <a href="#" onclick="showOrganizerProfile()">Organizer Profile</a>
@@ -40,7 +83,7 @@
         </section>
 
         <!-- Organizer Profile Section -->
-        <section id="organizer-profile" style="display: none; background-color: lightgray;">
+        <section id="organizer-profile" style="display: none;">
             <h2>Organizer Profile</h2>
             <%
         // Display organizer details if available in request attributes
@@ -199,7 +242,16 @@
             <!-- Include all the details mentioned in the question -->
             <p>Detailed information for the selected event goes here.</p>
         </section>
+        
+        <div class="home__images">
+            <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
+                    <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
+                </div>
+        
     </div>  
+        
 </body>
 
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
@@ -219,4 +271,12 @@
 <% } %>
 
 
-<%@ include file="footer.jsp" %>
+   
+<script src="assets/js/gsap.min.js"></script>
+
+<!-- MAIN JS -->
+<script src="assets/js/main.js"></script>
+
+<script src="assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</html>

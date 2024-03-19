@@ -1,3 +1,12 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 19-Mar-2024, 11:09:00 pm
+    Author     : abhig
+*/
+
 /* Google Font CDN Link */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
@@ -15,16 +24,14 @@ body {
   justify-content: center;
 }
 p{
-    font-weight: bolder; 
-    color: white; 
-    background-color: rgba(245, 148, 39, 0.4);
+    font-weight: bolder;
+    color: white;
+    background-color: rgb(62 32 147 / 60%);
+    padding: 15px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
 }
-.container {
-  max-width: 1100px;
-  width: 100%;
-  border-radius: 6px;
-  padding: 20px 60px 30px 40px;
-}
+
 .container .content {
   display: flex;
   align-items: center;
@@ -83,12 +90,12 @@ p{
   z-index: 2;
 }
 .content .right-side .topic-text {
-  font-size: 23px;
-  font-weight: 600;
-  color: #3e2093;
-  z-index: 2;
-  background-color: rgba(245, 148, 39, 0.4);
-  align-content: center;
+  font-size: 30px;
+    font-weight: 600;
+    color: #3e2093;
+    z-index: 2;
+    align-content: center;
+    padding: 15px 15px;
 }
 .right-side .input-box {
   height: 55px;
