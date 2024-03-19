@@ -76,7 +76,6 @@ img {
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
-  z-index: 2;
 }
 
 .main {
@@ -98,7 +97,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
 }
 
 .nav__logo{
@@ -127,7 +125,6 @@ img {
     flex-direction: column;
     row-gap: 2.5rem;
     transition: top .4s;
-    z-index: 2;
   }
 }
 
@@ -255,7 +252,6 @@ img {
 
 .home__images{
   z-index: 1;
-  filter: blur(10px);
 }
 
 .home__images img{
@@ -264,7 +260,6 @@ img {
   width: 600px;
   left: -7rem;
   bottom: 0;
-  filter: blur(10px);
 }
 
 /*=============== BREAKPOINTS ===============*/
