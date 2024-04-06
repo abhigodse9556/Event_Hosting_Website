@@ -670,3 +670,9 @@
 0:0:0:0:0:0:0:1 - - [19/Mar/2024:23:33:49 +0530] "GET /FestaVista/register.jsp HTTP/1.1" 200 7278
 0:0:0:0:0:0:0:1 - - [19/Mar/2024:23:33:49 +0530] "GET /FestaVista/assets/css/styles.css HTTP/1.1" 304 -
 0:0:0:0:0:0:0:1 - - [19/Mar/2024:23:33:49 +0530] "GET /FestaVista/script.js HTTP/1.1" 404 775
+127.0.0.1 - - [19/Mar/2024:23:36:53 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Admin [19/Mar/2024:23:36:53 +0530] "GET /manager/text/ HTTP/1.1" 200 39
+127.0.0.1 - - [19/Mar/2024:23:36:53 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Admin [19/Mar/2024:23:36:53 +0530] "GET /manager/text/ HTTP/1.1" 200 39
+127.0.0.1 - - [19/Mar/2024:23:36:53 +0530] "HEAD /netbeans-tomcat-status-test HTTP/1.1" 404 -
+127.0.0.1 - Admin [19/Mar/2024:23:36:53 +0530] "GET /manager/text/ HTTP/1.1" 200 39

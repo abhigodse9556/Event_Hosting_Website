@@ -1,8 +1,4 @@
-<%-- 
-    Document   : newjsp
-    Created on : 18-Mar-2024, 8:09:46 pm
-    Author     : abhig
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -19,7 +15,7 @@
       
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="assets/css/about.css">
+      <link rel="stylesheet" href="assets/css/aboutpage.css">
 
       <title>Event Management Website</title>
    </head>
@@ -79,25 +75,26 @@
                 </div>
         
 <div class="about-section">
-  <h1>Welcome to Festa Vista</h1>
+  <h1>Welcome to Festa Vista</h1><br>
   <p>At Festa Vista, we're passionate about connecting organizers with their audience and creating memorable experiences. Whether you're an event organizer looking to showcase your event or an enthusiast seeking exciting experiences, we're here to make it happen.</p>
-  <h1>Our Mission</h1>
+  <br><br><h1>Our Mission</h1><br>
   <p>Our mission is to bridge the gap between event organizers and attendees, providing a platform where events of all kinds can flourish. We strive to make event planning and participation seamless, enjoyable, and rewarding for everyone involved.</p>
-  <h1>What we offer</h1>
+  <br><br><h1>What we offer</h1><br>
   <p><li>Organizer Registration: We offer a user-friendly platform for event organizers to register and showcase their events. From conferences and concerts to workshops and community gatherings, we welcome all types of events.</li>
 
-  <li>Event Discovery: Visitors to our website can easily discover a diverse range of events happening in their area or areas of interest. With detailed event listings and filtering options, finding the perfect event has never been easier.</li>
+  <br><li>Event Discovery: Visitors to our website can easily discover a diverse range of events happening in their area or areas of interest. With detailed event listings and filtering options, finding the perfect event has never been easier.</li>
 
-<li>Participant Registration: Interested individuals can register for events directly through our website, making event participation hassle-free and convenient.</li>
+<br><li>Participant Registration: Interested individuals can register for events directly through our website, making event participation hassle-free and convenient.</li>
 
-<li>Engaging Community: We foster a vibrant community of event enthusiasts, organizers, and participants. Through our platform, users can connect, share experiences, and stay updated on upcoming events.</li></p>
+<br><li>Engaging Community: We foster a vibrant community of event enthusiasts, organizers, and participants. Through our platform, users can connect, share experiences, and stay updated on upcoming events.</li></p>
 </div>
+        <br><br>
 
-<h2 style="text-align:center">Our Team</h2>
 <div class="row">
+    <br><br><h2 style="text-align:center">Our Team</h2><br><br>
   <div class="column">
     <div class="card">
-      <img src="/w3images/team1.jpg" alt="Jane" style="width:100%; height: 300px;">
+      <img src="assets/img/abhi.jpg" alt="Jane" style="width:100%; height: 300px;">
       <div class="container">
         <h2>Jane Doe</h2>
         <p class="title">CEO & Founder</p>
@@ -110,7 +107,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="/w3images/team2.jpg" alt="Mike" style="width:100%; height: 300px;">
+      <img src="assets/img/dummy.jpg" alt="Mike" style="width:100%; height: 300px;">
       <div class="container">
         <h2>Mike Ross</h2>
         <p class="title">Art Director</p>
@@ -123,7 +120,7 @@
   
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%; height: 300px;">
+      <img src="assets/img/dummy.jpg" alt="John" style="width:100%; height: 300px;">
       <div class="container">
         <h2>John Doe</h2>
         <p class="title">Designer</p>
@@ -136,7 +133,7 @@
     
   <div class="column">
     <div class="card">
-      <img src="/w3images/team3.jpg" alt="John" style="width:100%; height: 300px;">
+      <img src="assets/img/dummy.jpg" alt="John" style="width:100%; height: 300px;">
       <div class="container">
         <h2>John Doe</h2>
         <p class="title">Designer</p>
@@ -148,7 +145,7 @@
   </div>
 </div>
 <div class="about-section">
-  <h1>Get in Touch</h1>
+    <h1>Get in Touch</h1><br>
   <p>Have questions, feedback, or need assistance? We're here to help! Feel free to reach out to us via our <a href="contact.jsp">contact</a> page or connect with us on social media.
 
 Thank you for choosing Festa Vista for all your event needs. Let's create unforgettable experiences together!</p>

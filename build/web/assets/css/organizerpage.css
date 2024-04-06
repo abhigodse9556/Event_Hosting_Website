@@ -3,6 +3,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
 */
 /* 
+    Created on : 20-Mar-2024, 7:44:50 pm
+    Author     : abhig
+*/
+
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
     Created on : 19-Mar-2024, 11:15:42 pm
     Author     : abhig
 */
@@ -25,12 +34,21 @@ body {
     overflow: hidden;
 }
 
+.dabba{
+    display: flex;
+}
+
 /* Left Sidebar Styles */
 .sidebar {
-    width: 300px;
+    width: max-content;
     padding: 20px;
-    position: fixed;
     overflow-y: auto;
+    background-color: #9341411c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+    color: #cb1414;
+    margin-left: 20px;
+    height: 750px;
 }
 
 .sidebar a {
@@ -38,6 +56,9 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 10px;
+    color: hsl(192, 62%, 25%);
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .sidebar a:hover {
@@ -46,14 +67,16 @@ body {
 
 /* Main Content Styles */
 .content {
-    flex: 1;
     padding: 20px;
-    margin-left: 280px;
+    flex: 1;
+    width: 1200px;
 }
 
 .event-overview {
     cursor: pointer;
     margin-bottom: 10px;
+    padding: 40px;
+    width: 33%;
 }
 
 /* Post Event Form Styles */

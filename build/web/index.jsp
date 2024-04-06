@@ -22,7 +22,7 @@
    <!--==================== HEADER ====================-->
       <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">
+            <a href="index.jsp" class="nav__logo">
                 <img src="assets/img/logo.svg" alt="logo">
             </a>
 
@@ -33,7 +33,10 @@
                     </li>
 
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Events</a>
+                       <form action="Servlet?id=all_events" method="post">
+    <input type="hidden" name="id" value="all_events">
+    <button type="submit" class="nav__link">Events</button>
+</form>
                     </li>
 
                     <li class="nav__item">
@@ -81,9 +84,10 @@
                         <p class="home__description">
                             Events To Remember
                         </p>
-                        <a href="#" class="home__button">
-                            Explore Events
-                        </a>
+                        <form action="Servlet?id=all_events" method="post">
+    <input type="hidden" name="id" value="all_events">
+    <button type="submit" class="home__button">Explore Events</button>
+</form>
                     </div>
                     <img src="assets/img/bird-1.svg" alt="image" class="home__bird-1">
                     <img src="assets/img/bird-2.svg" alt="image" class="home__bird-2">

@@ -1,4 +1,10 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.util.Base64"%>
+<%@page import="ServersidePackages.DataObject"%>
+<%@page import="ServersidePackages.DataObject"%>
+<%@page import="java.util.List"%>
+<%@page import="com.mysql.cj.jdbc.Blob"%>
+<%@ page import="java.io.*, java.sql.*" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
      <head>
@@ -13,9 +19,26 @@
       
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
-      <link rel="stylesheet" href="assets/css/organizer.css">
+      <link rel="stylesheet" href="assets/css/organizerpage.css">
 
       <title>Event Organizer Dashboard</title>
+      
+      <style>
+        /* CSS to fix the size of the image */
+        .poster-image {
+            width: 200px; /* Adjust width as needed */
+            height: 200px; /* Auto adjust height to maintain aspect ratio */
+        }
+        
+        td{
+            padding: 10px;
+            background-color: #9341411c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+    color: #cb1414;
+    cursor: pointer;
+        }
+    </style>
    </head>
    
    <!--==================== HEADER ====================-->
@@ -66,7 +89,7 @@
     <script src="script.js"></script>
     
     
-    
+    <div class="dabba">
     <div class="sidebar">
         <% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %>
         <h2>Welcome, <%= loggedInUsername %>!</h2><br>
@@ -74,8 +97,8 @@
         <a href="#" onclick="showOrganizerProfile()">Organizer Profile</a>
         <a href="#" onclick="showEventForm()">Post an Event</a>
         <a href="#" onclick="showEventHistory()">Event History</a>
+        <a href="index.jsp">Logout</a>
     </div>
-
     <div class="content">
         <!-- Initial Image Section -->
         <section id="initial-image">
@@ -127,8 +150,7 @@
             <option value="Musical / DJ">Musical / DJ</option>
             <option value="Business">Business</option>
             <option value="Educational">Educational</option>
-            <option value="Promos">Promos</option>
-            <option value="Expos">Expos</option>
+            <option value="Promos / Expos">Promos / Expos</option>
           </select>
         </div>
         <div class="item">
@@ -224,14 +246,84 @@
             <h2>Event History</h2>
             <!-- Overview of posted events goes here -->
             <!-- Display poster image, event name, date, etc. -->
+            <div class="event-list" style="display: flex;">
             <div class="event-overview" onclick="showDetailedEvent(1)">
                 <!-- Event Overview Content -->
-                <img src="event_poster.jpg" alt="Event Poster">
+                <% Blob eventPoster = (Blob) request.getAttribute("eventPoster");
+       if (eventPoster != null) {
+           byte[] imageBytes = eventPoster.getBytes(1, (int) eventPoster.length());
+           String base64Image = javax.xml.bind.DatatypeConverter.printBase64Binary(imageBytes);
+    %>
+           <img src="data:image/jpeg;base64, <%=base64Image%> " alt="Event Poster">
+    <% } %>
                 <p>Event Name</p>
+                <%String eventName = (String) request.getAttribute("eventName");%>
+                <%=eventName%>
                 <p>Date of Event</p>
+                <%String eventDate = (String) request.getAttribute("eventDate");%>
+                <%=eventDate%>
             </div>
-
+            
+            <div class="event-overview" onclick="showDetailedEvent(1)">
+                <!-- Event Overview Content -->
+                <% Blob eventPoster2 = (Blob) request.getAttribute("eventPoster");
+       if (eventPoster2 != null) {
+           byte[] imageBytes = eventPoster2.getBytes(1, (int) eventPoster2.length());
+           String base64Image = javax.xml.bind.DatatypeConverter.printBase64Binary(imageBytes);
+    %>
+           <img src="data:image/jpeg;base64, <%=base64Image%> " alt="Event Poster">
+    <% } %>
+                <p>Event Name</p>
+                <%String eventName2 = (String) request.getAttribute("eventName");%>
+                <%=eventName2%>
+                <p>Date of Event</p>
+                <%String eventDate2 = (String) request.getAttribute("eventDate");%>
+                <%=eventDate2%>
+            </div>
+            </div>
             <!-- Add more event overviews as needed -->
+            
+            <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Poster</th>
+        </tr>
+        <%
+            List<DataObject> dataList = (List<DataObject>) request.getAttribute("dataList");
+            for (DataObject data : dataList) {
+        %>
+        <tr>
+            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getId() %></td>
+            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getName() %></td>
+            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getDate() %></td>
+            <td onclick="showDetailedEvent(<%= data.getId() %>)">
+                 <%
+                    Blob posterBlob = data.getPoster();
+                    if (posterBlob != null) {
+                        try (InputStream inputStream = posterBlob.getBinaryStream()) {
+                            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                            byte[] buffer = new byte[4096];
+                            int bytesRead = -1;
+                            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                                outputStream.write(buffer, 0, bytesRead);
+                            }
+                            byte[] imageBytes = outputStream.toByteArray();
+                            String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                            out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+                        } catch (SQLException | IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                %>
+            </td>
+        </tr>
+        <%
+            }
+        %>
+    </table>
+            
         </section>
 
         <!-- Detailed Event Information Section -->
@@ -251,7 +343,7 @@
                 </div>
         
     </div>  
-        
+      </div>  
 </body>
 
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>

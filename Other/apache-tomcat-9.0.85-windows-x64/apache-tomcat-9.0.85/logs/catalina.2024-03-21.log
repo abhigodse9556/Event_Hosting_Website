@@ -1,0 +1,701 @@
+21-Mar-2024 15:03:33.096 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+21-Mar-2024 15:03:33.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+21-Mar-2024 15:03:33.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+21-Mar-2024 15:03:33.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Mar-2024 15:03:33.100 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:03:33.101 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\logging.properties
+21-Mar-2024 15:03:33.112 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_shmem,address=tomcat_shared_memory_id,server=y,suspend=n
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:03:33.113 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\temp
+21-Mar-2024 15:03:33.203 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+21-Mar-2024 15:03:33.203 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+21-Mar-2024 15:03:33.203 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+21-Mar-2024 15:03:33.206 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+21-Mar-2024 15:03:33.546 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:03:33.573 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [677] milliseconds
+21-Mar-2024 15:03:33.631 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Mar-2024 15:03:33.631 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+21-Mar-2024 15:03:33.644 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:03:33.659 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:03:33.976 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [332] ms
+21-Mar-2024 15:03:33.976 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+21-Mar-2024 15:03:33.977 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/eventhub] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has been ignored
+21-Mar-2024 15:03:33.984 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@53ab0286]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\abhig\Documents\NetBeansProjects\eventhub\target\eventhub-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+21-Mar-2024 15:03:34.045 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has finished in [69] ms
+21-Mar-2024 15:03:34.046 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml]
+21-Mar-2024 15:03:34.046 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/EventManagement] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has been ignored
+21-Mar-2024 15:03:34.092 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has finished in [46] ms
+21-Mar-2024 15:03:34.092 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml]
+21-Mar-2024 15:03:34.093 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/FestaVista] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has been ignored
+21-Mar-2024 15:03:34.607 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:03:34.632 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has finished in [540] ms
+21-Mar-2024 15:03:34.632 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+21-Mar-2024 15:03:34.633 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+21-Mar-2024 15:03:34.637 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@34a0ef00]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\MCA SEM IV\Project\mavenproject1\target\mavenproject1-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+21-Mar-2024 15:03:34.695 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [63] ms
+21-Mar-2024 15:03:34.695 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml]
+21-Mar-2024 15:03:34.696 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has been ignored
+21-Mar-2024 15:03:35.043 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:03:35.046 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has finished in [351] ms
+21-Mar-2024 15:03:35.046 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml]
+21-Mar-2024 15:03:35.047 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication2] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has been ignored
+21-Mar-2024 15:03:35.076 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has finished in [30] ms
+21-Mar-2024 15:03:35.077 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs]
+21-Mar-2024 15:03:35.117 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs] has finished in [40] ms
+21-Mar-2024 15:03:35.118 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples]
+21-Mar-2024 15:03:35.574 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples] has finished in [457] ms
+21-Mar-2024 15:03:35.575 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager]
+21-Mar-2024 15:03:35.618 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager] has finished in [43] ms
+21-Mar-2024 15:03:35.618 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager]
+21-Mar-2024 15:03:35.662 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager] has finished in [44] ms
+21-Mar-2024 15:03:35.662 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT]
+21-Mar-2024 15:03:35.692 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT] has finished in [30] ms
+21-Mar-2024 15:03:35.696 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:03:35.725 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [2151] milliseconds
+21-Mar-2024 15:03:39.585 INFO [http-nio-8080-exec-5] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/FestaVista]
+21-Mar-2024 15:03:39.635 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml]
+21-Mar-2024 15:03:39.637 WARNING [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/FestaVista] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has been ignored
+21-Mar-2024 15:03:40.097 INFO [http-nio-8080-exec-6] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:03:40.102 INFO [http-nio-8080-exec-6] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has finished in [467] ms
+21-Mar-2024 15:03:40.107 INFO [http-nio-8080-exec-2] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FestaVista]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:15:07.115 INFO [http-nio-8080-exec-12] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Construction_Monitoring_System]
+21-Mar-2024 15:15:07.542 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:15:07.677 WARNING [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:15:07.754 INFO [http-nio-8080-exec-13] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [212] ms
+21-Mar-2024 15:15:07.759 INFO [http-nio-8080-exec-15] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Construction_Monitoring_System]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:18:00.557 INFO [http-nio-8080-exec-26] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Construction_Monitoring_System]
+21-Mar-2024 15:18:00.585 INFO [http-nio-8080-exec-25] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:18:00.588 WARNING [http-nio-8080-exec-25] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:18:00.642 INFO [http-nio-8080-exec-25] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [57] ms
+21-Mar-2024 15:18:00.647 INFO [http-nio-8080-exec-27] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Construction_Monitoring_System]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:19:21.189 INFO [http-nio-8080-exec-27] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Construction_Monitoring_System]
+21-Mar-2024 15:19:29.082 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:19:29.099 WARNING [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:19:29.158 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [76] ms
+21-Mar-2024 15:19:29.163 INFO [http-nio-8080-exec-33] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Construction_Monitoring_System]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:20:28.646 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+21-Mar-2024 15:20:28.647 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:20:28.652 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Mar-2024 15:20:28.672 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+21-Mar-2024 15:20:28.672 WARNING [main] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+21-Mar-2024 15:20:28.690 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:20:28.712 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:20:57.453 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+21-Mar-2024 15:20:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+21-Mar-2024 15:20:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+21-Mar-2024 15:20:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+21-Mar-2024 15:20:57.460 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+21-Mar-2024 15:20:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+21-Mar-2024 15:20:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+21-Mar-2024 15:20:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+21-Mar-2024 15:20:57.461 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+21-Mar-2024 15:20:57.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:20:57.462 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:20:57.478 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+21-Mar-2024 15:20:57.478 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+21-Mar-2024 15:20:57.478 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+21-Mar-2024 15:20:57.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+21-Mar-2024 15:20:57.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+21-Mar-2024 15:20:57.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\logging.properties
+21-Mar-2024 15:20:57.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+21-Mar-2024 15:20:57.479 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+21-Mar-2024 15:20:57.480 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+21-Mar-2024 15:20:57.480 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -agentlib:jdwp=transport=dt_shmem,address=tomcat_shared_memory_id,server=y,suspend=n
+21-Mar-2024 15:20:57.480 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+21-Mar-2024 15:20:57.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:20:57.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+21-Mar-2024 15:20:57.481 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\temp
+21-Mar-2024 15:20:57.562 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+21-Mar-2024 15:20:57.563 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+21-Mar-2024 15:20:57.563 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+21-Mar-2024 15:20:57.575 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+21-Mar-2024 15:20:58.135 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:20:58.166 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [1031] milliseconds
+21-Mar-2024 15:20:58.253 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+21-Mar-2024 15:20:58.253 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+21-Mar-2024 15:20:58.267 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:20:58.295 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:20:58.827 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [559] ms
+21-Mar-2024 15:20:58.828 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+21-Mar-2024 15:20:58.829 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/eventhub] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has been ignored
+21-Mar-2024 15:20:58.837 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@47da3952]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\abhig\Documents\NetBeansProjects\eventhub\target\eventhub-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+21-Mar-2024 15:20:58.910 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has finished in [82] ms
+21-Mar-2024 15:20:58.910 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml]
+21-Mar-2024 15:20:58.912 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/EventManagement] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has been ignored
+21-Mar-2024 15:20:59.020 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has finished in [110] ms
+21-Mar-2024 15:20:59.022 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml]
+21-Mar-2024 15:20:59.026 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/FestaVista] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has been ignored
+21-Mar-2024 15:20:59.908 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:20:59.936 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has finished in [914] ms
+21-Mar-2024 15:20:59.936 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+21-Mar-2024 15:20:59.938 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+21-Mar-2024 15:20:59.946 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@44de0113]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\MCA SEM IV\Project\mavenproject1\target\mavenproject1-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+21-Mar-2024 15:21:00.008 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [72] ms
+21-Mar-2024 15:21:00.009 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml]
+21-Mar-2024 15:21:00.011 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has been ignored
+21-Mar-2024 15:21:00.591 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:21:00.598 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has finished in [590] ms
+21-Mar-2024 15:21:00.598 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml]
+21-Mar-2024 15:21:00.600 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication2] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has been ignored
+21-Mar-2024 15:21:00.650 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has finished in [52] ms
+21-Mar-2024 15:21:00.651 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs]
+21-Mar-2024 15:21:00.724 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs] has finished in [73] ms
+21-Mar-2024 15:21:00.724 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples]
+21-Mar-2024 15:21:01.513 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples] has finished in [788] ms
+21-Mar-2024 15:21:01.513 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager]
+21-Mar-2024 15:21:01.601 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager] has finished in [87] ms
+21-Mar-2024 15:21:01.601 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager]
+21-Mar-2024 15:21:01.672 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager] has finished in [71] ms
+21-Mar-2024 15:21:01.672 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT]
+21-Mar-2024 15:21:01.716 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT] has finished in [43] ms
+21-Mar-2024 15:21:01.722 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 15:21:01.767 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [3595] milliseconds
+21-Mar-2024 15:21:05.978 INFO [http-nio-8080-exec-4] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Construction_Monitoring_System]
+21-Mar-2024 15:21:06.011 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:21:06.014 WARNING [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:21:06.053 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [42] ms
+21-Mar-2024 15:21:06.070 INFO [http-nio-8080-exec-2] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Construction_Monitoring_System]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:22:03.085 INFO [http-nio-8080-exec-11] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Construction_Monitoring_System]
+21-Mar-2024 15:22:03.110 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+21-Mar-2024 15:22:03.116 WARNING [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+21-Mar-2024 15:22:03.179 INFO [http-nio-8080-exec-8] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [69] ms
+21-Mar-2024 15:22:03.186 INFO [http-nio-8080-exec-12] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Construction_Monitoring_System]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:24:15.296 INFO [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:24:15.298 WARNING [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:24:18.748 INFO [http-nio-8080-exec-23] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:24:18.876 INFO [http-nio-8080-exec-23] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:24:19.005 INFO [http-nio-8080-exec-23] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:24:19 IST 2024]; root of context hierarchy
+21-Mar-2024 15:24:19.116 INFO [http-nio-8080-exec-23] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:24:19.368 INFO [http-nio-8080-exec-23] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 491 ms
+21-Mar-2024 15:24:19.371 INFO [http-nio-8080-exec-23] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:24:19.400 INFO [http-nio-8080-exec-23] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:24:19 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:24:19.401 INFO [http-nio-8080-exec-23] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:24:19.712 INFO [http-nio-8080-exec-23] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:24:19.845 INFO [http-nio-8080-exec-23] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 467 ms
+21-Mar-2024 15:24:19.852 INFO [http-nio-8080-exec-23] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [4,555] ms
+21-Mar-2024 15:24:19.860 INFO [http-nio-8080-exec-14] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:31:45.783 INFO [http-nio-8080-exec-21] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:24:19 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:45.800 INFO [http-nio-8080-exec-21] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:24:19 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:48.634 INFO [http-nio-8080-exec-20] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:31:48.714 INFO [http-nio-8080-exec-20] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:31:48.837 INFO [http-nio-8080-exec-20] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:31:48 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:48.946 INFO [http-nio-8080-exec-20] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:31:49.104 INFO [http-nio-8080-exec-20] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 389 ms
+21-Mar-2024 15:31:49.115 INFO [http-nio-8080-exec-20] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:31:49.136 INFO [http-nio-8080-exec-20] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:49 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:49.136 INFO [http-nio-8080-exec-20] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:31:49.449 INFO [http-nio-8080-exec-20] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:31:49.577 INFO [http-nio-8080-exec-20] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 461 ms
+21-Mar-2024 15:31:52.846 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context [/Realtime_Construction]
+21-Mar-2024 15:31:52.847 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Realtime_Construction] has started
+21-Mar-2024 15:31:52.847 INFO [Catalina-utility-1] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:49 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:52.851 INFO [Catalina-utility-1] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:31:48 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:55.221 INFO [Catalina-utility-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:31:55.312 INFO [Catalina-utility-1] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:31:55.445 INFO [Catalina-utility-1] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:31:55 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:55.539 INFO [Catalina-utility-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:31:55.707 INFO [Catalina-utility-1] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 395 ms
+21-Mar-2024 15:31:55.718 INFO [Catalina-utility-1] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:31:55.744 INFO [Catalina-utility-1] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:55.744 INFO [Catalina-utility-1] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:31:56.082 INFO [Catalina-utility-1] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:31:56.236 INFO [Catalina-utility-1] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 518 ms
+21-Mar-2024 15:31:56.240 INFO [Catalina-utility-1] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/Realtime_Construction] is completed
+21-Mar-2024 15:31:56.275 INFO [http-nio-8080-exec-18] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:56.280 INFO [http-nio-8080-exec-18] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:31:55 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:56.809 INFO [http-nio-8080-exec-18] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:31:56.859 INFO [http-nio-8080-exec-17] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:31:56.859 WARNING [http-nio-8080-exec-17] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:31:59.412 INFO [http-nio-8080-exec-17] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:31:59.488 INFO [http-nio-8080-exec-17] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:31:59.614 INFO [http-nio-8080-exec-17] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:31:59 IST 2024]; root of context hierarchy
+21-Mar-2024 15:31:59.716 INFO [http-nio-8080-exec-17] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:31:59.846 INFO [http-nio-8080-exec-17] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 358 ms
+21-Mar-2024 15:31:59.854 INFO [http-nio-8080-exec-17] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:31:59.874 INFO [http-nio-8080-exec-17] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:59 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:31:59.874 INFO [http-nio-8080-exec-17] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:32:00.137 INFO [http-nio-8080-exec-17] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:32:00.261 INFO [http-nio-8080-exec-17] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 407 ms
+21-Mar-2024 15:32:00.267 INFO [http-nio-8080-exec-17] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,408] ms
+21-Mar-2024 15:32:00.271 INFO [http-nio-8080-exec-23] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:32:15.310 INFO [http-nio-8080-exec-34] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:31:59 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:32:15.310 INFO [http-nio-8080-exec-34] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:31:59 IST 2024]; root of context hierarchy
+21-Mar-2024 15:32:16.290 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.reload Reloading context [/Realtime_Construction]
+21-Mar-2024 15:32:17.886 INFO [http-nio-8080-exec-31] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:32:17.956 INFO [http-nio-8080-exec-31] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:32:18.076 INFO [http-nio-8080-exec-31] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:32:18 IST 2024]; root of context hierarchy
+21-Mar-2024 15:32:18.171 INFO [http-nio-8080-exec-31] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:32:18.301 INFO [http-nio-8080-exec-31] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 345 ms
+21-Mar-2024 15:32:18.309 INFO [http-nio-8080-exec-31] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:32:18.328 INFO [http-nio-8080-exec-31] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:32:18 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:32:18.328 INFO [http-nio-8080-exec-31] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:32:18.572 INFO [http-nio-8080-exec-31] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:32:18.699 INFO [http-nio-8080-exec-31] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 390 ms
+21-Mar-2024 15:32:18.702 INFO [Catalina-utility-1] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:32:18.706 INFO [http-nio-8080-exec-25] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:32:18 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:32:18.708 INFO [http-nio-8080-exec-25] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:32:18 IST 2024]; root of context hierarchy
+21-Mar-2024 15:32:18.718 WARNING [http-nio-8080-exec-25] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [Realtime_Construction] appears to have started a thread named [Catalina-utility-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ org.apache.catalina.core.StandardContext.backgroundProcess(StandardContext.java:5269)
+ org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1301)
+ org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+ org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.processChildren(ContainerBase.java:1305)
+ org.apache.catalina.core.ContainerBase$ContainerBackgroundProcessor.run(ContainerBase.java:1283)
+ java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+ java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358)
+ java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+21-Mar-2024 15:32:19.228 INFO [http-nio-8080-exec-25] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:32:19.254 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:32:19.257 WARNING [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:32:21.374 INFO [http-nio-8080-exec-35] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:32:21.450 INFO [http-nio-8080-exec-35] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:32:21.578 INFO [http-nio-8080-exec-35] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:32:21 IST 2024]; root of context hierarchy
+21-Mar-2024 15:32:21.672 INFO [http-nio-8080-exec-35] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:32:21.807 INFO [http-nio-8080-exec-35] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 357 ms
+21-Mar-2024 15:32:21.815 INFO [http-nio-8080-exec-35] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:32:21.834 INFO [http-nio-8080-exec-35] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:32:21 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:32:21.835 INFO [http-nio-8080-exec-35] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:32:22.101 INFO [http-nio-8080-exec-35] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:32:22.223 INFO [http-nio-8080-exec-35] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 408 ms
+21-Mar-2024 15:32:22.231 INFO [http-nio-8080-exec-35] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [2,976] ms
+21-Mar-2024 15:32:22.233 INFO [http-nio-8080-exec-23] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:33:05.129 INFO [http-nio-8080-exec-32] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:32:21 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:33:05.132 INFO [http-nio-8080-exec-32] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:32:21 IST 2024]; root of context hierarchy
+21-Mar-2024 15:33:05.664 INFO [http-nio-8080-exec-32] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:33:05.693 INFO [http-nio-8080-exec-41] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:33:05.693 WARNING [http-nio-8080-exec-41] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:33:07.936 INFO [http-nio-8080-exec-41] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:33:08.012 INFO [http-nio-8080-exec-41] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:33:08.137 INFO [http-nio-8080-exec-41] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:33:08 IST 2024]; root of context hierarchy
+21-Mar-2024 15:33:08.233 INFO [http-nio-8080-exec-41] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:33:08.360 INFO [http-nio-8080-exec-41] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 348 ms
+21-Mar-2024 15:33:08.368 INFO [http-nio-8080-exec-41] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:33:08.389 INFO [http-nio-8080-exec-41] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:33:08 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:33:08.389 INFO [http-nio-8080-exec-41] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:33:08.624 INFO [http-nio-8080-exec-41] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:33:08.734 INFO [http-nio-8080-exec-41] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 366 ms
+21-Mar-2024 15:33:08.738 INFO [http-nio-8080-exec-41] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,045] ms
+21-Mar-2024 15:33:08.741 INFO [http-nio-8080-exec-38] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:33:38.825 INFO [http-nio-8080-exec-39] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:33:08 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:33:38.828 INFO [http-nio-8080-exec-39] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:33:08 IST 2024]; root of context hierarchy
+21-Mar-2024 15:33:39.346 INFO [Catalina-utility-1] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:33:39.621 INFO [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:33:39.886 WARNING [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:33:42.174 INFO [http-nio-8080-exec-46] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:33:42.246 INFO [http-nio-8080-exec-46] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:33:42.371 INFO [http-nio-8080-exec-46] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:33:42 IST 2024]; root of context hierarchy
+21-Mar-2024 15:33:42.465 INFO [http-nio-8080-exec-46] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:33:42.598 INFO [http-nio-8080-exec-46] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 352 ms
+21-Mar-2024 15:33:42.608 INFO [http-nio-8080-exec-46] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:33:42.633 INFO [http-nio-8080-exec-46] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:33:42 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:33:42.633 INFO [http-nio-8080-exec-46] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:33:42.885 INFO [http-nio-8080-exec-46] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:33:43.002 INFO [http-nio-8080-exec-46] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 394 ms
+21-Mar-2024 15:33:43.007 INFO [http-nio-8080-exec-46] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,387] ms
+21-Mar-2024 15:33:43.013 INFO [http-nio-8080-exec-35] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:35:14.484 INFO [http-nio-8080-exec-54] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:33:42 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:35:14.488 INFO [http-nio-8080-exec-54] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:33:42 IST 2024]; root of context hierarchy
+21-Mar-2024 15:35:15.024 INFO [http-nio-8080-exec-54] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:35:15.057 INFO [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:35:15.057 WARNING [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:35:17.552 INFO [http-nio-8080-exec-47] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:35:17.653 INFO [http-nio-8080-exec-47] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:35:17.786 INFO [http-nio-8080-exec-47] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:35:17 IST 2024]; root of context hierarchy
+21-Mar-2024 15:35:17.887 INFO [http-nio-8080-exec-47] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:35:18.028 INFO [http-nio-8080-exec-47] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 375 ms
+21-Mar-2024 15:35:18.036 INFO [http-nio-8080-exec-47] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:35:18.057 INFO [http-nio-8080-exec-47] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:35:18 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:35:18.057 INFO [http-nio-8080-exec-47] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:35:18.298 INFO [http-nio-8080-exec-47] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:35:18.429 INFO [http-nio-8080-exec-47] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 392 ms
+21-Mar-2024 15:35:18.432 INFO [http-nio-8080-exec-47] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,375] ms
+21-Mar-2024 15:35:18.436 INFO [http-nio-8080-exec-49] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:38:18.665 INFO [http-nio-8080-exec-62] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:35:18 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:38:18.675 INFO [http-nio-8080-exec-62] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:35:17 IST 2024]; root of context hierarchy
+21-Mar-2024 15:38:19.198 INFO [http-nio-8080-exec-62] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:38:19.237 INFO [http-nio-8080-exec-65] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:38:19.239 WARNING [http-nio-8080-exec-65] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:38:21.419 INFO [http-nio-8080-exec-65] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:38:21.548 INFO [http-nio-8080-exec-65] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:38:21.707 INFO [http-nio-8080-exec-65] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:38:21 IST 2024]; root of context hierarchy
+21-Mar-2024 15:38:21.798 INFO [http-nio-8080-exec-65] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:38:21.926 INFO [http-nio-8080-exec-65] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 378 ms
+21-Mar-2024 15:38:21.935 INFO [http-nio-8080-exec-65] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:38:21.955 INFO [http-nio-8080-exec-65] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:38:21 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:38:21.955 INFO [http-nio-8080-exec-65] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:38:22.213 INFO [http-nio-8080-exec-65] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:38:22.324 INFO [http-nio-8080-exec-65] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 389 ms
+21-Mar-2024 15:38:22.330 INFO [http-nio-8080-exec-65] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,092] ms
+21-Mar-2024 15:38:22.333 INFO [http-nio-8080-exec-59] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 15:52:51.993 INFO [http-nio-8080-exec-72] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:38:21 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:52:51.997 INFO [http-nio-8080-exec-72] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:38:21 IST 2024]; root of context hierarchy
+21-Mar-2024 15:52:52.525 INFO [http-nio-8080-exec-72] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 15:52:52.561 INFO [http-nio-8080-exec-74] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 15:52:52.562 WARNING [http-nio-8080-exec-74] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 15:52:54.668 INFO [http-nio-8080-exec-74] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 15:52:54.751 INFO [http-nio-8080-exec-74] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 15:52:54.931 INFO [http-nio-8080-exec-74] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 15:52:54 IST 2024]; root of context hierarchy
+21-Mar-2024 15:52:55.024 INFO [http-nio-8080-exec-74] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 15:52:55.151 INFO [http-nio-8080-exec-74] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 400 ms
+21-Mar-2024 15:52:55.158 INFO [http-nio-8080-exec-74] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 15:52:55.175 INFO [http-nio-8080-exec-74] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:52:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 15:52:55.175 INFO [http-nio-8080-exec-74] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 15:52:55.422 INFO [http-nio-8080-exec-74] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 15:52:55.536 INFO [http-nio-8080-exec-74] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 377 ms
+21-Mar-2024 15:52:55.541 INFO [http-nio-8080-exec-74] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [2,980] ms
+21-Mar-2024 15:52:55.547 INFO [http-nio-8080-exec-78] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 16:07:58.974 INFO [http-nio-8080-exec-83] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 15:52:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 16:07:58.977 INFO [http-nio-8080-exec-83] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 15:52:54 IST 2024]; root of context hierarchy
+21-Mar-2024 16:07:59.523 INFO [http-nio-8080-exec-83] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 16:07:59.559 INFO [http-nio-8080-exec-82] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 16:07:59.565 WARNING [http-nio-8080-exec-82] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 16:08:01.822 INFO [http-nio-8080-exec-82] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 16:08:01.897 INFO [http-nio-8080-exec-82] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 16:08:02.033 INFO [http-nio-8080-exec-82] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 16:08:02 IST 2024]; root of context hierarchy
+21-Mar-2024 16:08:02.133 INFO [http-nio-8080-exec-82] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 16:08:02.271 INFO [http-nio-8080-exec-82] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 374 ms
+21-Mar-2024 16:08:02.282 INFO [http-nio-8080-exec-82] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 16:08:02.303 INFO [http-nio-8080-exec-82] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 16:08:02 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 16:08:02.303 INFO [http-nio-8080-exec-82] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 16:08:02.545 INFO [http-nio-8080-exec-82] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 16:08:02.661 INFO [http-nio-8080-exec-82] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 379 ms
+21-Mar-2024 16:08:02.667 INFO [http-nio-8080-exec-82] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,108] ms
+21-Mar-2024 16:08:02.671 INFO [http-nio-8080-exec-78] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 16:38:55.906 INFO [http-nio-8080-exec-89] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 16:08:02 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 16:38:55.909 INFO [http-nio-8080-exec-89] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 16:08:02 IST 2024]; root of context hierarchy
+21-Mar-2024 16:38:56.432 INFO [http-nio-8080-exec-89] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 16:38:56.461 INFO [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 16:38:56.461 WARNING [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 16:38:58.741 INFO [http-nio-8080-exec-90] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 16:38:58.825 INFO [http-nio-8080-exec-90] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 16:38:58.954 INFO [http-nio-8080-exec-90] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 16:38:58 IST 2024]; root of context hierarchy
+21-Mar-2024 16:38:59.054 INFO [http-nio-8080-exec-90] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 16:38:59.183 INFO [http-nio-8080-exec-90] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 358 ms
+21-Mar-2024 16:38:59.190 INFO [http-nio-8080-exec-90] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 16:38:59.211 INFO [http-nio-8080-exec-90] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 16:38:59 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 16:38:59.211 INFO [http-nio-8080-exec-90] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 16:38:59.476 INFO [http-nio-8080-exec-90] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 16:38:59.590 INFO [http-nio-8080-exec-90] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 398 ms
+21-Mar-2024 16:38:59.594 INFO [http-nio-8080-exec-90] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,132] ms
+21-Mar-2024 16:38:59.598 INFO [http-nio-8080-exec-93] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 17:00:29.940 INFO [http-nio-8080-exec-103] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 16:38:59 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:00:29.942 INFO [http-nio-8080-exec-103] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 16:38:58 IST 2024]; root of context hierarchy
+21-Mar-2024 17:00:30.462 INFO [http-nio-8080-exec-103] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 17:00:30.504 INFO [http-nio-8080-exec-104] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 17:00:30.507 WARNING [http-nio-8080-exec-104] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 17:00:32.910 INFO [http-nio-8080-exec-104] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 17:00:32.982 INFO [http-nio-8080-exec-104] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 17:00:33.097 INFO [http-nio-8080-exec-104] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 17:00:33 IST 2024]; root of context hierarchy
+21-Mar-2024 17:00:33.188 INFO [http-nio-8080-exec-104] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 17:00:33.309 INFO [http-nio-8080-exec-104] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 327 ms
+21-Mar-2024 17:00:33.316 INFO [http-nio-8080-exec-104] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 17:00:33.338 INFO [http-nio-8080-exec-104] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:00:33 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:00:33.338 INFO [http-nio-8080-exec-104] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 17:00:33.586 INFO [http-nio-8080-exec-104] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 17:00:33.695 INFO [http-nio-8080-exec-104] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 379 ms
+21-Mar-2024 17:00:33.700 INFO [http-nio-8080-exec-104] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,195] ms
+21-Mar-2024 17:00:33.705 INFO [http-nio-8080-exec-97] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 17:09:52.391 INFO [http-nio-8080-exec-111] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:00:33 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:09:52.393 INFO [http-nio-8080-exec-111] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 17:00:33 IST 2024]; root of context hierarchy
+21-Mar-2024 17:09:52.921 INFO [http-nio-8080-exec-111] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 17:09:52.958 INFO [http-nio-8080-exec-108] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 17:09:52.961 WARNING [http-nio-8080-exec-108] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 17:09:55.332 INFO [http-nio-8080-exec-108] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 17:09:55.416 INFO [http-nio-8080-exec-108] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 17:09:55.530 INFO [http-nio-8080-exec-108] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 17:09:55 IST 2024]; root of context hierarchy
+21-Mar-2024 17:09:55.623 INFO [http-nio-8080-exec-108] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 17:09:55.746 INFO [http-nio-8080-exec-108] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 330 ms
+21-Mar-2024 17:09:55.754 INFO [http-nio-8080-exec-108] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 17:09:55.775 INFO [http-nio-8080-exec-108] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:09:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:09:55.775 INFO [http-nio-8080-exec-108] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 17:09:56.017 INFO [http-nio-8080-exec-108] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 17:09:56.131 INFO [http-nio-8080-exec-108] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 377 ms
+21-Mar-2024 17:09:56.135 INFO [http-nio-8080-exec-108] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,177] ms
+21-Mar-2024 17:09:56.141 INFO [http-nio-8080-exec-118] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 17:14:50.804 INFO [http-nio-8080-exec-123] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:09:55 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:14:50.807 INFO [http-nio-8080-exec-123] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 17:09:55 IST 2024]; root of context hierarchy
+21-Mar-2024 17:14:51.329 INFO [http-nio-8080-exec-123] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 17:14:51.442 INFO [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 17:14:51.598 WARNING [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 17:14:53.689 INFO [http-nio-8080-exec-119] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 17:14:53.755 INFO [http-nio-8080-exec-119] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 17:14:53.871 INFO [http-nio-8080-exec-119] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 17:14:53 IST 2024]; root of context hierarchy
+21-Mar-2024 17:14:53.963 INFO [http-nio-8080-exec-119] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 17:14:54.085 INFO [http-nio-8080-exec-119] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 330 ms
+21-Mar-2024 17:14:54.093 INFO [http-nio-8080-exec-119] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 17:14:54.113 INFO [http-nio-8080-exec-119] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:14:54 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 17:14:54.113 INFO [http-nio-8080-exec-119] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 17:14:54.352 INFO [http-nio-8080-exec-119] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 17:14:54.463 INFO [http-nio-8080-exec-119] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 370 ms
+21-Mar-2024 17:14:54.468 INFO [http-nio-8080-exec-119] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,025] ms
+21-Mar-2024 17:14:54.472 INFO [http-nio-8080-exec-120] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 18:51:27.541 INFO [http-nio-8080-exec-134] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 17:14:54 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 18:51:27.546 INFO [http-nio-8080-exec-134] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 17:14:53 IST 2024]; root of context hierarchy
+21-Mar-2024 18:51:28.072 INFO [http-nio-8080-exec-134] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 18:51:28.126 INFO [http-nio-8080-exec-127] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 18:51:28.128 WARNING [http-nio-8080-exec-127] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 18:51:30.472 INFO [http-nio-8080-exec-127] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 18:51:30.542 INFO [http-nio-8080-exec-127] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 18:51:30.666 INFO [http-nio-8080-exec-127] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 18:51:30 IST 2024]; root of context hierarchy
+21-Mar-2024 18:51:30.777 INFO [http-nio-8080-exec-127] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 18:51:30.909 INFO [http-nio-8080-exec-127] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 367 ms
+21-Mar-2024 18:51:30.916 INFO [http-nio-8080-exec-127] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 18:51:30.936 INFO [http-nio-8080-exec-127] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 18:51:30 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 18:51:30.936 INFO [http-nio-8080-exec-127] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 18:51:31.178 INFO [http-nio-8080-exec-127] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 18:51:31.285 INFO [http-nio-8080-exec-127] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 369 ms
+21-Mar-2024 18:51:31.290 INFO [http-nio-8080-exec-127] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,163] ms
+21-Mar-2024 18:51:31.293 INFO [http-nio-8080-exec-130] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 18:56:22.044 INFO [http-nio-8080-exec-140] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 18:51:30 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 18:56:22.047 INFO [http-nio-8080-exec-140] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 18:51:30 IST 2024]; root of context hierarchy
+21-Mar-2024 18:56:22.570 INFO [http-nio-8080-exec-140] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/Realtime_Construction]
+21-Mar-2024 18:56:22.612 INFO [http-nio-8080-exec-143] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+21-Mar-2024 18:56:22.612 WARNING [http-nio-8080-exec-143] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+21-Mar-2024 18:56:24.929 INFO [http-nio-8080-exec-143] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+21-Mar-2024 18:56:25.006 INFO [http-nio-8080-exec-143] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+21-Mar-2024 18:56:25.134 INFO [http-nio-8080-exec-143] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Thu Mar 21 18:56:25 IST 2024]; root of context hierarchy
+21-Mar-2024 18:56:25.226 INFO [http-nio-8080-exec-143] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+21-Mar-2024 18:56:25.344 INFO [http-nio-8080-exec-143] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 338 ms
+21-Mar-2024 18:56:25.350 INFO [http-nio-8080-exec-143] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+21-Mar-2024 18:56:25.371 INFO [http-nio-8080-exec-143] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 18:56:25 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 18:56:25.371 INFO [http-nio-8080-exec-143] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+21-Mar-2024 18:56:25.609 INFO [http-nio-8080-exec-143] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+21-Mar-2024 18:56:25.715 INFO [http-nio-8080-exec-143] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 365 ms
+21-Mar-2024 18:56:25.719 INFO [http-nio-8080-exec-143] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [3,107] ms
+21-Mar-2024 18:56:25.725 INFO [http-nio-8080-exec-139] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/Realtime_Construction]] after start() had already been called. The second call will be ignored.
+21-Mar-2024 22:12:08.548 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+21-Mar-2024 22:12:08.548 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 22:12:08.548 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+21-Mar-2024 22:12:08.587 INFO [main] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Thu Mar 21 18:56:25 IST 2024]; parent: Root WebApplicationContext
+21-Mar-2024 22:12:08.599 INFO [main] org.springframework.web.context.support.XmlWebApplicationContext.doClose Closing Root WebApplicationContext: startup date [Thu Mar 21 18:56:25 IST 2024]; root of context hierarchy
+21-Mar-2024 22:12:08.615 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+21-Mar-2024 22:12:08.631 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]

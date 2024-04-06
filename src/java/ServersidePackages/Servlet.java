@@ -1,11 +1,14 @@
 package ServersidePackages;
 
+import com.mysql.cj.jdbc.Blob;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 
 
@@ -39,6 +42,10 @@ public class Servlet extends HttpServlet {
             case "register" : handleRegistration(request, response);
             break;
             case "login" : handleLogin(request, response);
+            break;
+            case "all_events" : displayAllEvents(request, response);
+            break;
+            case "event_details" : displayEventsDetails(request, response);
             break;
             default : {
             }
@@ -91,8 +98,7 @@ public class Servlet extends HttpServlet {
                 }
                 // Close the connection
             }
-        } catch (ClassNotFoundException | SQLException e) {
-        }
+        } catch (ClassNotFoundException | SQLException e) {}
     }
 
 
@@ -114,6 +120,7 @@ public class Servlet extends HttpServlet {
         try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
             // Prepare SQL query
             String sql = "SELECT * FROM organizers WHERE org_username = ? AND org_password = ?";
+            
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 statement.setString(1, username);
                 statement.setString(2, password);
@@ -137,10 +144,68 @@ public class Servlet extends HttpServlet {
                     request.setAttribute("organizerEmail", email);
                     request.setAttribute("organizerOrg", org);
                     request.setAttribute("organizerMobile", mobile);
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("organizer.jsp");
-                    dispatcher.forward(request, response);
                     
-                   
+//                    String sql2 = "SELECT * FROM events WHERE org_username = ?";
+//            try (PreparedStatement statement1 = connection.prepareStatement(sql2)) {
+//                statement1.setString(1, user);
+//                
+//
+//                // Execute the query
+//                ResultSet resultSet1 = statement1.executeQuery();
+//                
+//
+//                if (resultSet1.next()) {
+//                    // Successful login
+//                    
+//                    String event_name = resultSet1.getString("event_name");
+//                    String event_date = resultSet1.getString("event_date");
+//                    Blob event_poster_blob = (Blob) resultSet1.getBlob("poster");
+//                    
+//                    request.setAttribute("eventName", event_name);
+//                    request.setAttribute("eventDate", event_date); 
+//                    request.setAttribute("eventPoster", event_poster_blob);
+//                }
+//
+//                
+//            }
+            
+            List<DataObject> dataList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events WHERE org_username='"+user+"' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                DataObject data = new DataObject(id, name1, date,event_poster_blob);
+                                dataList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            statement.close();
+            connection.close();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Set the data list in request attribute
+        request.setAttribute("dataList", dataList);
+                    
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("organizer.jsp");
+                    dispatcher.forward(request, response);  
                     
                 } else {
                     // Invalid credentials
@@ -150,11 +215,18 @@ public class Servlet extends HttpServlet {
 
                 
             }
+            
+            
+            
         }
     } catch (ClassNotFoundException | SQLException e) {
         // Handle exceptions (e.g., log or display an error message)
         e.printStackTrace();
     }
+    
+    
+    
+    
     
     }
     
@@ -244,18 +316,317 @@ public class Servlet extends HttpServlet {
                     }
 
                     // Forward to the same JSP page or a confirmation page
-                    //request.getRequestDispatcher("Servlet?id=login").forward(request, response);
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
+                    dispatcher.forward(request, response);
                     
-                    try {
+
+                    
+                }
+            }
+        } catch (ClassNotFoundException | SQLException e) {
+            // Handle exceptions (e.g., log or display an error message)
+            e.printStackTrace();
+            if("Duplicate entry 'Dj N' for key 'events.event_name_UNIQUE'".equals(e.getMessage())){
+             request.setAttribute("eventName", "The event name is not available! Use another one.....");
+            }
+            else{
+                request.setAttribute("eventName", "Something went wrong! Event posting failed...........");
+            }     
+            RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
+            dispatcher.forward(request, response);
+        }
+    }
+   
+    
+        private void displayAllEvents(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    
+            
+            List<DataObject> dataList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                DataObject data = new DataObject(id, name1, date,event_poster_blob);
+                                dataList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+           
+                     
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Set the data list in request attribute
+        
+ 
+        List<SportObject> sportList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Sports' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                SportObject data = new SportObject(id, name1, date, event_poster_blob);
+                                sportList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        
+                    
+        List<MusicObject> musicList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Musical / DJ' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                MusicObject data = new MusicObject(id, name1, date, event_poster_blob);
+                                musicList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        
+        List<TrekkObject> trekkList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Trekking / Adventures' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                TrekkObject data = new TrekkObject(id, name1, date, event_poster_blob);
+                                trekkList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        List<CulturalObject> culturalList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Cultural' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                CulturalObject data = new CulturalObject(id, name1, date, event_poster_blob);
+                                culturalList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+               
+        
+        List<BusinessObject> businessList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Business' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                BusinessObject data = new BusinessObject(id, name1, date, event_poster_blob);
+                                businessList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        List<EduObject> eduList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Educational' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                EduObject data = new EduObject(id, name1, date, event_poster_blob);
+                                eduList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        List<PromosObject> promoList = new ArrayList<>();
+
+        try {
+            // Load the MySQL JDBC driver
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            
+            // Connect to the MySQL database
+            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
+            
+            
+                        // Process the result set and store data in a list of DataObject
+                        try ( // Execute a query to fetch multiple records
+                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events where event_type = 'Promos / Expos' order by event_id desc;");
+                                ResultSet resultSet1 = statement2.executeQuery()) {
+                            // Process the result set and store data in a list of DataObject
+                            while (resultSet1.next()) {
+                                int id = resultSet1.getInt(1);
+                                String name1 = resultSet1.getString(2);
+                                String date = resultSet1.getString(3);
+                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
+                                PromosObject data = new PromosObject(id, name1, date, event_poster_blob);
+                                promoList.add(data);
+                            }
+                            // Close the result set, statement, and connection
+                        }
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+           // Set the data list in request attribute
+           request.setAttribute("dataList", dataList);
+           request.setAttribute("sportList", sportList); 
+           request.setAttribute("musicList", musicList); 
+           request.setAttribute("trekkList", trekkList); 
+           request.setAttribute("culturalList", culturalList); 
+           request.setAttribute("businessList", businessList); 
+           request.setAttribute("eduList", eduList); 
+           request.setAttribute("promoList", promoList); 
+           RequestDispatcher dispatcher = request.getRequestDispatcher("allevents.jsp");
+                    dispatcher.forward(request, response);      
+    
+    
+    
+    
+    
+    }
+        
+        
+        private void displayEventsDetails(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    
+  // Retrieve form parameters
+    String e_id = request.getParameter("event-id");
+
+    try {
         // Load JDBC driver
         Class.forName("com.mysql.cj.jdbc.Driver");
 
         // Establish a connection
-        try{
+        try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
             // Prepare SQL query
-            String sql = "SELECT * FROM organizers WHERE org_username = ?";
+            String sql = "SELECT * FROM events WHERE event_id = ?";
+            
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setString(1, user);
+                statement.setString(1, e_id);
                 
 
                 // Execute the query
@@ -265,21 +636,56 @@ public class Servlet extends HttpServlet {
                 if (resultSet.next()) {
                     // Successful login
                     
-                    String name = resultSet.getString("org_name");
-                    String org = resultSet.getString("org_organization");
-                    String mobile = resultSet.getString("org_mobile");
-                    String email = resultSet.getString("org_email");
+                    String e_name = resultSet.getString(2);
+        String e_type = resultSet.getString(3);
+        String e_date = resultSet.getString(4);
+        String e_time = resultSet.getString(5);
+        String e_duration = resultSet.getString(6);
+        String e_specialattraction = resultSet.getString(7);
+        String e_description = resultSet.getString(8);
+        String e_promoter = resultSet.getString(9);
+        String e_venue = resultSet.getString(10);
+        String e_addline1 = resultSet.getString(11);
+        String e_addline2 = resultSet.getString(12);
+        String e_city = resultSet.getString(13);
+        String e_state = resultSet.getString(14);
+        String e_post = resultSet.getString(15);
+        String e_country = resultSet.getString(16);
+        int e_tickets = resultSet.getInt(17);
+        String e_contactpersonfirst = resultSet.getString(18);
+        String e_conatactpersonlast = resultSet.getString(19);
+        String e_contactemail = resultSet.getString(20);
+        String e_contactnumber = resultSet.getString(21);
+        String e_isrecord = resultSet.getString(22);
+        String e_organizer = resultSet.getString(23);
+        Blob e_poster = (Blob) resultSet.getBlob(24);           
+                    request.setAttribute("e_name", e_name);
+        request.setAttribute("e_type", e_type);
+        request.setAttribute("e_date", e_date);
+        request.setAttribute("e_time", e_time);
+        request.setAttribute("e_duration", e_duration);
+        request.setAttribute("e_specialattraction", e_specialattraction);
+        request.setAttribute("e_description", e_description);
+        request.setAttribute("e_promoter", e_promoter);
+        request.setAttribute("e_venue", e_venue);
+        request.setAttribute("e_addline1", e_addline1);
+        request.setAttribute("e_addline2", e_addline2);
+        request.setAttribute("e_city", e_city);
+        request.setAttribute("e_state", e_state);
+        request.setAttribute("e_post", e_post);
+        request.setAttribute("e_country", e_country);
+        request.setAttribute("e_tickets", e_tickets);
+        request.setAttribute("e_contactpersonfirst", e_contactpersonfirst);
+        request.setAttribute("e_conatactpersonlast", e_conatactpersonlast);
+        request.setAttribute("e_contactemail", e_contactemail);
+        request.setAttribute("e_contactnumber", e_contactnumber);
+        request.setAttribute("e_isrecord", e_isrecord);
+        request.setAttribute("e_organizer", e_organizer);
+        request.setAttribute("e_poster", e_poster);                  
+        
                     
-                    request.setAttribute("loginSuccess", null);
-                    request.setAttribute("loggedInUsername", user);
-                    request.setAttribute("organizerName", name);
-                    request.setAttribute("organizerEmail", email);
-                    request.setAttribute("organizerOrg", org);
-                    request.setAttribute("organizerMobile", mobile);
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("organizer.jsp");
-                    dispatcher.forward(request, response);
-                    
-                   
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("eventdetails.jsp");
+                    dispatcher.forward(request, response);  
                     
                 } else {
                     // Invalid credentials
@@ -289,21 +695,15 @@ public class Servlet extends HttpServlet {
 
                 
             }
-        }catch (SQLException e) {
-        // Handle exceptions (e.g., log or display an error message)
-        e.printStackTrace();
-    }
-    } catch (ClassNotFoundException e) {
-        // Handle exceptions (e.g., log or display an error message)
-        e.printStackTrace();
-    }
-                    
-                }
-            }
-        } catch (ClassNotFoundException | SQLException e) {
-            // Handle exceptions (e.g., log or display an error message)
-            e.printStackTrace();
+            
+            
+            
         }
+    } catch (ClassNotFoundException | SQLException e) {
+        // Handle exceptions (e.g., log or display an error message)
+        e.printStackTrace();
     }
-   
+    
+    }
+    
 }

@@ -1,0 +1,704 @@
+06-Apr-2024 09:13:25.657 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.85
+06-Apr-2024 09:13:25.663 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jan 5 2024 08:28:07 UTC
+06-Apr-2024 09:13:25.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.85.0
+06-Apr-2024 09:13:25.664 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 11
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-21
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           21.0.2+13-LTS-58
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+06-Apr-2024 09:13:25.665 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+06-Apr-2024 09:13:25.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+06-Apr-2024 09:13:25.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+06-Apr-2024 09:13:25.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+06-Apr-2024 09:13:25.680 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+06-Apr-2024 09:13:25.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+06-Apr-2024 09:13:25.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\logging.properties
+06-Apr-2024 09:13:25.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+06-Apr-2024 09:13:25.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+06-Apr-2024 09:13:25.683 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+06-Apr-2024 09:13:25.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+06-Apr-2024 09:13:25.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+06-Apr-2024 09:13:25.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85
+06-Apr-2024 09:13:25.684 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\temp
+06-Apr-2024 09:13:25.689 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded Apache Tomcat Native library [1.2.39] using APR version [1.7.4].
+06-Apr-2024 09:13:25.751 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+06-Apr-2024 09:13:25.752 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+06-Apr-2024 09:13:25.764 INFO [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 3.0.11 19 Sep 2023]
+06-Apr-2024 09:13:26.288 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+06-Apr-2024 09:13:26.323 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [969] milliseconds
+06-Apr-2024 09:13:26.396 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+06-Apr-2024 09:13:26.396 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.85]
+06-Apr-2024 09:13:26.410 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml]
+06-Apr-2024 09:13:26.432 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Construction_Monitoring_System] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has been ignored
+06-Apr-2024 09:13:26.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Construction_Monitoring_System.xml] has finished in [493] ms
+06-Apr-2024 09:13:26.904 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+06-Apr-2024 09:13:26.906 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/eventhub] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has been ignored
+06-Apr-2024 09:13:26.914 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@23fb172e]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [C:\Users\abhig\Documents\NetBeansProjects\eventhub\target\eventhub-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+06-Apr-2024 09:13:26.961 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\eventhub.xml] has finished in [56] ms
+06-Apr-2024 09:13:26.961 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml]
+06-Apr-2024 09:13:26.963 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/EventManagement] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has been ignored
+06-Apr-2024 09:13:27.058 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\EventManagement.xml] has finished in [96] ms
+06-Apr-2024 09:13:27.058 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml]
+06-Apr-2024 09:13:27.060 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/FestaVista] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has been ignored
+06-Apr-2024 09:13:27.981 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:13:27.987 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has finished in [929] ms
+06-Apr-2024 09:13:27.988 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+06-Apr-2024 09:13:27.989 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/mavenproject1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has been ignored
+06-Apr-2024 09:13:27.995 SEVERE [main] org.apache.catalina.startup.HostConfig.deployDescriptor Error deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml]
+	java.lang.IllegalStateException: Error starting child
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:686)
+		at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:658)
+		at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:661)
+		at org.apache.catalina.startup.HostConfig.deployDescriptor(HostConfig.java:691)
+		at org.apache.catalina.startup.HostConfig$DeployDescriptor.run(HostConfig.java:1897)
+		at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:123)
+		at org.apache.catalina.startup.HostConfig.deployDescriptors(HostConfig.java:584)
+		at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:474)
+		at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1619)
+		at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:318)
+		at org.apache.catalina.util.LifecycleBase.fireLifecycleEvent(LifecycleBase.java:114)
+		at org.apache.catalina.util.LifecycleBase.setStateInternal(LifecycleBase.java:402)
+		at org.apache.catalina.util.LifecycleBase.setState(LifecycleBase.java:345)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:893)
+		at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:794)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1332)
+		at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1322)
+		at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+		at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+		at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145)
+		at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:866)
+		at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:248)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardService.startInternal(StandardService.java:433)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:921)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.startup.Catalina.start(Catalina.java:772)
+		at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+		at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+		at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:347)
+		at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:478)
+	Caused by: org.apache.catalina.LifecycleException: Failed to start component [org.apache.catalina.webresources.StandardRoot@796d3c9f]
+		at org.apache.catalina.util.LifecycleBase.handleSubClassException(LifecycleBase.java:419)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:186)
+		at org.apache.catalina.core.StandardContext.resourcesStart(StandardContext.java:4575)
+		at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4708)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:683)
+		... 35 more
+	Caused by: java.lang.IllegalArgumentException: The main resource set specified [D:\MCA SEM IV\Project\mavenproject1\target\mavenproject1-1.0-SNAPSHOT] is not a directory or war file, or is not readable (it does not exist or permissions to access it are missing)
+		at org.apache.catalina.webresources.StandardRoot.createMainResourceSet(StandardRoot.java:749)
+		at org.apache.catalina.webresources.StandardRoot.startInternal(StandardRoot.java:707)
+		at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:171)
+		... 39 more
+06-Apr-2024 09:13:28.027 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\mavenproject1.xml] has finished in [38] ms
+06-Apr-2024 09:13:28.027 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml]
+06-Apr-2024 09:13:28.028 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/Realtime_Construction] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has been ignored
+06-Apr-2024 09:13:31.764 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:13:31.881 INFO [main] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization started
+06-Apr-2024 09:13:32.007 INFO [main] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing Root WebApplicationContext: startup date [Sat Apr 06 09:13:32 IST 2024]; root of context hierarchy
+06-Apr-2024 09:13:32.120 INFO [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/applicationContext.xml]
+06-Apr-2024 09:13:32.359 INFO [main] org.springframework.web.context.ContextLoader.initWebApplicationContext Root WebApplicationContext: initialization completed in 478 ms
+06-Apr-2024 09:13:32.379 INFO [main] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization started
+06-Apr-2024 09:13:32.402 INFO [main] org.springframework.web.context.support.XmlWebApplicationContext.prepareRefresh Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Apr 06 09:13:32 IST 2024]; parent: Root WebApplicationContext
+06-Apr-2024 09:13:32.402 INFO [main] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions Loading XML bean definitions from ServletContext resource [/WEB-INF/dispatcher-servlet.xml]
+06-Apr-2024 09:13:32.699 INFO [main] org.springframework.web.servlet.handler.SimpleUrlHandlerMapping.registerHandler Mapped URL path [/index.htm] onto handler 'indexController'
+06-Apr-2024 09:13:32.837 INFO [main] org.springframework.web.servlet.DispatcherServlet.initServletBean FrameworkServlet 'dispatcher': initialization completed in 458 ms
+06-Apr-2024 09:13:32.842 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\Realtime_Construction.xml] has finished in [4,815] ms
+06-Apr-2024 09:13:32.842 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml]
+06-Apr-2024 09:13:32.844 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication1] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has been ignored
+06-Apr-2024 09:13:33.395 INFO [main] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:13:33.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication1.xml] has finished in [558] ms
+06-Apr-2024 09:13:33.400 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deploying deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml]
+06-Apr-2024 09:13:33.402 WARNING [main] org.apache.catalina.startup.HostConfig.deployDescriptor The path attribute with value [/WebApplication2] in deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has been ignored
+06-Apr-2024 09:13:33.457 INFO [main] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\WebApplication2.xml] has finished in [55] ms
+06-Apr-2024 09:13:33.458 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs]
+06-Apr-2024 09:13:33.521 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\docs] has finished in [62] ms
+06-Apr-2024 09:13:33.521 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples]
+06-Apr-2024 09:13:34.198 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\examples] has finished in [676] ms
+06-Apr-2024 09:13:34.198 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager]
+06-Apr-2024 09:13:34.270 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\host-manager] has finished in [72] ms
+06-Apr-2024 09:13:34.272 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager]
+06-Apr-2024 09:13:34.345 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\manager] has finished in [73] ms
+06-Apr-2024 09:13:34.345 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT]
+06-Apr-2024 09:13:34.382 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\webapps\ROOT] has finished in [37] ms
+06-Apr-2024 09:13:34.388 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+06-Apr-2024 09:13:34.437 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [8112] milliseconds
+06-Apr-2024 09:20:59.514 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:20:59.553 WARNING [http-nio-8080-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 09:20:59.554 WARNING [http-nio-8080-exec-7] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:21:00.422 INFO [http-nio-8080-exec-7] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:21:00.434 INFO [http-nio-8080-exec-7] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:21:02.381 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:37:25.451 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:37:25.457 WARNING [http-nio-8080-exec-15] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 09:37:25.458 WARNING [http-nio-8080-exec-15] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:37:26.302 INFO [http-nio-8080-exec-15] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:37:26.319 INFO [http-nio-8080-exec-15] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:37:27.289 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:41:31.697 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:41:31.703 WARNING [http-nio-8080-exec-24] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 09:41:31.703 WARNING [http-nio-8080-exec-24] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:41:32.449 INFO [http-nio-8080-exec-24] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:41:32.457 INFO [http-nio-8080-exec-24] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:41:32.908 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:41:59.440 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:42:00.211 INFO [http-nio-8080-exec-21] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:42:00.221 INFO [http-nio-8080-exec-21] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:42:00.563 INFO [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:42:01.339 INFO [http-nio-8080-exec-26] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:42:01.344 INFO [http-nio-8080-exec-26] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:48:55.996 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:48:56.849 INFO [http-nio-8080-exec-36] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:48:56.856 INFO [http-nio-8080-exec-36] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:48:57.195 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:48:57.932 INFO [http-nio-8080-exec-37] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:48:57.938 INFO [http-nio-8080-exec-37] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:54:28.745 INFO [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:54:28.751 WARNING [http-nio-8080-exec-44] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 09:54:28.752 WARNING [http-nio-8080-exec-44] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:54:29.543 INFO [http-nio-8080-exec-44] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:54:29.549 INFO [http-nio-8080-exec-44] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:54:29.804 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:54:29.892 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:54:30.702 INFO [http-nio-8080-exec-48] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:54:30.717 INFO [http-nio-8080-exec-48] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:57:12.330 INFO [http-nio-8080-exec-50] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:57:13.092 INFO [http-nio-8080-exec-50] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:57:13.098 INFO [http-nio-8080-exec-50] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:59:41.440 INFO [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 09:59:41.446 WARNING [http-nio-8080-exec-58] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 09:59:41.446 WARNING [http-nio-8080-exec-58] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 09:59:42.242 INFO [http-nio-8080-exec-58] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 09:59:42.250 INFO [http-nio-8080-exec-58] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 09:59:45.027 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 10:01:24.255 INFO [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 10:01:25.076 INFO [http-nio-8080-exec-43] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 10:01:25.083 INFO [http-nio-8080-exec-43] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 10:01:25.426 INFO [http-nio-8080-exec-59] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 10:01:26.176 INFO [http-nio-8080-exec-59] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 10:01:26.182 INFO [http-nio-8080-exec-59] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 10:02:42.328 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 10:02:43.096 INFO [http-nio-8080-exec-56] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 10:02:43.102 INFO [http-nio-8080-exec-56] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 10:03:58.404 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 10:03:59.170 INFO [http-nio-8080-exec-67] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 10:03:59.176 INFO [http-nio-8080-exec-67] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 10:44:58.986 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 10:44:58.992 WARNING [http-nio-8080-exec-78] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 10:44:58.992 WARNING [http-nio-8080-exec-78] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 10:44:59.719 INFO [http-nio-8080-exec-78] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 10:44:59.725 INFO [http-nio-8080-exec-78] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 10:45:00.090 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:14:54.159 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:14:54.164 WARNING [http-nio-8080-exec-89] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:14:54.165 WARNING [http-nio-8080-exec-89] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:14:54.921 INFO [http-nio-8080-exec-89] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:14:54.928 INFO [http-nio-8080-exec-89] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:14:58.402 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:23:16.169 INFO [http-nio-8080-exec-90] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:23:16.175 WARNING [http-nio-8080-exec-90] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:23:16.175 WARNING [http-nio-8080-exec-90] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:23:16.251 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:23:17.045 INFO [http-nio-8080-exec-90] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:23:17.052 INFO [http-nio-8080-exec-90] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:24:11.444 INFO [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:24:11.449 WARNING [http-nio-8080-exec-105] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:24:11.449 WARNING [http-nio-8080-exec-105] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:24:12.274 INFO [http-nio-8080-exec-105] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:24:12.281 INFO [http-nio-8080-exec-105] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:24:16.027 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:25:16.504 INFO [http-nio-8080-exec-110] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:25:16.511 WARNING [http-nio-8080-exec-110] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:25:16.511 WARNING [http-nio-8080-exec-110] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:25:17.300 INFO [http-nio-8080-exec-110] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:25:17.305 INFO [http-nio-8080-exec-110] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:25:18.953 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:35:24.563 INFO [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:35:24.567 WARNING [http-nio-8080-exec-114] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:35:24.569 WARNING [http-nio-8080-exec-114] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:35:25.328 INFO [http-nio-8080-exec-114] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:35:25.333 INFO [http-nio-8080-exec-114] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:35:29.085 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:42:11.339 INFO [http-nio-8080-exec-122] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:42:11.346 WARNING [http-nio-8080-exec-122] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 11:42:11.347 WARNING [http-nio-8080-exec-122] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:42:12.189 INFO [http-nio-8080-exec-122] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:42:12.197 INFO [http-nio-8080-exec-122] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:42:12.533 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:42:13.383 INFO [http-nio-8080-exec-125] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:42:13.393 INFO [http-nio-8080-exec-125] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:42:15.036 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 11:42:36.856 INFO [http-nio-8080-exec-121] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:42:37.635 INFO [http-nio-8080-exec-121] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:42:37.644 INFO [http-nio-8080-exec-121] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 11:45:14.769 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 11:45:15.567 INFO [http-nio-8080-exec-131] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 11:45:15.573 INFO [http-nio-8080-exec-131] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:09:15.504 INFO [http-nio-8080-exec-145] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:09:15.511 WARNING [http-nio-8080-exec-145] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 12:09:15.512 WARNING [http-nio-8080-exec-145] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 12:09:16.294 INFO [http-nio-8080-exec-145] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:09:16.294 INFO [http-nio-8080-exec-145] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:09:16.640 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:09:17.447 INFO [http-nio-8080-exec-144] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:09:17.453 INFO [http-nio-8080-exec-144] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:09:20.367 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 12:09:38.452 INFO [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:09:39.208 INFO [http-nio-8080-exec-142] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:09:39.212 INFO [http-nio-8080-exec-142] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:10:07.230 INFO [http-nio-8080-exec-143] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:10:07.994 INFO [http-nio-8080-exec-143] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:10:08.000 INFO [http-nio-8080-exec-143] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:10:08.332 INFO [http-nio-8080-exec-141] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:10:09.341 INFO [http-nio-8080-exec-141] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:10:09.346 INFO [http-nio-8080-exec-141] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:10:26.477 INFO [http-nio-8080-exec-148] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:10:27.237 INFO [http-nio-8080-exec-148] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:10:27.242 INFO [http-nio-8080-exec-148] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:10:58.672 INFO [http-nio-8080-exec-140] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:10:59.517 INFO [http-nio-8080-exec-140] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:10:59.523 INFO [http-nio-8080-exec-140] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:10:59.851 INFO [http-nio-8080-exec-151] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:11:00.625 INFO [http-nio-8080-exec-151] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:11:00.629 INFO [http-nio-8080-exec-151] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:11:42.881 INFO [http-nio-8080-exec-155] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:11:43.582 INFO [http-nio-8080-exec-155] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:11:43.586 INFO [http-nio-8080-exec-155] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:11:48.482 INFO [http-nio-8080-exec-148] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:11:49.256 INFO [http-nio-8080-exec-148] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:11:49.262 INFO [http-nio-8080-exec-148] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:13:12.040 INFO [http-nio-8080-exec-152] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:13:12.871 INFO [http-nio-8080-exec-152] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:13:12.876 INFO [http-nio-8080-exec-152] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:13:12.917 INFO [http-nio-8080-exec-158] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:13:13.734 INFO [http-nio-8080-exec-158] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:13:13.740 INFO [http-nio-8080-exec-158] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:13:24.149 INFO [http-nio-8080-exec-157] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:13:24.994 INFO [http-nio-8080-exec-157] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:13:25.001 INFO [http-nio-8080-exec-157] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:15:19.981 INFO [http-nio-8080-exec-165] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:15:20.872 INFO [http-nio-8080-exec-165] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:15:20.878 INFO [http-nio-8080-exec-165] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:15:21.209 INFO [http-nio-8080-exec-166] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:15:22.054 INFO [http-nio-8080-exec-166] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:15:22.059 INFO [http-nio-8080-exec-166] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:15:43.014 INFO [http-nio-8080-exec-163] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:15:43.828 INFO [http-nio-8080-exec-163] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:15:43.834 INFO [http-nio-8080-exec-163] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:18:37.671 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:18:38.455 INFO [http-nio-8080-exec-172] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:18:38.461 INFO [http-nio-8080-exec-172] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:21:46.888 INFO [http-nio-8080-exec-175] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:21:47.726 INFO [http-nio-8080-exec-175] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:21:47.732 INFO [http-nio-8080-exec-175] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:25:35.121 INFO [http-nio-8080-exec-180] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:25:35.918 INFO [http-nio-8080-exec-180] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:25:35.923 INFO [http-nio-8080-exec-180] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:28:49.756 INFO [http-nio-8080-exec-187] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:28:50.553 INFO [http-nio-8080-exec-187] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:28:50.558 INFO [http-nio-8080-exec-187] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:30:24.138 INFO [http-nio-8080-exec-177] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:30:24.928 INFO [http-nio-8080-exec-177] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:30:24.935 INFO [http-nio-8080-exec-177] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 12:49:35.141 INFO [http-nio-8080-exec-188] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 12:49:35.413 INFO [http-nio-8080-exec-188] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 12:49:35.415 INFO [http-nio-8080-exec-188] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:36:19.193 INFO [http-nio-8080-exec-196] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 14:36:19.203 WARNING [http-nio-8080-exec-196] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 14:36:19.203 WARNING [http-nio-8080-exec-196] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:36:20.026 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:36:20.028 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:36:20.057 INFO [http-nio-8080-exec-196] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 14:36:20.068 INFO [http-nio-8080-exec-196] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:36:54.497 INFO [http-nio-8080-exec-201] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 14:36:55.275 INFO [http-nio-8080-exec-201] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 14:36:55.282 INFO [http-nio-8080-exec-201] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:41:05.616 INFO [http-nio-8080-exec-214] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 14:41:05.625 WARNING [http-nio-8080-exec-214] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 14:41:05.625 WARNING [http-nio-8080-exec-214] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:41:06.663 INFO [http-nio-8080-exec-214] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 14:41:06.675 INFO [http-nio-8080-exec-214] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:41:10.247 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:44:17.807 INFO [http-nio-8080-exec-221] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 14:44:17.809 WARNING [http-nio-8080-exec-221] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 14:44:17.809 WARNING [http-nio-8080-exec-221] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:44:18.084 INFO [http-nio-8080-exec-221] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 14:44:18.086 INFO [http-nio-8080-exec-221] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:44:21.303 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:46:57.945 INFO [http-nio-8080-exec-235] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] has started
+06-Apr-2024 14:46:57.947 WARNING [http-nio-8080-exec-235] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesJdbc The web application [FestaVista] registered the JDBC driver [com.mysql.cj.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+06-Apr-2024 14:46:57.947 WARNING [http-nio-8080-exec-235] org.apache.catalina.loader.WebappClassLoaderBase.clearReferencesThreads The web application [FestaVista] appears to have started a thread named [mysql-cj-abandoned-connection-cleanup] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+ java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1847)
+ java.base/java.lang.ref.ReferenceQueue.await(ReferenceQueue.java:71)
+ java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:143)
+ java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:218)
+ com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:91)
+ java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+ java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+ java.base/java.lang.Thread.run(Thread.java:1583)
+06-Apr-2024 14:46:58.221 INFO [http-nio-8080-exec-235] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+06-Apr-2024 14:46:58.222 INFO [http-nio-8080-exec-235] org.apache.catalina.core.StandardContext.reload Reloading Context with name [/FestaVista] is completed
+06-Apr-2024 14:46:59.563 INFO [mysql-cj-abandoned-connection-cleanup] org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+	java.lang.IllegalStateException: Illegal access: this web application instance has been stopped already. Could not load []. The following stack trace is thrown for debugging purposes as well as to attempt to terminate the thread which caused the illegal access.
+		at org.apache.catalina.loader.WebappClassLoaderBase.checkStateForResourceLoading(WebappClassLoaderBase.java:1349)
+		at org.apache.catalina.loader.WebappClassLoaderBase.getResource(WebappClassLoaderBase.java:981)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.checkThreadContextClassLoader(AbandonedConnectionCleanupThread.java:123)
+		at com.mysql.cj.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:90)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+		at java.base/java.lang.Thread.run(Thread.java:1583)

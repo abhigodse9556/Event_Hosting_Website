@@ -603,3 +603,8 @@
 19-Mar-2024 23:33:28.076 INFO [http-nio-8080-exec-18] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
 19-Mar-2024 23:33:28.081 INFO [http-nio-8080-exec-18] org.apache.catalina.startup.HostConfig.deployDescriptor Deployment of deployment descriptor [C:\Users\abhig\Documents\NetBeansProjects\FestaVista\Other\apache-tomcat-9.0.85-windows-x64\apache-tomcat-9.0.85\conf\Catalina\localhost\FestaVista.xml] has finished in [736] ms
 19-Mar-2024 23:33:28.087 INFO [http-nio-8080-exec-22] org.apache.catalina.util.LifecycleBase.start The start() method was called on component [StandardEngine[Catalina].StandardHost[localhost].StandardContext[/FestaVista]] after start() had already been called. The second call will be ignored.
+19-Mar-2024 23:36:54.821 INFO [main] org.apache.catalina.core.StandardServer.await A valid shutdown command was received via the shutdown port. Stopping the Server instance.
+19-Mar-2024 23:36:54.827 INFO [main] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+19-Mar-2024 23:36:54.831 INFO [main] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+19-Mar-2024 23:36:54.870 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+19-Mar-2024 23:36:54.881 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
