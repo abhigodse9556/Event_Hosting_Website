@@ -46,6 +46,7 @@
             gap: 40px;
         }
 
+        .edit-section,
         .text-section {
             background-color: rgba(0, 0, 0, 0.8);
             color: #fff;
@@ -182,6 +183,33 @@ h4:nth-of-type(3) {
                 width: 100%;
             }
         }
+
+        .poster-actions {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            opacity: 0;            
+        }
+        .image-section:hover .poster-actions {
+            opacity: 1;
+        }
+        .poster-actions button {
+            background-color: rgba(0, 0, 0, 5);
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 14px;
+            margin: 5px 5px;
+        }
+        .poster-actions button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .image-section:hover {
+            transform: translateY(-5px);
+        }
     </style>
    </head>
    
@@ -212,9 +240,9 @@ h4:nth-of-type(3) {
                 </ul>
                 <div class="nav__buttons">
                     <a href="#" class="nav__button-link" onclick="openEditEvent()">Update Profile</a>
-                    <form class="postevent" action="#postevent.jsp" method="post">
+                    <form class="postevent" action="postevent.jsp" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <button type="submit" class="nav__link">Register for Event</button>
+    <button type="submit" class="nav__link">Post an Event</button>
 </form>
                 </div>
 
@@ -280,7 +308,121 @@ h4:nth-of-type(3) {
             <h4>Mobile Number: <%= e_contactnumber %></h4>
             <h5>Will event be recorded?: <%= e_isrecord %></h5>
             <p style="display: none">Organizer: <%= e_organizer %></p>
-            <a href="#" class="view-button" onclick="openEditEvent()">Register for the event</a>
+            <a href="#" class="view-button" onclick="openEditEvent()">EDIT EVENT DETAILS</a>
+    </div>
+    
+<div id="edit-section" class="edit-section" style="display: none;">
+    <form action="Servlet?id=update_event" method="post" enctype="multipart/form-data" style="overflow-y: scroll; scrollbar-width: none;">
+          
+                <div class="item" style="display:none;">
+          <p>Organizer's Username</p>
+          <input type="text" name="eventorganizerusername" value="<%= e_organizer %>" readonly/>
+        </div>
+                <div class="item" style="display:none;">
+          <p>Event ID</p>
+          <input type="text" name="eventID" value="<%= eventID %>" readonly/>
+        </div>
+        <div class="item">
+          <p>Name of Event</p>
+          <input type="text" name="eventname" value="<%= e_name %>"/>
+        </div>
+          <div class="item">
+          <p>Type of Event</p>
+          <select name="event_type" style="background-color: #ffffff">
+            <option value=""></option>
+            <option value="<%= e_type %>" selected><%= e_type %></option>
+            <option value="Sports">Sports</option>
+            <option value="Trekking / Adventures">Trekking / Adventures</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Musical / DJ">Musical / DJ</option>
+            <option value="Business">Business</option>
+            <option value="Educational">Educational</option>
+            <option value="Promos / Expos">Promos / Expos</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Date of Event</p>
+          <input type="text" name="bdate" value="<%= e_date %>"/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Time of Event</p>
+          <input type="text" name="event_time" value="<%= e_time %>"/>
+          <i class="fas fa-clock"></i>
+        </div>
+          <div class="item">
+          <p>Set Duration</p>
+          <input type="text" name="duration" value="<%= e_duration %>"/>
+        </div>
+        <div class="item">
+          <p>Special Attraction</p>
+          <input type="text" name="specialAttraction" value="<%= e_specialattraction %>"/>
+        </div>
+        <div class="item">
+          <p>Description of Event</p>
+          <textarea rows="5" name="description"><%= e_description %></textarea>
+        </div>
+        <div class="item">
+          <p>Organizer's Name</p>
+          <input type="text" name="promoter" value="<%= e_promoter %>"/>
+        </div>
+        <div class="item">
+          <p>Venue Name</p>
+          <input type="text" name="venue_name" value="<%= e_venue %>"/>
+        </div>
+        <div class="item">
+          <p>Venue Address</p>
+          <input type="text" name="add1" value="<%= e_addline1 %>" />
+          <input type="text" name="add2" value="<%= e_addline2 %>" />
+          <div class="city-item">
+            <input type="text" name="city" value="<%= e_city %>" />
+            <input type="text" name="state" value="<%= e_state %>" />
+            <input type="text" name="pin" value="<%= e_post %>" />
+            <input type="text" name="country" value="<%= e_country %>"/>
+          </div>
+        </div>
+        <div class="item">
+          <p>Entry Fees</p>
+          <input type="text" name="ticket_count" value="<%= e_tickets %>"/>
+        </div>
+        
+        
+        <div class="item">
+          <p>Contact Person</p>
+          <div class="name-item">
+            <input type="text" name="firstname" value="<%= e_contactpersonfirst %>" />
+            <input type="text" name="lastname" value="<%= e_conatactpersonlast %>" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Contact Email</p>
+          <input type="text" name="email" value="<%= e_contactemail %>"/>
+        </div>
+        <div class="item">
+          <p>Contact Number</p>
+          <input type="text" name="con_num" value="<%= e_contactnumber %>"/>
+        </div>
+        <div class="question">
+          <p>Will this event be recorded?</p>
+          <div class="question-answer">
+             
+            <div>
+              <input type="radio" value="Yes" id="radio_1" name="recorded" <%= e_isrecord.equals("Yes") ? "checked" : "" %>/>
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+            </div>
+            
+            <div>
+              <input type="radio" value="No" id="radio_2" name="recorded" <%= e_isrecord.equals("No") ? "checked" : "" %>/>
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+                        
+        <div class="btn-block">
+          <button type="submit">SAVE CHANGES</button>
+          <a href="#" class="view-button" onclick="cancelEditEvent()">CANCEL</a>
+        </div>
+      </form>
     </div>
         
             
@@ -292,6 +434,29 @@ h4:nth-of-type(3) {
     %>
            <img src="data:image/jpeg;base64, <%=base64Image%> " alt="Event Poster" class="poster-image">   
     <% } %>
+    <div class="poster-actions">
+                    <button onclick="openEditPoster()">Change Poster</button>
+                </div>
+        </div>
+    <div id="image-edit" class="image-section" style="display: none;">
+        
+            <form action="Servlet?id=update_event-poster" method="post" enctype="multipart/form-data" style="overflow-y: scroll; scrollbar-width: none;">
+                <div class="item" style="display: none;">
+          <p>Organizer's Username</p>
+          <input type="text" name="eventorganizerusername" value="<%= e_organizer %>" readonly/>
+        </div>
+                <div class="item" style="display: none;">
+          <p>Event ID</p>
+          <input type="text" name="eventID" value="<%= eventID %>" readonly/>
+        </div>
+                <div>
+           <label for="poster">Upload Event Poster</label>
+           <input type="file" id="poster" name="poster" accept="image/*" required/>
+         </div>
+                <button type="submit">SAVE CHANGES</button>
+          <a href="#" class="view-button" onclick="cancelEditPoster()">CANCEL</a>
+            </form>
+        </div>
     
     
     

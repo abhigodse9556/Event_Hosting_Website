@@ -68,10 +68,16 @@
         
         
             
-            form{
-                margin-top: 20px;
-                box-shadow: 0 0 0px 0 #ffffff;
-            }
+        form{
+            margin-top: 20px;
+            box-shadow: 0 0 0px 0 #ffffff;
+            width: 100%;
+            padding: 20px;
+            border-radius: 16px;
+            color: #fefefe;
+            font-size: large;
+            font-weight: bold;
+        }
 
         
 
@@ -130,7 +136,6 @@
        
        <% 
     String loggedinuser = request.getParameter("loggedinuser");
-    String loggedinpass = request.getParameter("loggedinpass");
     // Process 'data' as needed
 %>
        
@@ -143,8 +148,6 @@
           <input type="text" name="eventorganizerusername" value="<%=loggedinuser%>" readonly/>
         </div>
                 <div class="item" style="display: none;">
-          <p>Organizer's Password</p>
-          <input type="text" name="eventorganizerpassword" value="<%=loggedinpass%>" readonly/>
         </div>
         <div class="item">
           <p>Name of Event</p>
@@ -254,21 +257,6 @@
             
 </body>
 
-<% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
-<% Boolean eventPostSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
-<% if (loginSuccess != null) { %>
-    <script>
-        var message = <%= loginSuccess ? "'Login successful!'" : "'Error in login. Please try again.'" %>;
-        alert(message);
-    </script>
-<% } %>
-
-<% if (eventPostSuccess != null) { %>
-    <script>
-        var message = <%= eventPostSuccess ? "'Event posted successfully!'" : "'Error in posting. Please try again.'" %>;
-        alert(message);
-    </script>
-<% } %>
 
 <script>
     function openEditProfile(){

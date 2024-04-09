@@ -6,7 +6,6 @@
 <%@ page import="java.io.*, java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %>
-<% String loggedInPassword = (String) request.getAttribute("loggedInPassword"); %>
 <!DOCTYPE html>
 <html>
      <head>
@@ -25,20 +24,6 @@
 
       <title>Event Organizer Dashboard</title>
       <style>
-        /* CSS to fix the size of the image */
-        .poster-image {
-            width: 200px; /* Adjust width as needed */
-            height: 200px; /* Auto adjust height to maintain aspect ratio */
-        }
-        
-        td{
-            padding: 10px;
-            background-color: #9341411c;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
-    color: #cb1414;
-    cursor: pointer;
-        }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,7 +34,10 @@
             display: block;
         }
 
-        
+        .poster-image {
+            width: 200px; /* Adjust width as needed */
+            height: 250px; /* Auto adjust height to maintain aspect ratio */
+        }
         .org_container {
             max-width: 1200px;
             margin: 100px auto;
@@ -72,7 +60,9 @@
             font-size: 24px;
         }
         
-        
+        .heading{
+            height: min-content;
+        }
             
             form{
                 margin-top: 20px;
@@ -87,7 +77,7 @@
             align-items: center;
             justify-content: center;
             padding: 40px;
-            height: 700px;
+            height: 730px;
             
             h2{
                 background-color: rgba(255, 255, 255, 0.1);
@@ -129,6 +119,20 @@
             .cancel-button:hover{
                 background-color: black;
             }
+            .logout-button{
+                background-color: #a82877;
+                color: #fff;
+                padding-top: 5px;
+                border-radius: 5px;
+                padding-bottom: 7px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: 5px;
+                margin-top: 5px;
+            }
+            .logout-button:hover{
+                background-color: black;
+            }
             
 
         /* Events Section */
@@ -138,7 +142,7 @@
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
-            height: 700px;
+            height: 730px;
             overflow-y: scroll;
             scrollbar-width: none;
         }
@@ -149,6 +153,9 @@
             transition: transform 0.3s;
             cursor: pointer;
             position: relative;
+            height: 290px;
+            display: flex;
+            column-gap: 20px;
         }
         .event:hover {
             transform: translateY(-5px);
@@ -164,13 +171,19 @@
         .event-info {
             color: rgba(255, 255, 255, 0.7);
         }
+        .event-details{
+            text-align: center;
+            padding: 50px;
+        }
         .event-actions {
-            text-align: right;
             position: absolute;
             top: 10px;
             right: 10px;
             opacity: 0;
             transition: opacity 0.3s;
+            margin-left: 280px;
+            margin-top: 140px;
+            margin-right: 60px;
         }
         .event:hover .event-actions {
             opacity: 1;
@@ -184,6 +197,7 @@
             cursor: pointer;
             transition: background-color 0.3s;
             font-size: 14px;
+            margin: 5px 5px;
         }
         .event-actions button:hover {
             background-color: rgba(0, 0, 0, 0.7);
@@ -221,7 +235,6 @@
                     <a href="login.jsp" class="nav__button-link">Update Profile</a>
                     <form action="postevent.jsp" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <input type="hidden" name="loggedinpass" value="<%= loggedInPassword %>">
     <button type="submit" class="nav__link">Post an Event</button>
 </form>
                 </div>
@@ -262,16 +275,17 @@
         }
     %>
     <button onclick="openEditProfile()">Edit Profile</button>
+    <a href="index.jsp" class="logout-button">Logout</a>
         </div>
             
             <div id="edit_profile" class="section profile edit">
                 <h2>Edit Profile</h2>
-                <form >
-                    <p><strong>Username:</strong> <input type="text" name="org_user" placeholder="<%= loggedInUsername%>" readonly></p>
-                    <p><strong>Name:</strong> <input type="text" name="org_name" placeholder="<%= organizerName%>"></p>
-                    <p><strong>Organization:</strong> <input type="text" name="org_organization" placeholder="<%= organizerOrg%>"></p>
-                    <p><strong>Email:</strong> <input type="text" name="org_email" placeholder="<%= organizerEmail%>"></p>
-                    <p><strong>Mobile:</strong> <input type="text" name="org_mobile" placeholder="<%= organizerMobile%>"></p>
+                <form id="profileUpdateform" action="Servlet?id=updateOrgProfile" method="post">
+                    <p><strong>Username:</strong> <input type="text" name="org_user" value="<%= loggedInUsername%>" readonly></p>
+                    <p><strong>Name:</strong> <input type="text" name="org_name" value="<%= organizerName%>"></p>
+                    <p><strong>Organization:</strong> <input type="text" name="org_organization" value="<%= organizerOrg%>"></p>
+                    <p><strong>Email:</strong> <input type="text" name="org_email" value="<%= organizerEmail%>"></p>
+                    <p><strong>Mobile:</strong> <input type="text" name="org_mobile" value="<%= organizerMobile%>"></p>
                     <button type="submit">Save Changes</button>
                     <a class="cancel-button" href="#" onclick="cancelEditProfile()">Cancel</a>
                 </form>
@@ -279,24 +293,50 @@
 
         <!-- Events Section -->
         <div class="section events">
-            <h2>Event History</h2>
+            <div class="heading">
+                <h2>Event History</h2>
+            </div>
             <%
             List<DataObject> dataList = (List<DataObject>) request.getAttribute("dataList");
             for (DataObject data : dataList) {
         %>
             <div class="event">
-                
+                <%
+                    Blob posterBlob = data.getPoster();
+                    if (posterBlob != null) {
+                        try (InputStream inputStream = posterBlob.getBinaryStream()) {
+                            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                            byte[] buffer = new byte[4096];
+                            int bytesRead = -1;
+                            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                                outputStream.write(buffer, 0, bytesRead);
+                            }
+                            byte[] imageBytes = outputStream.toByteArray();
+                            String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                            out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+                        } catch (SQLException | IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                %>
+                <div class="event-details">
                 <h3><%= data.getName() %></h3>
                 <p class="event-info"><strong>Date:</strong> <%= data.getDate() %></p>
-                <p class="event-info"><strong>ID:</strong> <%= data.getId() %></p>
+                
+                </div>
                  <form id="deleteEvent_<%= data.getId() %>" action="Servlet?id=deleteEvent" method="post" style="display:none;">
                     <input type="hidden" name="eventID" value="<%= data.getId() %>">
                     <input type="hidden" name="eventOrg" value="<%= loggedInUsername %>">
-                    <input type="hidden" name="eventOrgPass" value="<%= loggedInPassword %>">
                     <button id="deleteButton_<%= data.getId() %>" type="submit">Delete</button>
                 </form>
+                 <form id="viewEvent_<%= data.getId() %>" action="Servlet?id=event_details" method="post" style="display:none;">
+                    <input type="hidden" name="loggedInUsername" value="<%= loggedInUsername %>">
+                    <input type="hidden" name="event-id" value="<%= data.getId() %>">
+                    <input type="hidden" name="viewer" value="organizer">
+                    <button id="viewButton_<%= data.getId() %>" type="submit">View</button>
+                </form>
                 <div class="event-actions">
-                    <button>Edit</button>
+                    <button onclick="viewEvent(<%= data.getId() %>)">View</button>
                     <button onclick="showConfirmation(<%= data.getId() %>)">Delete</button>
                 </div>
             </div>
@@ -310,29 +350,6 @@
    
 </body>
 
-<% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
-<% Boolean eventPostSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
-<% Boolean deletionSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
-<% if (loginSuccess != null) { %>
-    <script>
-        var message = <%= loginSuccess ? "'Login successful!'" : "'Error in login. Please try again.'" %>;
-        alert(message);
-    </script>
-<% } %>
-
-<% if (eventPostSuccess != null) { %>
-    <script>
-        var message = <%= eventPostSuccess ? "'Event posted successfully!'" : "'Error in posting. Please try again.'" %>;
-        alert(message);
-    </script>
-<% } %>
-<% if (deletionSuccess != null) { %>
-    <script>
-        var message = <%= deletionSuccess ? "'Event deleted successfully!'" : "'Error in deleting. Please try again.'" %>;
-        alert(message);
-    </script>
-<% } %>
-
 <script>
     function openEditProfile(){
         document.getElementById("edit_profile").style.display = "flex";
@@ -343,14 +360,14 @@
         document.getElementById("profile").style.display = "flex";
     }
     function showConfirmation(eventID) {
-                // Display a confirmation message box
-                var confirmed = confirm("Are you sure you want to delete event?");
-                // If the user confirms, submit the form
-                if (confirmed) {
-                    document.getElementById("deleteButton_" + eventID).click();
-                }
-            }
-
+        var confirmed = confirm("Are you sure you want to delete event?");
+        if (confirmed) {
+            document.getElementById("deleteButton_" + eventID).click();
+        }
+    }
+    function viewEvent(eventID){
+        document.getElementById("viewButton_" + eventID).click();
+    }
 </script>
    
 <script src="assets/js/gsap.min.js"></script>
