@@ -25,21 +25,37 @@
       <style>
           
           .poster-image{
-              width: 200px;
-              height: 300px;
+              width: 580px;
+              height: 85%;
+              position: fixed;
+              margin-left: 45%;
           }
           
           .all_events{
-              display: block;
+              display: flex;
               flex-wrap: wrap;
               justify-content: space-between;
-              
-              h2{
-                  position: fixed;
-              }
           }
           
-          
+          .details_text{
+              width: 50%;
+              
+              h1{
+                  text-align: center;
+              }
+              
+              h3{
+                  text-align: right;
+              }
+              
+              h4{
+                  margin: 15px 1px;
+              }
+              
+              p{
+                  text-align: justify;
+              }
+          }
       </style>
    </head>
    
@@ -96,6 +112,8 @@
                 
 <div class="all_events">
     
+    <div class="details_text">
+
     <%
         // Display event details if available in request attributes
         String e_name = (String) request.getAttribute("e_name");
@@ -123,34 +141,29 @@
 
         if (e_name != null && e_date != null) {
     %>
-            <p>Name: <%= e_name %></p>
-            <p>Category: <%= e_type %></p>
-            <p>Date: <%= e_date %></p>
-            <p>Time: <%= e_time %></p>
-            <p>Duration: <%= e_duration %></p>
-            <p>Special Attraction: <%= e_specialattraction %></p>
-            <p>Description: <%= e_description %></p>
-            <p>Promoter: <%= e_promoter %></p>
-            <p>Venue: <%= e_venue %></p>
-            <p>Address line 1: <%= e_addline1 %></p>
-            <p>Address line 2: <%= e_addline2 %></p>
-            <p>City: <%= e_city %></p>
-            <p>State: <%= e_state %></p>
-            <p>Postal Code: <%= e_post %></p>
-            <p>Country: <%= e_country %></p>
-            <p>Available Tickets: <%= e_tickets %></p>
-            <p>Contact Person First Name: <%= e_contactpersonfirst %></p>
-            <p>Contact Person Last Name: <%= e_conatactpersonlast %></p>
-            <p>Email ID: <%= e_contactemail %></p>
-            <p>Mobile Number: <%= e_contactnumber %></p>
-            <p>Will event be recorded?: <%= e_isrecord %></p>
-            <p>Organizer: <%= e_organizer %></p>
+            <h1><%= e_name %></h1>
+            <h4>Category: <%= e_type %></h4>
+            <h3>Date & Time: <%= e_date %> at <%= e_time %></h3>
+            <h3>Duration: <%= e_duration %></h3>
+            <h4>Special Attraction: <%= e_specialattraction %></h4>
+            <p><b>Description:</b> <%= e_description %></p>
+            <h4>Promoter: <%= e_promoter %></h4>
+            <h4>Venue Name: <%= e_venue %></h4>
+            <p><b>Venue address:</b> <%= e_addline1 %>, <%= e_addline2 %>, <%= e_city %>, <%= e_state %>, <%= e_country %>, <%= e_post %></p>
+            <h4>Entry fees: <%= e_tickets %></h4>
+            <h4>Contact Person: <%= e_contactpersonfirst %> <%= e_conatactpersonlast %></h4>
+            <h4>Email ID: <%= e_contactemail %></h4>
+            <h4>Mobile Number: <%= e_contactnumber %></h4>
+            <h5>Will event be recorded?: <%= e_isrecord %></h5>
+            <p style="display: none">Organizer: <%= e_organizer %></p>
+    </div>
+    
             <% Blob e_poster = (Blob) request.getAttribute("e_poster");
        if (e_poster != null) {
            byte[] imageBytes = e_poster.getBytes(1, (int) e_poster.length());
            String base64Image = javax.xml.bind.DatatypeConverter.printBase64Binary(imageBytes);
     %>
-           <img src="data:image/jpeg;base64, <%=base64Image%> " alt="Event Poster">
+           <img src="data:image/jpeg;base64, <%=base64Image%> " alt="Event Poster" class="poster-image">   
     <% } %>
     <%
         }
@@ -158,12 +171,12 @@
 </div>
 
                 
-                <div class="home__images">
+<!--                <div class="home__images">
                     <img src="assets/img/img-44.png" alt="image" class="home__img-4"  style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-3.png" alt="image" class="home__img-3"  style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-2.png" alt="image" class="home__img-2"  style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-11.png" alt="image" class="home__img-1"  style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>
+                </div>-->
             </div>
     
     

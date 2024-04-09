@@ -29,6 +29,8 @@ public class Servlet extends HttpServlet {
         String dbUser = "root";
         String dbPassword = "root123";
         String user;
+        Boolean eventPostSuccess = null;
+        Boolean eventDeleteSuccess = null;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -46,6 +48,8 @@ public class Servlet extends HttpServlet {
             case "all_events" : displayAllEvents(request, response);
             break;
             case "event_details" : displayEventsDetails(request, response);
+            break;
+            case "deleteEvent" : deleteAnEvent(request, response);
             break;
             default : {
             }
@@ -138,36 +142,37 @@ public class Servlet extends HttpServlet {
                     String mobile = resultSet.getString("org_mobile");
                     String email = resultSet.getString("org_email");
                     
-                    request.setAttribute("loginSuccess", true);
+                    
                     request.setAttribute("loggedInUsername", username);
+                    request.setAttribute("loggedInPassword", password);
                     request.setAttribute("organizerName", name);
                     request.setAttribute("organizerEmail", email);
                     request.setAttribute("organizerOrg", org);
                     request.setAttribute("organizerMobile", mobile);
                     
-//                    String sql2 = "SELECT * FROM events WHERE org_username = ?";
-//            try (PreparedStatement statement1 = connection.prepareStatement(sql2)) {
-//                statement1.setString(1, user);
-//                
-//
-//                // Execute the query
-//                ResultSet resultSet1 = statement1.executeQuery();
-//                
-//
-//                if (resultSet1.next()) {
-//                    // Successful login
-//                    
-//                    String event_name = resultSet1.getString("event_name");
-//                    String event_date = resultSet1.getString("event_date");
-//                    Blob event_poster_blob = (Blob) resultSet1.getBlob("poster");
-//                    
-//                    request.setAttribute("eventName", event_name);
-//                    request.setAttribute("eventDate", event_date); 
-//                    request.setAttribute("eventPoster", event_poster_blob);
-//                }
-//
-//                
-//            }
+                    if(null==eventPostSuccess){
+                       request.setAttribute("loginSuccess", true);
+                    }
+                    else if(eventPostSuccess==true){
+                       request.setAttribute("loginSuccess", null);
+                       request.setAttribute("eventPostSuccess", true);
+                    }
+                    else if(eventPostSuccess==false){
+                       request.setAttribute("loginSuccess", null);
+                       request.setAttribute("eventPostSuccess", false);
+                    }
+                    
+                    if(null==eventDeleteSuccess){
+                       request.setAttribute("loginSuccess", true);
+                    }
+                    else if(eventDeleteSuccess==true){
+                       request.setAttribute("loginSuccess", null);
+                       request.setAttribute("deletionSuccess", true);
+                    }
+                    else if(eventDeleteSuccess==false){
+                       request.setAttribute("loginSuccess", null);
+                       request.setAttribute("deletionSuccess", false);
+                    }
             
             List<DataObject> dataList = new ArrayList<>();
 
@@ -204,7 +209,7 @@ public class Servlet extends HttpServlet {
         // Set the data list in request attribute
         request.setAttribute("dataList", dataList);
                     
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("organizer.jsp");
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("organizerdashboard.jsp");
                     dispatcher.forward(request, response);  
                     
                 } else {
@@ -223,16 +228,16 @@ public class Servlet extends HttpServlet {
         // Handle exceptions (e.g., log or display an error message)
         e.printStackTrace();
     }
+      
+}
     
-    
-    
-    
-    
-    }
-    
+
+
     private void handleEventPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Retrieve form parameters
+        String eventorgName = request.getParameter("eventorganizerusername");
+        String eventorgPass = request.getParameter("eventorganizerpassword");
         String eventName = request.getParameter("eventname");
         String eventType = request.getParameter("event_type");
         String eventDate = request.getParameter("bdate");
@@ -296,7 +301,7 @@ public class Servlet extends HttpServlet {
                     eventStatement.setString(19, contactEmail);
                     eventStatement.setString(20, contactNumber);
                     eventStatement.setString(21, recorded);
-                    eventStatement.setString(22, user);
+                    eventStatement.setString(22, eventorgName);
                     if (filePart == null) {
                         eventStatement.setNull(23, java.sql.Types.BLOB);
                     } else {
@@ -310,14 +315,16 @@ public class Servlet extends HttpServlet {
                     if (rowsInsertedEvent > 0) {
                         // Set a response attribute indicating success
                         request.setAttribute("eventPostSuccess", true);
+                        eventPostSuccess = true;
+                        
+                        
                     } else {
                         // Set a response attribute indicating failure
                         request.setAttribute("eventPostSuccess", false);
+                        eventPostSuccess = false;
                     }
-
-                    // Forward to the same JSP page or a confirmation page
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
-                    dispatcher.forward(request, response);
+                    request.getRequestDispatcher("autoredirectpage.jsp?username="+eventorgName+"&password="+eventorgPass).forward(request, response);
+                    
                     
 
                     
@@ -326,15 +333,12 @@ public class Servlet extends HttpServlet {
         } catch (ClassNotFoundException | SQLException e) {
             // Handle exceptions (e.g., log or display an error message)
             e.printStackTrace();
-            if("Duplicate entry 'Dj N' for key 'events.event_name_UNIQUE'".equals(e.getMessage())){
-             request.setAttribute("eventName", "The event name is not available! Use another one.....");
-            }
-            else{
-                request.setAttribute("eventName", "Something went wrong! Event posting failed...........");
-            }     
-            RequestDispatcher dispatcher = request.getRequestDispatcher("success.jsp");
-            dispatcher.forward(request, response);
+            eventPostSuccess = false;
+            request.getRequestDispatcher("autoredirectpage.jsp?username="+eventorgName+"&password="+eventorgPass).forward(request, response);
         }
+        
+        
+        
     }
    
     
@@ -705,5 +709,50 @@ public class Servlet extends HttpServlet {
     }
     
     }
+        
+private void deleteAnEvent(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    // Extract event ID from request parameter
+    int eID = Integer.parseInt(request.getParameter("eventID"));
+    String username = request.getParameter("eventOrg");
+    String password = request.getParameter("eventOrgPass");
+
+    try {
+        // Load JDBC driver
+        Class.forName("com.mysql.cj.jdbc.Driver");
+
+        // Establish connection
+        try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
+            // Prepare SQL query
+            String sql = "DELETE FROM events WHERE event_id = ?";
+            try (PreparedStatement statement = connection.prepareStatement(sql)) {
+                // Set event ID parameter
+                statement.setInt(1, eID);
+
+                // Execute query
+                int rowsDeleted = statement.executeUpdate();
+
+                // Check result of deletion
+                if (rowsDeleted > 0) {
+                    // Set success attribute
+                    request.setAttribute("deletionSuccess", true);
+                    eventDeleteSuccess = true;
+                } else {
+                    // Set failure attribute
+                    request.setAttribute("deletionSuccess", false);
+                    eventDeleteSuccess = false;
+                }
+
+                // Forward to the same JSP page
+                request.getRequestDispatcher("autoredirectpage.jsp?username="+username+"&password="+password).forward(request, response);
+            }
+        }
+    } catch (ClassNotFoundException | SQLException | NumberFormatException e) {
+        // Handle exceptions
+        e.printStackTrace();
+        eventDeleteSuccess = false;
+    }
+}
+
     
 }

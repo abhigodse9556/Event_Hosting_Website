@@ -195,7 +195,7 @@
           </div>
         </div>
         <div class="item">
-          <p>Available Tickets</p>
+          <p>Entry Fees</p>
           <input type="text" name="ticket_count"/>
         </div>
         
@@ -247,7 +247,7 @@
             <!-- Overview of posted events goes here -->
             <!-- Display poster image, event name, date, etc. -->
             <div class="event-list" style="display: flex;">
-            <div class="event-overview" onclick="showDetailedEvent(1)">
+            <div class="event-overview" onclick="showDetailedEvent1(1)">
                 <!-- Event Overview Content -->
                 <% Blob eventPoster = (Blob) request.getAttribute("eventPoster");
        if (eventPoster != null) {
@@ -264,7 +264,7 @@
                 <%=eventDate%>
             </div>
             
-            <div class="event-overview" onclick="showDetailedEvent(1)">
+            <div class="event-overview" onclick="showDetailedEvent1(1)">
                 <!-- Event Overview Content -->
                 <% Blob eventPoster2 = (Blob) request.getAttribute("eventPoster");
        if (eventPoster2 != null) {
@@ -295,10 +295,10 @@
             for (DataObject data : dataList) {
         %>
         <tr>
-            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getId() %></td>
-            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getName() %></td>
-            <td onclick="showDetailedEvent(<%= data.getId() %>)"><%= data.getDate() %></td>
-            <td onclick="showDetailedEvent(<%= data.getId() %>)">
+            <td onclick="showDetailedEvent1(<%= data.getId() %>)"><%= data.getId() %></td>
+            <td onclick="showDetailedEvent1(<%= data.getId() %>)"><%= data.getName() %></td>
+            <td onclick="showDetailedEvent1(<%= data.getId() %>)"><%= data.getDate() %></td>
+            <td onclick="showDetailedEvent1(<%= data.getId() %>)">
                  <%
                     Blob posterBlob = data.getPoster();
                     if (posterBlob != null) {
@@ -362,7 +362,16 @@
     </script>
 <% } %>
 
-
+<script>
+    function showDetailedEvent1(eventId) {
+    document.getElementById("initial-image").style.display = "none";
+    document.getElementById("organizer-profile").style.display = "none";
+    document.getElementById("event-form").style.display = "block";
+    document.getElementById("event-history").style.display = "none";
+    document.getElementById("detailed-event").style.display = "none";
+            // Use the eventId to fetch and display detailed event information
+}
+</script>
    
 <script src="assets/js/gsap.min.js"></script>
 

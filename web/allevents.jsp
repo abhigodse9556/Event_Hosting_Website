@@ -58,7 +58,6 @@
           
           .events-box{
               width: 25%;
-              cursor: pointer;
           }
           
           .poster-image{
@@ -66,6 +65,9 @@
               height: 300px;
           }
          
+          button{
+              cursor: pointer;
+          }
       </style>
    </head>
    
@@ -409,7 +411,6 @@
     for (PromosObject data : promoList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {

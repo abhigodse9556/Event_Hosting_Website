@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Design by foolishdeveloper.com -->
     <title>Event Management Website</title>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
@@ -200,12 +199,13 @@ button{
         <label for="password">Password</label>
         <input type="password" placeholder="Password" id="password" name="password">
 
-        <button type="submit">Log In</button>
+        <button id="submitButton" type="submit">Log In</button>
         <div class="social">
           <div class="go"><i class="fab fa-google"></i>  Google</div>
           <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
         </div>
     </form>
+
 </body>
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% if (loginSuccess != null) { %>
@@ -215,6 +215,10 @@ button{
     </script>
 <% } %>
 
+
+
+    
+    
 <script src="assets/js/gsap.min.js"></script>
 
 <!-- MAIN JS -->
