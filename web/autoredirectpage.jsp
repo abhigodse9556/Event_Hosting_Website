@@ -27,7 +27,7 @@ function autoredirect(){
 }
     </script>
         
-      <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
+<% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% Boolean eventPostSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
 <% Boolean deletionSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
 <% Boolean updatationSuccess = (Boolean) request.getAttribute("updatationSuccess"); %>

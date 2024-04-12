@@ -159,7 +159,6 @@ button{
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
                     <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
                 </div>
 
@@ -201,8 +200,10 @@ button{
 
         <button id="submitButton" type="submit">Log In</button>
         <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Google</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+            <a href="register.jsp" class="go">Don't have an account Register</a>
+            <a href="index.jsp" class="fb">Cancel</a>
+<!--          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>-->
         </div>
     </form>
 
@@ -210,7 +211,7 @@ button{
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% if (loginSuccess != null) { %>
     <script>
-        var message = <%= loginSuccess ? "'Login successful!'" : "'Please login again.'" %>;
+        var message = <%= loginSuccess ? "'Login successful!'" : "'Invalid Crediantials'" %>;
         alert(message);
     </script>
 <% } %>

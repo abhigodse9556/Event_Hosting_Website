@@ -337,7 +337,7 @@ public class Servlet extends HttpServlet {
         String state = request.getParameter("state");
         String postalCode = request.getParameter("pin");
         String country = request.getParameter("country");
-        String availableTickets = request.getParameter("ticket_count");
+        String entry_fees = request.getParameter("entry_fees");
         String contactFirstName = request.getParameter("firstname");
         String contactLastName = request.getParameter("lastname");
         String contactEmail = request.getParameter("email");
@@ -358,7 +358,7 @@ public class Servlet extends HttpServlet {
                 // Prepare SQL query for event insertion
                 String eventInsertSql = "INSERT INTO events (event_name, event_type, event_date, event_time, set_time, " +
                                         "special_attraction, event_description, promoter_name, venue_name, venue_address1, " +
-                                        "venue_address2, city, state, postal_code, country, available_tickets, " +
+                                        "venue_address2, city, state, postal_code, country, entry_fees, " +
                                         "contact_first_name, contact_last_name, contact_email, contact_number, recorded, org_username, poster) " +
                                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 
@@ -379,7 +379,7 @@ public class Servlet extends HttpServlet {
                     eventStatement.setString(13, state);
                     eventStatement.setString(14, postalCode);
                     eventStatement.setString(15, country);
-                    eventStatement.setString(16, availableTickets);
+                    eventStatement.setString(16, entry_fees);
                     eventStatement.setString(17, contactFirstName);
                     eventStatement.setString(18, contactLastName);
                     eventStatement.setString(19, contactEmail);
@@ -446,7 +446,7 @@ public class Servlet extends HttpServlet {
         String state = request.getParameter("state");
         String postalCode = request.getParameter("pin");
         String country = request.getParameter("country");
-        String availableTickets = request.getParameter("ticket_count");
+        String entry_fees = request.getParameter("entry_fees");
         String contactFirstName = request.getParameter("firstname");
         String contactLastName = request.getParameter("lastname");
         String contactEmail = request.getParameter("email");
@@ -464,7 +464,7 @@ public class Servlet extends HttpServlet {
                 // Prepare SQL query for event insertion
                 String eventInsertSql = "UPDATE events SET event_name = ?, event_type = ?, event_date = ?, event_time = ?, set_time = ?, " +
                                         "special_attraction = ?, event_description = ?, promoter_name = ?, venue_name = ?, venue_address1 = ?, " +
-                                        "venue_address2 = ?, city = ?, state = ?, postal_code = ?, country = ?, available_tickets = ?, " +
+                                        "venue_address2 = ?, city = ?, state = ?, postal_code = ?, country = ?, entry_fees = ?, " +
                                         "contact_first_name = ?, contact_last_name = ?, contact_email = ?, contact_number = ?, recorded = ?, org_username = ?" +
                                         "WHERE event_id = ?";
                 
@@ -485,7 +485,7 @@ public class Servlet extends HttpServlet {
                     eventStatement.setString(13, state);
                     eventStatement.setString(14, postalCode);
                     eventStatement.setString(15, country);
-                    eventStatement.setString(16, availableTickets);
+                    eventStatement.setString(16, entry_fees);
                     eventStatement.setString(17, contactFirstName);
                     eventStatement.setString(18, contactLastName);
                     eventStatement.setString(19, contactEmail);
@@ -909,7 +909,7 @@ public class Servlet extends HttpServlet {
         String e_state = resultSet.getString(14);
         String e_post = resultSet.getString(15);
         String e_country = resultSet.getString(16);
-        int e_tickets = resultSet.getInt(17);
+        String e_tickets = resultSet.getString(17);
         String e_contactpersonfirst = resultSet.getString(18);
         String e_conatactpersonlast = resultSet.getString(19);
         String e_contactemail = resultSet.getString(20);

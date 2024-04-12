@@ -18,6 +18,39 @@
       <link rel="stylesheet" href="assets/css/aboutpage.css">
 
       <title>Event Management Website</title>
+      
+      <style>
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
+            color: #fff;
+            display: block;
+        }
+        
+        .about_container{
+            height: 880px;
+            overflow: auto;
+            scrollbar-width: none;
+            padding: 20px;
+        }
+        
+        .con-btn-div{
+            margin: 5px;
+        }
+        
+        .con_button{
+            background: linear-gradient(to right bottom, #fff, #02effe);
+            border-width: 0px;
+            width: 100%;
+            padding: 5px;
+            font-size: small;
+            font-weight: bold;
+            color: #fff;
+        }
+      </style>
+      
    </head>
    
    <!--==================== HEADER ====================-->
@@ -63,16 +96,16 @@
         </nav>
          
       </header>
-<body>
+
 <main class="main">
-    <div class="home_container container">
+    <div class="about_container">
         
-        <div class="home__images">
+<!--        <div class="home__images">
             <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>
+                </div>-->
         
 <div class="about-section">
   <h1>Welcome to Festa Vista</h1><br>
@@ -100,7 +133,7 @@
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>
-        <p><button class="button" onclick="gotoContact()">Contact</button></p>
+        <div class="con-btn-div"><button class="con_button" onclick="gotoContact()">Contact</button></div>
       </div>
     </div>
   </div>
@@ -113,7 +146,7 @@
         <p class="title">Art Director</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>mike@example.com</p>
-        <p><button class="button" onclick="gotoContact()">Contact</button></p>
+        <div class="con-btn-div"><button class="con_button" onclick="gotoContact()">Contact</button></div>
       </div>
     </div>
   </div>
@@ -126,7 +159,7 @@
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
-        <p><button class="button" onclick="gotoContact()">Contact</button></p>
+        <div class="con-btn-div"><button class="con_button" onclick="gotoContact()">Contact</button></div>
       </div>
     </div>
   </div>
@@ -139,7 +172,7 @@
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
-        <p><button class="button" onclick="gotoContact()">Contact</button></p>
+        <div class="con-btn-div"><button class="con_button" onclick="gotoContact()">Contact</button></div>
       </div>
     </div>
   </div>

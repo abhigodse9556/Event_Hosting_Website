@@ -1,11 +1,18 @@
+<%@page import="ServersidePackages.PromosObject"%>
+<%@page import="ServersidePackages.EduObject"%>
+<%@page import="ServersidePackages.BusinessObject"%>
+<%@page import="ServersidePackages.CulturalObject"%>
+<%@page import="ServersidePackages.TrekkObject"%>
+<%@page import="ServersidePackages.MusicObject"%>
 <%@page import="ServersidePackages.SportObject"%>
 <%@page import="java.util.Base64"%>
 <%@page import="ServersidePackages.DataObject"%>
 <%@page import="ServersidePackages.DataObject"%>
 <%@page import="java.util.List"%>
 <%@page import="com.mysql.cj.jdbc.Blob"%>
-<%@ page import="java.io.*, java.sql.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="java.io.*, java.sql.*" %>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
+<% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %> 
 <!DOCTYPE html>
 <html>
      <head>
@@ -23,79 +30,98 @@
 
       <title>Event Management Website</title>
       <style>
-          th{
-              color: red;
-              background-color: rgba(0,0,0,0.5);
-          }
-              
-          .name, 
-          .date{
-              width: 200px;
-              text-align: center;
-              padding: 20px auto;
-          }
-          
-          td{
-              font-size: large;
-              font-weight: 900;
-              text-align: center;
-              padding: 20px;
-          }
-          
-          .poster-image{
-              width: 200px;
-              height: 300px;
-          }
-          
+           body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
+            color: #fff;
+            display: block;
+        }
+        
+        .event__container{
+            margin: 100px 20px 0px;
+            height: 780px;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        
+        .event-selector{
+            text-align: end;
+            margin: 10px 60px 10px 20px;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        
+        .event-selector select{
+            font-size: medium;
+        }
+        
+        .event-selector select:hover{
+            color: #f09819;
+        }
+        
           .all_events{
+              display: grid;
+              gap: 24px;
+              grid-template-columns: repeat(5, 1fr);
+              
+              h2{
+                  position: fixed;
+              }
+          } 
+          
+          .sport_events,
+          .dj_events,
+          .business_events,
+          .cultural_events,
+          .edu_events,
+          .promo_events,
+          .trekk_events{
               display: none;
-              flex-wrap: wrap;
-              justify-content: space-between;
+              gap: 24px;
+              grid-template-columns: repeat(5, 1fr);
               
               h2{
                   position: fixed;
               }
           }
           
-          .slider {
-              overflow: hidden;
-              white-space: nowrap;
+          .events-box{
+              padding: 20px;
+              background: linear-gradient(to right bottom, #3231a4, #319da4c9);
+              border-radius: 10px;
+              text-align: center;
+              color: #b4fff1;
+              
+              .show_btn{
+                display: none;
+              }
+          }
+          .events-box:hover{
+              background: linear-gradient(to right bottom, hsl(258.09deg 76.62% 70.36%), #dcacacba);
+              
+              .show_btn{
+                display: flex;
+                border-style: hidden;
+                font-size: 18px;
+                margin: auto;
+              }
           }
           
-          .slider .events-box{
-              display: inline-block;
-              vertical-align: top;
-              width: calc(25% - 20px);
-              margin-right: 20px;
-              margin-top: 40px;
+          
+          
+          
+          .poster-image{
+              width: 200px;
+              height: 300px;
+              margin: auto;
           }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 10px;
-            z-index: 1000;
-        }
-
-        .prev {
-            left: 0;
-            margin-left: 100px;
-        }
-
-        .next {
-            right: 0;
-            margin-right: 100px;
-        }
-        
-        .event_slider{
-            margin-left: 20px;
-            margin-right: 20px;
-        }
+         
+          button{
+              cursor: pointer;
+          }
       </style>
    </head>
    
@@ -125,8 +151,8 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
-                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                    <a href="participantdashboard.jsp" class="nav__button-ghost"><%= loggedInUsername %></a>
+                    <a href="index.jsp" class="nav__button-link">Logout</a>
                 </div>
 
                 <!--close button-->
@@ -148,16 +174,30 @@
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home">
-            <div class="event__container container" style="margin-top: 100px">
+            <div class="event__container">
                 
-<div class="all_events">
+                <div class="event-selector">
+                    <p>Event Categories</p>
+          <select id="event_type" name="event_type" onchange="showSelectedCategory()">
+            <option value=""></option>
+            <option value="All Events" selected>All Events</option>
+            <option value="Sports">Sports</option>
+            <option value="Trekking / Adventures">Trekking / Adventures</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Musical / DJ">Musical / DJ</option>
+            <option value="Business">Business</option>
+            <option value="Educational">Educational</option>
+            <option value="Promos / Expos">Promos / Expos</option>
+          </select>
+                </div>
+                              
+<div id="all_events" class="all_events">
     
     <% 
     List<DataObject> dataList = (List<DataObject>) request.getAttribute("dataList");
     for (DataObject data : dataList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -176,31 +216,25 @@
             }
         }
         %>
-        <%= data.getName() %><br>
-        <%= data.getDate() %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
     </div>
     <% 
     }
     %>
 </div>
-<div class="event_slider">
-<h2>All Events</h2>
-<div id="all_event_slider" class="slider">
-    <!-- Slider content will be dynamically generated here -->
-</div>
 
-<button id="prevBtn" class="prev" onclick="moveSlider(-1)">&#10094;</button>
-<button id="nextBtn" class="next" onclick="moveSlider(1)">&#10095;</button>
-
-</div>
-<div class="all_events">
+<div id="sport_events" class="sport_events">
     
     <% 
     List<SportObject> sportList = (List<SportObject>) request.getAttribute("sportList");
     for (SportObject data : sportList) {
     %>
-    <div class="sport-events-box">
-        <h1><%= data.getId() %></h1>
+    <div class="events-box">
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -219,116 +253,339 @@
             }
         }
         %>
-        <%= data.getName() %><br>
-        <%= data.getDate() %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
     </div>
     <% 
     }
     %>
 </div>
-<div class="sport_event_slider">
-<h2>Sport Events</h2>
-<div id="sport_event_slider" class="sportslider">
-    <!-- Slider content will be dynamically generated here -->
+
+<div id="dj_events" class="dj_events">
+    
+    <% 
+    List<MusicObject> musicList = (List<MusicObject>) request.getAttribute("musicList");
+    for (MusicObject data : musicList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
 </div>
 
-<button id="prevBtn1" class="prev1" onclick="moveSlider1(-1)">&#10094;</button>
-<button id="nextBtn1" class="next1" onclick="moveSlider1(1)">&#10095;</button>
 
+<div id="trekk_events" class="trekk_events">
+    
+    <% 
+    List<TrekkObject> trekkList = (List<TrekkObject>) request.getAttribute("trekkList");
+    for (TrekkObject data : trekkList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
 </div>
 
+<div id="cultural_events" class="cultural_events">
+    
+    <% 
+    List<CulturalObject> culturalList = (List<CulturalObject>) request.getAttribute("culturalList");
+    for (CulturalObject data : culturalList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
+</div>
 
+<div id="business_events" class="business_events">
+    
+    <% 
+    List<BusinessObject> businessList = (List<BusinessObject>) request.getAttribute("businessList");
+    for (BusinessObject data : businessList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+       <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
+</div>
 
+<div id="edu_events" class="edu_events">
+    
+    <% 
+    List<EduObject> eduList = (List<EduObject>) request.getAttribute("eduList");
+    for (EduObject data : eduList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
+</div>
 
+<div id="promo_events" class="promo_events">
     
-  
+    <% 
+    List<PromosObject> promoList = (List<PromosObject>) request.getAttribute("promoList");
+    for (PromosObject data : promoList) {
+    %>
+    <div class="events-box">
+        <% 
+        Blob posterBlob1 = data.getPoster();
+        if (posterBlob1 != null) {
+            try (InputStream inputStream = posterBlob1.getBinaryStream()) {
+                ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+                byte[] buffer = new byte[4096];
+                int bytesRead = -1;
+                while ((bytesRead = inputStream.read(buffer)) != -1) {
+                    outputStream.write(buffer, 0, bytesRead);
+                }
+                byte[] imageBytes = outputStream.toByteArray();
+                String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+                out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
+            } catch (SQLException | IOException e) {
+                e.printStackTrace();
+            }
+        }
+        %>
+        <h1><%= data.getName() %></h1>
+        <h1><%= data.getDate() %></h1>
+        <form action="Servlet?id=event_details" method="post">
+    <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <button type="submit" class="show_btn">Show Details</button>
+</form>
+    </div>
+    <% 
+    }
+    %>
+</div>
     
-    
-    
-                   
-                
-                <div class="home__images">
-                    <img src="assets/img/img-44.png" alt="image" class="home__img-4"  style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-3.png" alt="image" class="home__img-3"  style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-2.png" alt="image" class="home__img-2"  style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-11.png" alt="image" class="home__img-1"  style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>
             </div>
-    
-    
          </section>
       </main>
       
      
    </body>
    
+
    <script>
-let slideIndex = 0;
-const slider = document.getElementById("all_event_slider");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
+       function showSelectedCategory() {
+            var selectedCategory = document.getElementById("event_type").value;
+            var all_events = document.getElementById("all_events");
+            var sport_events = document.getElementById("sport_events");
+            var dj_events = document.getElementById("dj_events");
+            var trekk_events = document.getElementById("trekk_events");
+            var cultural_events = document.getElementById("cultural_events");
+            var business_events = document.getElementById("business_events");
+            var edu_events = document.getElementById("edu_events");
+            var promo_events = document.getElementById("promo_events");
+            
 
-// Function to move the slider
-function moveSlider(n) {
-    const eventTables = document.querySelectorAll(".events-box");
-    const slidesPerPage = 4;
-    const totalSlides = eventTables.length;
-    const maxSlides = Math.ceil(totalSlides / slidesPerPage);
-    
-    slideIndex += n;
-    if (slideIndex < 0) {
-        slideIndex = maxSlides - 1;
-    }
-    if (slideIndex >= maxSlides) {
-        slideIndex = 0;
-    }
-
-    const startIndex = slideIndex * slidesPerPage;
-    const endIndex = Math.min(startIndex + slidesPerPage, totalSlides);
-
-    slider.innerHTML = "";
-    for (let i = startIndex; i < endIndex; i++) {
-        slider.appendChild(eventTables[i].cloneNode(true));
-    }
-}
-
-let slideIndex1 = 0;
-const slider1 = document.getElementById("sport_event_slider");
-const prevBtn1 = document.getElementById("prevBtn1");
-const nextBtn1 = document.getElementById("nextBtn1");
-
-// Function to move the slider
-function moveSlider1(n) {
-    const eventTables1 = document.querySelectorAll(".sport-events-box");
-    const slidesPerPage1 = 4;
-    const totalSlides1 = eventTables1.length;
-    const maxSlides1 = Math.ceil(totalSlides1 / slidesPerPage1);
-    
-    slideIndex1 += n;
-    if (slideIndex1 < 0) {
-        slideIndex1 = maxSlides1 - 1;
-    }
-    if (slideIndex1 >= maxSlides1) {
-        slideIndex1 = 0;
-    }
-
-    const startIndex1 = slideIndex1 * slidesPerPage1;
-    const endIndex1 = Math.min(startIndex1 + slidesPerPage1, totalSlides1);
-
-    slider1.innerHTML = "";
-    for (let i = startIndex1; i < endIndex1; i++) {
-        slider1.appendChild(eventTables1[i].cloneNode(true));
-    }
-}
-
-// Initial slider setup
-window.addEventListener("load", function() {
-    moveSlider(0);
-    moveSlider1(0);
-});
-
+            // Show the selected event category
+            if (selectedCategory === "All Events") {
+                all_events.style.display = "grid";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            } else if (selectedCategory === "Sports") {
+                all_events.style.display = "none";
+                sport_events.style.display = "grid";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Musical / DJ") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "grid";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Business") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "grid";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Trekking / Adventures") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "grid";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Cultural") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "grid";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Educational") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "grid";
+                promo_events.style.display = "none";
+            }else if (selectedCategory === "Promos / Expos") {
+                all_events.style.display = "none";
+                sport_events.style.display = "none";
+                dj_events.style.display = "none";
+                trekk_events.style.display = "none";
+                cultural_events.style.display = "none";
+                business_events.style.display = "none";
+                edu_events.style.display = "none";
+                promo_events.style.display = "grid";
+            }
+            // Show other event category elements based on selected option
+        }
    </script>
-   
 <script src="assets/js/gsap.min.js"></script>
 
 <!-- MAIN JS -->

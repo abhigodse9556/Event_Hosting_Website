@@ -29,7 +29,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right bottom, #1d4350, #a43931);
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
             color: #fff;
             display: block;
         }
@@ -54,7 +54,7 @@
         h2 {
             margin: 0;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background: linear-gradient(to right bottom, #319da4c9, #3231a4);
             text-align: center;
             font-weight: bold;
             font-size: 24px;
@@ -71,7 +71,7 @@
 
         /* Profile Section */
         .profile {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to right bottom, #3231a4, #319da4c9);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -80,7 +80,7 @@
             height: 730px;
             
             h2{
-                background-color: rgba(255, 255, 255, 0.1);
+                background: linear-gradient(to right bottom, #319da4c9, #3231a4);
             }
         }
         .profile p {
@@ -88,7 +88,7 @@
             font-size: 18px;
         }
         .profile button {
-            background-color: #a82877;
+            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -107,7 +107,7 @@
         }
         
             .cancel-button{
-                background-color: #a82877;
+                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -120,7 +120,7 @@
                 background-color: black;
             }
             .logout-button{
-                background-color: #a82877;
+                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -128,7 +128,7 @@
                 padding-left: 15px;
                 padding-right: 15px;
                 margin-left: 5px;
-                margin-top: 5px;
+                margin-top: 10px;
             }
             .logout-button:hover{
                 background-color: black;
@@ -137,7 +137,7 @@
 
         /* Events Section */
         .events {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to right bottom, #3231a4, #319da4c9);
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
@@ -147,7 +147,7 @@
             scrollbar-width: none;
         }
         .event {
-            background-color: rgba(255, 255, 255, 0.1);
+            background: linear-gradient(to right bottom, hsl(258.09deg 76.62% 70.36%), #dcacacba);
             padding: 20px;
             border-radius: 10px;
             transition: transform 0.3s;
@@ -189,7 +189,7 @@
             opacity: 1;
         }
         .event-actions button {
-            background-color: rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -198,9 +198,10 @@
             transition: background-color 0.3s;
             font-size: 14px;
             margin: 5px 5px;
+            width: 150px;
         }
         .event-actions button:hover {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 5);
         }
 
     </style>
@@ -232,7 +233,7 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-link">Update Profile</a>
+<!--                    <a href="login.jsp" class="nav__button-link">Update Profile</a>-->
                     <form action="postevent.jsp" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
     <button type="submit" class="nav__link">Post an Event</button>
@@ -321,7 +322,7 @@
                 %>
                 <div class="event-details">
                 <h3><%= data.getName() %></h3>
-                <p class="event-info"><strong>Date:</strong> <%= data.getDate() %></p>
+                <p class="event-info"><strong> <%= data.getDate() %></strong></p>
                 
                 </div>
                  <form id="deleteEvent_<%= data.getId() %>" action="Servlet?id=deleteEvent" method="post" style="display:none;">

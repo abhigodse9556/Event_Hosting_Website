@@ -31,7 +31,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right bottom, #1d4350, #a43931);
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
             color: #fff;
             display: block;
         }
@@ -48,7 +48,7 @@
 
         .edit-section,
         .text-section {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to right bottom, #3231a4, #319da4c9);
             color: #fff;
             height: 700px;
             border-radius: 20px;
@@ -88,7 +88,7 @@
             background-color: black;
         }
         .image-section {
-            background-color: rgba(0, 0, 0, 0.8);
+            background: linear-gradient(to right bottom, #3231a4, #319da4c9);
             padding: 20px;
             display: flex;
             justify-content: center;
@@ -123,7 +123,6 @@ h3 {
 p {
     font-size: 1.1rem;
     margin-bottom: 10px;
-    color: #777; /* Lighter color for paragraphs */
     text-align: justify;
 }
 
@@ -145,12 +144,12 @@ h1, h3, h4, h5, p {
 }
 
 h1:hover, h3:hover, h4:hover, h5:hover, p:hover {
-    color: #a82877; /* Change color on hover */
+    color: #e76eb9; /* Change color on hover */
 }
 
 /* Gradient Background for Headers */
 h1, h3, h4, h5 {
-    background: linear-gradient(45deg, #ff7e5f, #feb47b); /* Gradient background */
+    background: linear-gradient(45deg, #adfaff, #fefefe); /* Gradient background */
     -webkit-background-clip: text; /* Clip text to the background */
     -webkit-text-fill-color: transparent; /* Transparent text to show the gradient */
 }
@@ -278,7 +277,7 @@ h4:nth-of-type(3) {
         String e_state = (String) request.getAttribute("e_state");
         String e_post = (String) request.getAttribute("e_post");
         String e_country = (String) request.getAttribute("e_country");
-        int e_tickets = (int) request.getAttribute("e_tickets");
+        String e_tickets = (String) request.getAttribute("e_tickets");
         String e_contactpersonfirst = (String) request.getAttribute("e_contactpersonfirst");
         String e_conatactpersonlast = (String) request.getAttribute("e_conatactpersonlast");
         String e_contactemail = (String) request.getAttribute("e_contactemail");

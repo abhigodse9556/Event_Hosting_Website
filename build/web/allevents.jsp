@@ -10,8 +10,8 @@
 <%@page import="ServersidePackages.DataObject"%>
 <%@page import="java.util.List"%>
 <%@page import="com.mysql.cj.jdbc.Blob"%>
-<%@ page import="java.io.*, java.sql.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page import="java.io.*, java.sql.*" %>
+<%@page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
      <head>
@@ -33,14 +33,38 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right bottom, #1d4350, #a43931);
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
             color: #fff;
             display: block;
         }
+        
+        .event__container{
+            margin: 100px 20px 0px;
+            height: 780px;
+            padding: 20px;
+            overflow-y: auto;
+            scrollbar-width: none;
+        }
+        
+        .event-selector{
+            text-align: end;
+            margin: 10px 60px 10px 20px;
+            font-weight: bold;
+            font-size: x-large;
+        }
+        
+        .event-selector select{
+            font-size: medium;
+        }
+        
+        .event-selector select:hover{
+            color: #f09819;
+        }
+        
           .all_events{
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
+              display: grid;
+              gap: 24px;
+              grid-template-columns: repeat(5, 1fr);
               
               h2{
                   position: fixed;
@@ -55,8 +79,8 @@
           .promo_events,
           .trekk_events{
               display: none;
-              flex-wrap: wrap;
-              justify-content: space-between;
+              gap: 24px;
+              grid-template-columns: repeat(5, 1fr);
               
               h2{
                   position: fixed;
@@ -64,12 +88,34 @@
           }
           
           .events-box{
-              width: 25%;
+              padding: 20px;
+              background: linear-gradient(to right bottom, #3231a4, #319da4c9);
+              border-radius: 10px;
+              text-align: center;
+              color: #b4fff1;
+              
+              .show_btn{
+                display: none;
+              }
           }
+          .events-box:hover{
+              background: linear-gradient(to right bottom, hsl(258.09deg 76.62% 70.36%), #dcacacba);
+              
+              .show_btn{
+                display: flex;
+                border-style: hidden;
+                font-size: 18px;
+                margin: auto;
+              }
+          }
+          
+          
+          
           
           .poster-image{
               width: 200px;
               height: 300px;
+              margin: auto;
           }
          
           button{
@@ -127,9 +173,9 @@
       <main class="main">
          <!--==================== HOME ====================-->
          <section class="home">
-            <div class="event__container container" style="margin-top: 100px">
+            <div class="event__container">
                 
-                <div>
+                <div class="event-selector">
                     <p>Event Categories</p>
           <select id="event_type" name="event_type" onchange="showSelectedCategory()">
             <option value=""></option>
@@ -151,7 +197,6 @@
     for (DataObject data : dataList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -174,7 +219,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -189,7 +234,6 @@
     for (SportObject data : sportList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -212,7 +256,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -227,7 +271,6 @@
     for (MusicObject data : musicList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -250,7 +293,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -266,7 +309,6 @@
     for (TrekkObject data : trekkList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -289,7 +331,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -304,7 +346,6 @@
     for (CulturalObject data : culturalList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -327,7 +368,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -342,7 +383,6 @@
     for (BusinessObject data : businessList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -365,7 +405,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -380,7 +420,6 @@
     for (EduObject data : eduList) {
     %>
     <div class="events-box">
-        <h1><%= data.getId() %></h1>
         <% 
         Blob posterBlob1 = data.getPoster();
         if (posterBlob1 != null) {
@@ -403,7 +442,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -440,7 +479,7 @@
         <h1><%= data.getDate() %></h1>
         <form action="Servlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
-    <button type="submit" class="nav__link">Show Details</button>
+    <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
     <% 
@@ -448,7 +487,7 @@
     %>
 </div>
     
-    
+            </div>
          </section>
       </main>
       
@@ -471,7 +510,7 @@
 
             // Show the selected event category
             if (selectedCategory === "All Events") {
-                all_events.style.display = "flex";
+                all_events.style.display = "grid";
                 sport_events.style.display = "none";
                 dj_events.style.display = "none";
                 trekk_events.style.display = "none";
@@ -481,7 +520,7 @@
                 promo_events.style.display = "none";
             } else if (selectedCategory === "Sports") {
                 all_events.style.display = "none";
-                sport_events.style.display = "flex";
+                sport_events.style.display = "grid";
                 dj_events.style.display = "none";
                 trekk_events.style.display = "none";
                 cultural_events.style.display = "none";
@@ -491,7 +530,7 @@
             }else if (selectedCategory === "Musical / DJ") {
                 all_events.style.display = "none";
                 sport_events.style.display = "none";
-                dj_events.style.display = "flex";
+                dj_events.style.display = "grid";
                 trekk_events.style.display = "none";
                 cultural_events.style.display = "none";
                 business_events.style.display = "none";
@@ -503,14 +542,14 @@
                 dj_events.style.display = "none";
                 trekk_events.style.display = "none";
                 cultural_events.style.display = "none";
-                business_events.style.display = "flex";
+                business_events.style.display = "grid";
                 edu_events.style.display = "none";
                 promo_events.style.display = "none";
             }else if (selectedCategory === "Trekking / Adventures") {
                 all_events.style.display = "none";
                 sport_events.style.display = "none";
                 dj_events.style.display = "none";
-                trekk_events.style.display = "flex";
+                trekk_events.style.display = "grid";
                 cultural_events.style.display = "none";
                 business_events.style.display = "none";
                 edu_events.style.display = "none";
@@ -520,7 +559,7 @@
                 sport_events.style.display = "none";
                 dj_events.style.display = "none";
                 trekk_events.style.display = "none";
-                cultural_events.style.display = "flex";
+                cultural_events.style.display = "grid";
                 business_events.style.display = "none";
                 edu_events.style.display = "none";
                 promo_events.style.display = "none";
@@ -531,7 +570,7 @@
                 trekk_events.style.display = "none";
                 cultural_events.style.display = "none";
                 business_events.style.display = "none";
-                edu_events.style.display = "flex";
+                edu_events.style.display = "grid";
                 promo_events.style.display = "none";
             }else if (selectedCategory === "Promos / Expos") {
                 all_events.style.display = "none";
@@ -541,7 +580,7 @@
                 cultural_events.style.display = "none";
                 business_events.style.display = "none";
                 edu_events.style.display = "none";
-                promo_events.style.display = "flex";
+                promo_events.style.display = "grid";
             }
             // Show other event category elements based on selected option
         }

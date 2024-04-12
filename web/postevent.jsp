@@ -38,7 +38,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right bottom, #1d4350, #a43931);
+            background: linear-gradient(to right bottom, #ffffff, #02effe);
             color: #fff;
             display: block;
         }
@@ -210,7 +210,7 @@
         </div>
         <div class="item">
           <p>Entry Fees</p>
-          <input type="text" name="ticket_count"/>
+          <input type="text" name="entry_fees"/>
         </div>
         
         

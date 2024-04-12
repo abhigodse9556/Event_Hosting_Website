@@ -48,7 +48,7 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="participant_registration.jsp" class="nav__button-ghost">I am a Participant</a>
                     <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
                 </div>
 
