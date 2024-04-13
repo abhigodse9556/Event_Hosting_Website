@@ -146,8 +146,15 @@ button{
                         <a href="index.jsp" class="nav__link">Home</a>
                     </li>
 
+                    <li class="nav__item" style="display: none;">
+                       <form action="Servlet?id=all_events" method="post">
+    <input type="hidden" name="id" value="all_events">
+    <button id="event_btn" type="submit" class="nav__link">Events</button>
+</form>
+                    </li>
+
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Events</a>
+                        <a href="#" class="nav__link" onclick="eventNav()">Events</a>
                     </li>
 
                     <li class="nav__item">
@@ -207,6 +214,11 @@ button{
         </div>
     </form>
 
+<script>
+    function eventNav(){
+              document.getElementById("event_btn").click();
+          }
+</script>
 </body>
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% if (loginSuccess != null) { %>

@@ -1,5 +1,3 @@
-
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -17,6 +15,18 @@
       <link rel="stylesheet" href="assets/css/styles.css">
 
       <title>Event Management Website</title>
+      
+      <style>
+          .home__img-2{
+              margin-left: 350px;
+          }
+          .home__img-4{
+              height: 120%;
+              width: 100%;
+              padding-right: 50px;
+          }
+      </style>
+      
    </head>
    
    <!--==================== HEADER ====================-->
@@ -32,11 +42,15 @@
                         <a href="index.jsp" class="nav__link">Home</a>
                     </li>
 
-                    <li class="nav__item">
+                    <li class="nav__item" style="display: none;">
                        <form action="Servlet?id=all_events" method="post">
     <input type="hidden" name="id" value="all_events">
-    <button type="submit" class="nav__link">Events</button>
+    <button id="event_btn" type="submit" class="nav__link">Events</button>
 </form>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__link" onclick="eventNav()">Events</a>
                     </li>
 
                     <li class="nav__item">
@@ -48,8 +62,8 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="participant_registration.jsp" class="nav__button-ghost">I am a Participant</a>
-                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                    <a href="participant_login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="login.jsp" class="nav__button-ghost">I am an Organizer</a>
                 </div>
 
                 <!--close button-->
@@ -93,15 +107,19 @@
                     <img src="assets/img/bird-2.svg" alt="image" class="home__bird-2">
                 </div>
                 <div class="home__images">
-                    <img src="assets/img/img-44.png" alt="image" class="home__img-4">
+                    <img src="assets/img/img-jpg.jpg" alt="image" class="home__img-4">
                     <img src="assets/img/img-3.png" alt="image" class="home__img-3">
-                    <img src="assets/img/img-2.png" alt="image" class="home__img-2">
+                    <img src="assets/img/img-3123.png" alt="image" class="home__img-2">
                     <img src="assets/img/img-11.png" alt="image" class="home__img-1">
                 </div>
             </div>
          </section>
       </main>
-      
+      <script>
+          function eventNav(){
+              document.getElementById("event_btn").click();
+          }
+      </script>
      
    </body>
    

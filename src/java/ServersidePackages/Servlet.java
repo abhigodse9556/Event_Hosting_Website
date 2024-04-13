@@ -417,7 +417,7 @@ public class Servlet extends HttpServlet {
         } catch (ClassNotFoundException | SQLException e) {
             // Handle exceptions (e.g., log or display an error message)
             e.printStackTrace();
-            request.setAttribute("eventPostSuccess", true);
+            request.setAttribute("eventPostSuccess", false);
             request.getRequestDispatcher("autoredirectpage.jsp").forward(request, response);
         }
         

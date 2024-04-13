@@ -28,7 +28,7 @@ function autoredirect(){
     </script>
         
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
-<% Boolean eventPostSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
+<% Boolean eventRegistrationSuccess = (Boolean) request.getAttribute("eventRegistrationSuccess"); %>
 <% Boolean deletionSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
 <% Boolean updatationSuccess = (Boolean) request.getAttribute("updatationSuccess"); %>
 <% Boolean eventUpdateSuccess = (Boolean) request.getAttribute("eventUpdateSuccess"); %>
@@ -41,9 +41,9 @@ function autoredirect(){
     </script>
 <% } %>
 
-<% if (eventPostSuccess != null) { %>
+<% if (eventRegistrationSuccess != null) { %>
     <script>
-        var message = <%= eventPostSuccess ? "'Event posted successfully!'" : "'Error in posting event. Please try again.'" %>;
+        var message = <%= eventRegistrationSuccess ? "'Event registered successfully!'" : "'Error in registration of event. Please try again.'" %>;
         alert(message);
         autoredirect();
     </script>

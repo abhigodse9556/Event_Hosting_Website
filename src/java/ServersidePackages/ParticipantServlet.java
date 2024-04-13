@@ -41,7 +41,7 @@ public class ParticipantServlet extends HttpServlet {
             break;
             case "update_event" : handleEventUpdate(request, response);
             break;
-            case "postevent" : handleEventPost(request, response);
+            case "register_for_event" : handleEventRegistration(request, response);
             break;
             case "register" : handleRegistration(request, response);
             break;
@@ -312,36 +312,12 @@ public class ParticipantServlet extends HttpServlet {
     
 
 
-    private void handleEventPost(HttpServletRequest request, HttpServletResponse response)
+    private void handleEventRegistration(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Retrieve form parameters
-        String eventorgName = request.getParameter("eventorganizerusername");
-        String eventName = request.getParameter("eventname");
-        String eventType = request.getParameter("event_type");
-        String eventDate = request.getParameter("bdate");
-        String eventTime = request.getParameter("event_time");
-        String setTime = request.getParameter("duration");
-        String specialAttraction = request.getParameter("specialAttraction");
-        String eventDescription = request.getParameter("description");
-        String promoterName = request.getParameter("promoter");
-        String venueName = request.getParameter("venue_name");
-        String venueAddress1 = request.getParameter("add1");
-        String venueAddress2 = request.getParameter("add2");
-        String city = request.getParameter("city");
-        String state = request.getParameter("state");
-        String postalCode = request.getParameter("pin");
-        String country = request.getParameter("country");
-        String entry_fees = request.getParameter("entry_fees");
-        String contactFirstName = request.getParameter("firstname");
-        String contactLastName = request.getParameter("lastname");
-        String contactEmail = request.getParameter("email");
-        String contactNumber = request.getParameter("con_num");
-        String recorded = request.getParameter("recorded");
-        Part filePart = null;
-        if (request.getContentType() != null && request.getContentType().toLowerCase().startsWith("multipart/")) {
-            filePart = request.getPart("poster");
-        }
-        //String organizer_username = request.getParameter("loggedInUsername");
+        int eventID = Integer.parseInt(request.getParameter("e_id"));
+        String pname = request.getParameter("p_username");
+        String orgname = request.getParameter("org_username");
 
         try {
             // Load JDBC driver
@@ -350,58 +326,30 @@ public class ParticipantServlet extends HttpServlet {
             // Establish a connection
             try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
                 // Prepare SQL query for event insertion
-                String eventInsertSql = "INSERT INTO events (event_name, event_type, event_date, event_time, set_time, " +
-                                        "special_attraction, event_description, promoter_name, venue_name, venue_address1, " +
-                                        "venue_address2, city, state, postal_code, country, entry_fees, " +
-                                        "contact_first_name, contact_last_name, contact_email, contact_number, recorded, org_username, poster) " +
-                                        "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                String eventInsertSql = "INSERT INTO registrations (e_id, org_username, p_username) VALUES (?, ?, ?)";
                 
                 try (PreparedStatement eventStatement = connection.prepareStatement(eventInsertSql)) {
                     // Set parameters for the event insertion
-                    eventStatement.setString(1, eventName);
-                    eventStatement.setString(2, eventType);
-                    eventStatement.setString(3, eventDate);
-                    eventStatement.setString(4, eventTime);
-                    eventStatement.setString(5, setTime);
-                    eventStatement.setString(6, specialAttraction);
-                    eventStatement.setString(7, eventDescription);
-                    eventStatement.setString(8, promoterName);
-                    eventStatement.setString(9, venueName);
-                    eventStatement.setString(10, venueAddress1);
-                    eventStatement.setString(11, venueAddress2);
-                    eventStatement.setString(12, city);
-                    eventStatement.setString(13, state);
-                    eventStatement.setString(14, postalCode);
-                    eventStatement.setString(15, country);
-                    eventStatement.setString(16, entry_fees);
-                    eventStatement.setString(17, contactFirstName);
-                    eventStatement.setString(18, contactLastName);
-                    eventStatement.setString(19, contactEmail);
-                    eventStatement.setString(20, contactNumber);
-                    eventStatement.setString(21, recorded);
-                    eventStatement.setString(22, eventorgName);
-                    if (filePart == null) {
-                        eventStatement.setNull(23, java.sql.Types.BLOB);
-                    } else {
-                        eventStatement.setBlob(23, filePart.getInputStream());
-                    }
-
+                    eventStatement.setInt(1, eventID);
+                    eventStatement.setString(2, orgname);
+                    eventStatement.setString(3, pname);
                     // Execute the event insertion query
                     int rowsInsertedEvent = eventStatement.executeUpdate();
 
                     // Check the result of the event insertion
                     if (rowsInsertedEvent > 0) {
                         // Set a response attribute indicating success
-                        request.setAttribute("eventPostSuccess", true);
+                        request.setAttribute("eventRegistrationSuccess", true);
                         
                         
                     } else {
                         // Set a response attribute indicating failure
-                        request.setAttribute("eventPostSuccess", false);
+                        request.setAttribute("eventRegistrationSuccess", false);
                         
                     }
-                    request.setAttribute("loggedInUsername", eventorgName);
-                    request.getRequestDispatcher("autoredirectpage.jsp?").forward(request, response);
+                    
+                    request.setAttribute("loggedInUsername", pname);
+                    request.getRequestDispatcher("autoredirectparticipant.jsp?").forward(request, response);
                     
                     
 
@@ -411,8 +359,8 @@ public class ParticipantServlet extends HttpServlet {
         } catch (ClassNotFoundException | SQLException e) {
             // Handle exceptions (e.g., log or display an error message)
             e.printStackTrace();
-            request.setAttribute("eventPostSuccess", true);
-            request.getRequestDispatcher("autoredirectpage.jsp").forward(request, response);
+            request.setAttribute("eventRegistrationSuccess", false);
+            request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
         }
         
         
@@ -504,7 +452,7 @@ public class ParticipantServlet extends HttpServlet {
                         
                     }
                     request.setAttribute("loggedInUsername", eventorgName);
-                    request.getRequestDispatcher("autoredirectpage.jsp?").forward(request, response);
+                    request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
                     
                     
 
@@ -516,7 +464,7 @@ public class ParticipantServlet extends HttpServlet {
             e.printStackTrace();
             request.setAttribute("loggedInUsername", eventorgName);
             request.setAttribute("eventUpdateSuccess", false);
-            request.getRequestDispatcher("autoredirectpage.jsp").forward(request, response);
+            request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
         }
         
         
@@ -867,7 +815,7 @@ public class ParticipantServlet extends HttpServlet {
     
   // Retrieve form parameters
     String e_id = request.getParameter("event-id");
-    String viewer = request.getParameter("viewer");
+    String loggeduser = request.getParameter("loggedParticipant");
 
     try {
         // Load JDBC driver
@@ -890,64 +838,62 @@ public class ParticipantServlet extends HttpServlet {
                     // Successful login
                     
                     String e_name = resultSet.getString(2);
-        String e_type = resultSet.getString(3);
-        String e_date = resultSet.getString(4);
-        String e_time = resultSet.getString(5);
-        String e_duration = resultSet.getString(6);
-        String e_specialattraction = resultSet.getString(7);
-        String e_description = resultSet.getString(8);
-        String e_promoter = resultSet.getString(9);
-        String e_venue = resultSet.getString(10);
-        String e_addline1 = resultSet.getString(11);
-        String e_addline2 = resultSet.getString(12);
-        String e_city = resultSet.getString(13);
-        String e_state = resultSet.getString(14);
-        String e_post = resultSet.getString(15);
-        String e_country = resultSet.getString(16);
-        String e_tickets = resultSet.getString(17);
-        String e_contactpersonfirst = resultSet.getString(18);
-        String e_conatactpersonlast = resultSet.getString(19);
-        String e_contactemail = resultSet.getString(20);
-        String e_contactnumber = resultSet.getString(21);
-        String e_isrecord = resultSet.getString(22);
-        String e_organizer = resultSet.getString(23);
-        Blob e_poster = (Blob) resultSet.getBlob(24);           
+                    String e_type = resultSet.getString(3);
+                    String e_date = resultSet.getString(4);
+                    String e_time = resultSet.getString(5);
+                    String e_duration = resultSet.getString(6);
+                    String e_specialattraction = resultSet.getString(7);
+                    String e_description = resultSet.getString(8);
+                    String e_promoter = resultSet.getString(9);
+                    String e_venue = resultSet.getString(10);
+                    String e_addline1 = resultSet.getString(11);
+                    String e_addline2 = resultSet.getString(12);
+                    String e_city = resultSet.getString(13);
+                    String e_state = resultSet.getString(14);
+                    String e_post = resultSet.getString(15);
+                    String e_country = resultSet.getString(16);
+                    String e_tickets = resultSet.getString(17);
+                    String e_contactpersonfirst = resultSet.getString(18);
+                    String e_conatactpersonlast = resultSet.getString(19);
+                    String e_contactemail = resultSet.getString(20);
+                    String e_contactnumber = resultSet.getString(21);
+                    String e_isrecord = resultSet.getString(22);
+                    String e_organizer = resultSet.getString(23);
+                    Blob e_poster = (Blob) resultSet.getBlob(24);           
                     request.setAttribute("e_name", e_name);
-        request.setAttribute("e_type", e_type);
-        request.setAttribute("e_date", e_date);
-        request.setAttribute("e_time", e_time);
-        request.setAttribute("e_duration", e_duration);
-        request.setAttribute("e_specialattraction", e_specialattraction);
-        request.setAttribute("e_description", e_description);
-        request.setAttribute("e_promoter", e_promoter);
-        request.setAttribute("e_venue", e_venue);
-        request.setAttribute("e_addline1", e_addline1);
-        request.setAttribute("e_addline2", e_addline2);
-        request.setAttribute("e_city", e_city);
-        request.setAttribute("e_state", e_state);
-        request.setAttribute("e_post", e_post);
-        request.setAttribute("e_country", e_country);
-        request.setAttribute("e_tickets", e_tickets);
-        request.setAttribute("e_contactpersonfirst", e_contactpersonfirst);
-        request.setAttribute("e_conatactpersonlast", e_conatactpersonlast);
-        request.setAttribute("e_contactemail", e_contactemail);
-        request.setAttribute("e_contactnumber", e_contactnumber);
-        request.setAttribute("e_isrecord", e_isrecord);
-        request.setAttribute("e_organizer", e_organizer);
-        request.setAttribute("e_poster", e_poster);                  
+                    request.setAttribute("e_type", e_type);
+                    request.setAttribute("e_date", e_date);
+                    request.setAttribute("e_time", e_time);
+                    request.setAttribute("e_duration", e_duration);
+                    request.setAttribute("e_specialattraction", e_specialattraction);
+                    request.setAttribute("e_description", e_description);
+                    request.setAttribute("e_promoter", e_promoter);
+                    request.setAttribute("e_venue", e_venue);
+                    request.setAttribute("e_addline1", e_addline1);
+                    request.setAttribute("e_addline2", e_addline2);
+                    request.setAttribute("e_city", e_city);
+                    request.setAttribute("e_state", e_state);
+                    request.setAttribute("e_post", e_post);
+                    request.setAttribute("e_country", e_country);
+                    request.setAttribute("e_tickets", e_tickets);
+                    request.setAttribute("e_contactpersonfirst", e_contactpersonfirst);
+                    request.setAttribute("e_conatactpersonlast", e_conatactpersonlast);
+                    request.setAttribute("e_contactemail", e_contactemail);
+                    request.setAttribute("e_contactnumber", e_contactnumber);
+                    request.setAttribute("e_isrecord", e_isrecord);
+                    request.setAttribute("e_organizer", e_organizer);
+                    request.setAttribute("e_poster", e_poster);  
         
-                    if("organizer".equals(viewer)){
-                        RequestDispatcher dispatcher = request.getRequestDispatcher("viewevent.jsp");
-                        dispatcher.forward(request, response);
-                    }
-                    else{
-                        RequestDispatcher dispatcher = request.getRequestDispatcher("eventdetails.jsp");
-                        dispatcher.forward(request, response);  
-                    }
+                    request.setAttribute("loggedInParticipant", loggeduser);
+                    request.setAttribute("event-id", e_id);
+                        
+                    RequestDispatcher dispatcher = request.getRequestDispatcher("vieweventdetails.jsp");
+                    dispatcher.forward(request, response);  
+                   
                 } else {
                     // Invalid credentials
                     request.setAttribute("loginSuccess", false);
-                    request.getRequestDispatcher("login.jsp").forward(request, response);
+                    request.getRequestDispatcher("participant_login.jsp").forward(request, response);
                 }
 
                 

@@ -218,8 +218,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -255,8 +256,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -292,8 +294,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -330,8 +333,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -367,8 +371,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -404,8 +409,9 @@
         %>
        <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -441,8 +447,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>
@@ -478,8 +485,9 @@
         %>
         <h1><%= data.getName() %></h1>
         <h1><%= data.getDate() %></h1>
-        <form action="Servlet?id=event_details" method="post">
+        <form action="ParticipantServlet?id=event_details" method="post">
     <input type="hidden" name="event-id" value="<%= data.getId()%>">
+    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername%>">
     <button type="submit" class="show_btn">Show Details</button>
 </form>
     </div>

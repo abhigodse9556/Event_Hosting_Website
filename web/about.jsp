@@ -66,8 +66,15 @@
                         <a href="index.jsp" class="nav__link">Home</a>
                     </li>
 
+                    <li class="nav__item" style="display: none;">
+                       <form action="Servlet?id=all_events" method="post">
+    <input type="hidden" name="id" value="all_events">
+    <button id="event_btn" type="submit" class="nav__link">Events</button>
+</form>
+                    </li>
+
                     <li class="nav__item">
-                        <a href="#" class="nav__link">Events</a>
+                        <a href="#" class="nav__link" onclick="eventNav()">Events</a>
                     </li>
 
                     <li class="nav__item">
@@ -79,8 +86,8 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
-                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                    <a href="participant_login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="login.jsp" class="nav__button-ghost">I am an Organizer</a>
                 </div>
 
                 <!--close button-->
@@ -192,6 +199,11 @@ Thank you for choosing Festa Vista for all your event needs. Let's create unforg
         function gotoContact(){
     window.location.href = "http://localhost:8080/FestaVista/contact.jsp";
 }
+
+          function eventNav(){
+              document.getElementById("event_btn").click();
+          }
+
     </script>
 </body>
 
