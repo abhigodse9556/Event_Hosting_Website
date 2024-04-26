@@ -4,48 +4,77 @@
      <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
       <!--=============== FAVICON ===============-->
       <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-
       <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
-      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">      
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
       <link rel="stylesheet" href="assets/css/register.css">
+      <title>Event Management Website</title>      
+      <style>
+          .register{
+              background: linear-gradient(to right bottom, #ffffff, #02effe);
+          }
+          
+          .reg-form {
+              background: linear-gradient(to right bottom, #ff00c8, #0013c4);
+              width: 400px;
+              color: #ffffff;
+              margin: 3px auto;
+              padding: 30px;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+          }
+          
+          .column li {
+              color: #401fcc;
+              background-color: rgb(27 239 11 / 0%);
+              text-align: justify;
+              text-justify: inter-word;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+              padding: 10px 5px;
+              margin: 10px 5px;
+}
 
-      <title>Event Management Website</title>
-   </head>
-   
+          .column p {
+              color: #00d9ff;
+              background-color: rgba(275, 0, 0, 0);
+              text-align: justify;
+              text-justify: inter-word;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+              padding: 10px 5px;
+              margin: 10px 5px;
+          }
+      </style>
+      
+   </head>  
    <!--==================== HEADER ====================-->
       <header class="header" id="header">
         <nav class="nav container">
             <a href="#" class="nav__logo">
                 <img src="assets/img/logo.svg" alt="logo">
             </a>
-
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item">
                         <a href="index.jsp" class="nav__link">Home</a>
                     </li>
-
                     <li class="nav__item">
                         <a href="#" class="nav__link">Events</a>
                     </li>
-
                     <li class="nav__item">
                         <a href="about.jsp" class="nav__link">About</a>
                     </li>
-
                     <li class="nav__item">
                         <a href="contact.jsp" class="nav__link">Contact</a>
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="login.jsp" class="nav__button-ghost">I am a Participant</a>
-                    <a href="register.jsp" class="nav__button-ghost">I am an Organizer</a>
+                    <a href="participant_login.jsp" class="nav__button-ghost">I am a Participant</a>
+                    <a href="login.jsp" class="nav__button-ghost">I am an Organizer</a>
                 </div>
 
                 <!--close button-->
@@ -65,13 +94,6 @@
 <body>
      <main class="main">
          
-         <div class="home__images">
-            <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>
-         
          <section class="register">
              <div class="column">
                  <h2 class="headings">Why Register as an Organizer?</h2>
@@ -79,31 +101,31 @@
                  
                  <li>
                      <b>Showcase Your Event:</b>
-By registering as an organizer, you gain the opportunity to showcase your event to a wider audience. Your event will be featured on our platform, making it visible to potential participants who are actively seeking exciting events to attend.
+                     By registering as an organizer, you gain the opportunity to showcase your event to a wider audience. Your event will be featured on our platform, making it visible to potential participants who are actively seeking exciting events to attend.
                  </li>
                  <li>
                      <b>Expand Your Reach:</b>
-Registration allows you to expand your event's reach beyond your immediate network. With our platform, you have access to a diverse audience of event enthusiasts who may not have otherwise discovered your event.
+                     Registration allows you to expand your event's reach beyond your immediate network. With our platform, you have access to a diverse audience of event enthusiasts who may not have otherwise discovered your event.
                  </li>
                  <li>
                      <b>Streamlined Event Management:</b>
-Our registration process simplifies event management tasks such as attendee registration, communication, and updates. You'll have access to tools and features designed to streamline the planning and execution of your event, saving you time and effort.
+                     Our registration process simplifies event management tasks such as attendee registration, communication, and updates. You'll have access to tools and features designed to streamline the planning and execution of your event, saving you time and effort.
                  </li>
                  <li>
                      <b>Enhance Credibility:</b>
-Listing your event on a reputable platform like ours enhances its credibility and legitimacy. Visitors to our website trust our recommendations and are more likely to engage with events listed by registered organizers.
+                     Listing your event on a reputable platform like ours enhances its credibility and legitimacy. Visitors to our website trust our recommendations and are more likely to engage with events listed by registered organizers.
                  </li>
                  <li>
                      <b>Increase Participation:</b>
-Registration increases the likelihood of participant engagement with your event. Visitors can easily register for your event through our platform, making it convenient for them to join and participate.
+                     Registration increases the likelihood of participant engagement with your event. Visitors can easily register for your event through our platform, making it convenient for them to join and participate.
                  </li>
                  </div>
              <div class="column">
-        <form class="reg-form" id="register" onsubmit="return validateRegisterForm()" method="post" action="Servlet?id=register">
-            <h4 class="headings">Already Registered!</h4><br>
-            <a class="bottom-line" href="login.jsp" style="margin-left: 95px;"> Go to login page</a><br><br>
-            <h2 class="headings">Organizer Registration</h2><br>
-        <label for="name">Name:</label>
+                 <form class="reg-form" id="register" onsubmit="return validateRegisterForm()" method="post" action="Servlet?id=register">
+                    <h4 class="headings">Already Registered!</h4><br>
+                    <a class="bottom-line" href="login.jsp" style="margin-left: 95px;"> Go to login page</a><br><br>
+                    <h2 class="headings">Organizer Registration</h2><br>
+                    <label for="name">Name:</label>
         <input type="text" id="name" name="name" required><br>
 
         <label for="organizaion">Organization Name:</label>
@@ -141,6 +163,21 @@ Thank you for choosing Festa Vista for all your event needs. Let's create unforg
          </section>
         
       </main>
+    
+    <script>
+        function autofillUsername() {
+    // Get the value of the email field
+    var emailInput = document.getElementById('email');
+    var emailValue = emailInput.value;
+
+    // Extract the part before the '@' symbol
+    var username = emailValue.split('@')[0];
+
+    // Autofill the registerUsername field
+    var usernameInput = document.getElementById('registerUsername');
+    usernameInput.value = username;
+}
+    </script>
     
 </body>
 <% Boolean registrationSuccess = (Boolean) request.getAttribute("registrationSuccess"); %>

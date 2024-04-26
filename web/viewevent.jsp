@@ -35,6 +35,10 @@
             color: #fff;
             display: block;
         }
+        
+/*        main{
+            overflow: scroll;
+        }*/
 
         .view_container {
             width: 100%;
@@ -238,10 +242,11 @@ h4:nth-of-type(3) {
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="#" class="nav__button-link" onclick="openEditEvent()">Update Profile</a>
-                    <form class="postevent" action="postevent.jsp" method="post">
-    <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <button type="submit" class="nav__link">Post an Event</button>
+                    <a href="#" class="nav__button-ghost" onclick="viewEventParticipants()">View Participant Registrations</a>
+                    <a href="#" class="nav__button-ghost" onclick="openOrgProfile()"><%= loggedInUsername %></a>
+                    <form class="postevent" action="Servlet?id=loadOrg" method="post" style="display: none;">
+    <input type="hidden" name="username" value="<%= loggedInUsername %>">
+    <button id="profile_btn" type="submit" class="nav__link"><%= loggedInUsername %></button>
 </form>
                 </div>
 
@@ -258,7 +263,7 @@ h4:nth-of-type(3) {
         </nav>
          
       </header>
-    
+    <main> 
    <div class="view_container">
        <%
         // Display event details if available in request attributes
@@ -292,6 +297,7 @@ h4:nth-of-type(3) {
             
          
             <h2><%= e_name %></h2>
+            <h2><%= eventID %></h2>
     
             <h4>Category: <%= e_type %></h4>
             <h3>Date & Time: <%= e_date %> at <%= e_time %></h3>
@@ -305,8 +311,8 @@ h4:nth-of-type(3) {
             <h4>Contact Person: <%= e_contactpersonfirst %> <%= e_conatactpersonlast %></h4>
             <h4>Email ID: <%= e_contactemail %></h4>
             <h4>Mobile Number: <%= e_contactnumber %></h4>
-            <h5>Will event be recorded?: <%= e_isrecord %></h5>
-            <p style="display: none">Organizer: <%= e_organizer %></p>
+            <h5>Will event be recorded?: <%= e_isrecord %></h5><br>
+            <p style="display: none;">Organizer: <%= e_organizer %></p>
             <a href="#" class="view-button" onclick="openEditEvent()">EDIT EVENT DETAILS</a>
     </div>
     
@@ -457,14 +463,18 @@ h4:nth-of-type(3) {
             </form>
         </div>
     
-    
+    <form action="Servlet?id=eventparticipants" method="post" style="display: none;">
+          <input type="text" name="eventorganizerusername" value="<%= e_organizer %>" readonly/>
+          <input type="hidden" name="eventID" value="<%= eventID %>" readonly/>
+          <input type="hidden" name="eventName" value="<%= e_name %>" readonly/>
+         <button id="view_participants" type="submit">SAVE CHANGES</button>
+            </form>
     
           <%
         }
-    %>     
-            
-    </div>
-
+    %> 
+   </div>
+    </main>
    
 </body>
 
@@ -493,6 +503,12 @@ h4:nth-of-type(3) {
     }
     function viewEvent(eventID){
         document.getElementById("viewButton_" + eventID).click();
+    }
+    function viewEventParticipants(){
+        document.getElementById("view_participants").click();
+    }
+    function openOrgProfile(){
+        document.getElementById("profile_btn").click();
     }
 </script>
    

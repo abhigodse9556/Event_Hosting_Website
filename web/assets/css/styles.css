@@ -14,7 +14,7 @@
   --title-color: hsl(210, 52%, 20%);
   --text-color: hsl(210, 24%, 15%);
   --white-color: #fff;
-  --body-color: hsl(210, 55%, 85%);
+  --body-color: linear-gradient(to right bottom, #000000, #ff00c8);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/

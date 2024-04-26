@@ -1,3 +1,4 @@
+
 <%@page import="java.util.Base64"%>
 <%@page import="ServersidePackages.DataObject"%>
 <%@page import="ServersidePackages.DataObject"%>
@@ -45,7 +46,7 @@
 
         
         .org_container {
-            max-width: 1200px;
+            width: 600px;
             margin: 100px auto;
             padding: 20px;
             display: grid;
@@ -69,7 +70,7 @@
         
             
         form{
-            margin-top: 20px;
+            background: linear-gradient(to right bottom, #02effe, #ffffff);
             box-shadow: 0 0 0px 0 #ffffff;
             width: 100%;
             padding: 20px;

@@ -65,8 +65,7 @@
         }
             
             form{
-                margin-top: 20px;
-                box-shadow: 0 0 0px 0 #ffffff;
+                /*box-shadow: 0 0 0px 0 #ffffff;*/
             }
 
         /* Profile Section */
@@ -88,7 +87,7 @@
             font-size: 18px;
         }
         .profile button {
-            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -99,7 +98,7 @@
             font-weight: bold;
         }
         .profile button:hover {
-            background-color: black;
+            background: linear-gradient(to right bottom, #0018ff, #000000);
         }
         
         .edit{
@@ -107,7 +106,7 @@
         }
         
             .cancel-button{
-                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+                background: linear-gradient(to right bottom, #00f0ff, #0018ff);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -117,10 +116,10 @@
                 margin-left: 5px;
             }
             .cancel-button:hover{
-                background-color: black;
+                background: linear-gradient(to right bottom, #0018ff, #000000);
             }
             .logout-button{
-                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+                background: linear-gradient(to right bottom, #00f0ff, #0018ff);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -131,7 +130,7 @@
                 margin-top: 10px;
             }
             .logout-button:hover{
-                background-color: black;
+                background: linear-gradient(to right bottom, #0018ff, #000000);
             }
             
 
@@ -173,7 +172,7 @@
         }
         .event-details{
             text-align: center;
-            padding: 50px;
+            padding: 40px 10px 10px 10px;
         }
         .event-actions {
             position: absolute;
@@ -189,7 +188,7 @@
             opacity: 1;
         }
         .event-actions button {
-            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -201,7 +200,18 @@
             width: 150px;
         }
         .event-actions button:hover {
-            background-color: rgba(0, 0, 0, 5);
+            background: linear-gradient(to right bottom, #0018ff, #000000);
+        }
+        
+        .event_form{
+            margin: 10px;
+        }
+        
+        .post-button{
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
+        }
+        .post-button:hover{
+            background: linear-gradient(to right bottom, #0018ff, #000000);
         }
 
     </style>
@@ -233,11 +243,11 @@
                     </li>
                 </ul>
                 <div class="nav__buttons">
-<!--                    <a href="login.jsp" class="nav__button-link">Update Profile</a>-->
-                    <form action="postevent.jsp" method="post">
+                    <a href="#" class="nav__button-ghost" onclick="openEventPostForm()">Post Event</a>
+<!--                    <form action="postevent.jsp" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
     <button type="submit" class="nav__link">Post an Event</button>
-</form>
+</form>-->
                 </div>
 
                 <!--close button-->
@@ -257,7 +267,8 @@
    <div class="org_container">
         <!-- Profile Section -->
         <div id="profile" class="section profile">
-            <h3>Welcome, <%= loggedInUsername %>!</h3><br>
+            <h3>Hello, <%= loggedInUsername %>!</h3><br>
+            <h3>Welcome to Organizer Dashboard!</h3><br>
             <%
         // Display organizer details if available in request attributes
         String organizerName = (String) request.getAttribute("organizerName");
@@ -293,9 +304,9 @@
             </div>
 
         <!-- Events Section -->
-        <div class="section events">
+        <div id="event_history" class="section events">
             <div class="heading">
-                <h2>Event History</h2>
+                <h2>Posted Event History</h2>
             </div>
             <%
             List<DataObject> dataList = (List<DataObject>) request.getAttribute("dataList");
@@ -346,6 +357,126 @@
         %>
             
         </div>
+        
+        <!-- Events Posting Section -->
+        <div id="event_posting" class="section events" style="display: none;">
+            <div class="heading">
+                <h2>Event Posting Form</h2>
+            </div>
+            <div class="event_form">
+            <form action="Servlet?id=postevent" method="post" enctype="multipart/form-data">
+          
+                <div class="item" style="display: none;">
+          <p>Organizer's Username</p>
+          <input type="text" name="eventorganizerusername" value="<%=loggedInUsername%>" readonly/>
+        </div>
+        <div class="item">
+          <p>Name of Event</p>
+          <input type="text" name="eventname" />
+        </div>
+          <div class="item">
+          <p>Type of Event</p>
+          <select name="event_type">
+            <option value=""></option>
+            <option value="Please select" selected>*Please select from below options*</option>
+            <option value="Sports">Sports</option>
+            <option value="Trekking / Adventures">Trekking / Adventures</option>
+            <option value="Cultural">Cultural</option>
+            <option value="Musical / DJ">Musical / DJ</option>
+            <option value="Business">Business</option>
+            <option value="Educational">Educational</option>
+            <option value="Promos / Expos">Promos / Expos</option>
+          </select>
+        </div>
+        <div class="item">
+          <p>Date of Event</p>
+          <input type="text" name="bdate" placeholder="dd-mm-yyyy"/>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="item">
+          <p>Time of Event</p>
+          <input type="text" name="event_time" />
+          <i class="fas fa-clock"></i>
+        </div>
+          <div class="item">
+          <p>Set Duration</p>
+          <input type="text" name="duration"/>
+        </div>
+        <div class="item">
+          <p>Special Attraction</p>
+          <input type="text" name="specialAttraction"/>
+        </div>
+        <div class="item">
+          <p>Description of Event</p>
+          <textarea rows="3" name="description"></textarea>
+        </div>
+        <div class="item">
+          <p>Organizer's Name</p>
+          <input type="text" name="promoter"/>
+        </div>
+        <div class="item">
+          <p>Venue Name</p>
+          <input type="text" name="venue_name"/>
+        </div>
+        <div class="item">
+          <p>Venue Address</p>
+          <input type="text" name="add1" placeholder="Street address" />
+          <input type="text" name="add2" placeholder="Street address line 2" />
+          <div class="city-item">
+            <input type="text" name="city" placeholder="City" />
+            <input type="text" name="state" placeholder="State/Region" />
+            <input type="text" name="pin" placeholder="Postal / Zip code" />
+            <input type="text" name="country" placeholder="Country" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Entry Fees</p>
+          <input type="text" name="entry_fees"/>
+        </div>
+        
+        
+        <div class="item">
+          <p>Contact Person</p>
+          <div class="name-item">
+            <input type="text" name="firstname" placeholder="First" />
+            <input type="text" name="lastname" placeholder="Last" />
+          </div>
+        </div>
+        <div class="item">
+          <p>Contact Email</p>
+          <input type="text" name="email"/>
+        </div>
+        <div class="item">
+          <p>Contact Number</p>
+          <input type="text" name="con_num"/>
+        </div>
+
+          <div>
+           <label for="poster">Upload Event Poster</label>
+           <input type="file" id="poster" name="poster" accept="image/*" />
+         </div>
+        <div class="question">
+          <p>Will this event be recorded?</p>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="Yes" id="radio_1" name="recorded" />
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+            </div>
+            <div>
+              <input type="radio" value="No" id="radio_2" name="recorded" />
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+                        
+        <div class="btn-block">
+          <button class="post-button" type="submit">POST EVENT</button>
+          <a href="#" class="cancel-button" onclick="closeEventPostForm()">Cancel</a>
+        </div>
+      </form>
+            </div>
+        </div>
+        
     </div>
 
    
@@ -359,6 +490,14 @@
     function cancelEditProfile(){
         document.getElementById("edit_profile").style.display = "none";
         document.getElementById("profile").style.display = "flex";
+    }
+    function openEventPostForm(){
+        document.getElementById("event_history").style.display = "none";
+        document.getElementById("event_posting").style.display = "block";
+    }
+    function closeEventPostForm(){
+        document.getElementById("event_history").style.display = "grid";
+        document.getElementById("event_posting").style.display = "none";
     }
     function showConfirmation(eventID) {
         var confirmed = confirm("Are you sure you want to delete event?");

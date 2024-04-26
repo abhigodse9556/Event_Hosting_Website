@@ -2,6 +2,7 @@ package ServersidePackages;
 
 import com.mysql.cj.jdbc.Blob;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -47,13 +48,13 @@ public class ParticipantServlet extends HttpServlet {
             break;
             case "login" : handleLogin(request, response);
             break;
-            case "loadOrg" : fetchParticipantData(request, response);
+            case "loadParticipant" : fetchParticipantData(request, response);
             break;
             case "all_events" : displayAllEvents(request, response);
             break;
             case "event_details" : displayEventsDetails(request, response);
             break;
-            case "deleteEvent" : deleteAnEvent(request, response);
+            case "cancelReg" : cancelEventRegistration(request, response);
             break;
             case "updateParticipantProfile" : updateProfile(request, response);
             break;
@@ -95,6 +96,7 @@ public class ParticipantServlet extends HttpServlet {
                     // Check the result of the registration
                     if (rowsInserted > 0) {
                         // Set a response attribute indicating success
+                        request.setAttribute("loginSuccess", null);
                         request.setAttribute("registrationSuccess", true);
                     } else {
                         // Set a response attribute indicating failure
@@ -102,7 +104,7 @@ public class ParticipantServlet extends HttpServlet {
                     }
                     
                     // Forward to the same JSP page
-                    request.getRequestDispatcher("register.jsp").forward(request, response);
+                    request.getRequestDispatcher("participant_login.jsp").forward(request, response);
                 }
                 // Close the connection
             }
@@ -253,43 +255,50 @@ public class ParticipantServlet extends HttpServlet {
                     
                     
             
-            List<DataObject> dataList = new ArrayList<>();
+List<DataObject> dataList = new ArrayList<>();
 
-        try {
-            // Load the MySQL JDBC driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            
-            // Connect to the MySQL database
-            Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword);
-            
-            
-                        // Process the result set and store data in a list of DataObject
-                        try ( // Execute a query to fetch multiple records
-                                PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events WHERE org_username='"+user+"' order by event_id desc;");
-                                ResultSet resultSet1 = statement2.executeQuery()) {
-                            // Process the result set and store data in a list of DataObject
-                            while (resultSet1.next()) {
-                                int id = resultSet1.getInt(1);
-                                String name1 = resultSet1.getString(2);
-                                String date = resultSet1.getString(3);
-                                Blob event_poster_blob = (Blob) resultSet1.getBlob(4);
-                                DataObject data = new DataObject(id, name1, date,event_poster_blob);
-                                dataList.add(data);
-                            }
-                            // Close the result set, statement, and connection
-                        }
-            statement.close();
-            connection.close();
-            
-        } catch (Exception e) {
-            e.printStackTrace();
+try {
+    // Load the MySQL JDBC driver
+    Class.forName("com.mysql.cj.jdbc.Driver");
+
+    // Connect to the MySQL database
+    try (Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
+        // Execute a query to fetch multiple records
+        String sqlQuery = "SELECT reg.reg_id, reg.e_id, event.event_name, event.event_date, event.poster " +
+                          "FROM registrations AS reg " +
+                          "JOIN events AS event ON reg.e_id = event.event_id " +
+                          "JOIN participants AS participant ON reg.p_username = participant.p_username " +
+                          "WHERE participant.p_username = ? " +
+                          "ORDER BY reg.sr_no DESC";
+
+        try (PreparedStatement statement2 = connection1.prepareStatement(sqlQuery)) {
+            statement2.setString(1, user);
+
+            try (ResultSet resultSet1 = statement2.executeQuery()) {
+                // Process the result set and store data in a list of DataObject
+                while (resultSet1.next()) {
+                    String id = resultSet1.getString(1);
+                    int e_id = resultSet1.getInt(2);
+                    String name1 = resultSet1.getString(3);
+                    String date = resultSet1.getString(4);
+                    Blob eventPosterBlob = (Blob) resultSet1.getBlob(5);
+                    //byte[] eventPosterBytes = eventPosterBlob.getBytes(1, (int) eventPosterBlob.length());
+                    // Construct your DataObject using id, name1, date, and eventPosterBytes
+                    DataObject data = new DataObject(id, e_id, name1, date, eventPosterBlob);
+                    dataList.add(data);
+                }
+            }
         }
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
 
-        // Set the data list in request attribute
-        request.setAttribute("dataList", dataList);
-                    
-                    RequestDispatcher dispatcher = request.getRequestDispatcher("participantdashboard.jsp");
-                    dispatcher.forward(request, response);  
+// Set the data list in request attribute
+request.setAttribute("dataList", dataList);
+
+RequestDispatcher dispatcher = request.getRequestDispatcher("participantdashboard.jsp");
+dispatcher.forward(request, response);  
                     
                 } else {
                     // Invalid credentials
@@ -318,6 +327,7 @@ public class ParticipantServlet extends HttpServlet {
         int eventID = Integer.parseInt(request.getParameter("e_id"));
         String pname = request.getParameter("p_username");
         String orgname = request.getParameter("org_username");
+        String regid = request.getParameter("reg_id");
 
         try {
             // Load JDBC driver
@@ -326,20 +336,21 @@ public class ParticipantServlet extends HttpServlet {
             // Establish a connection
             try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
                 // Prepare SQL query for event insertion
-                String eventInsertSql = "INSERT INTO registrations (e_id, org_username, p_username) VALUES (?, ?, ?)";
+                String eventInsertSql = "INSERT INTO registrations (reg_id, e_id, org_username, p_username) VALUES (?, ?, ?, ?)";
                 
                 try (PreparedStatement eventStatement = connection.prepareStatement(eventInsertSql)) {
                     // Set parameters for the event insertion
-                    eventStatement.setInt(1, eventID);
-                    eventStatement.setString(2, orgname);
-                    eventStatement.setString(3, pname);
+                    eventStatement.setString(1, regid);
+                    eventStatement.setInt(2, eventID);
+                    eventStatement.setString(3, orgname);
+                    eventStatement.setString(4, pname);
                     // Execute the event insertion query
                     int rowsInsertedEvent = eventStatement.executeUpdate();
 
                     // Check the result of the event insertion
                     if (rowsInsertedEvent > 0) {
                         // Set a response attribute indicating success
-                        request.setAttribute("eventRegistrationSuccess", true);
+                         request.setAttribute("eventRegistrationSuccess", true);
                         
                         
                     } else {
@@ -349,7 +360,8 @@ public class ParticipantServlet extends HttpServlet {
                     }
                     
                     request.setAttribute("loggedInUsername", pname);
-                    request.getRequestDispatcher("autoredirectparticipant.jsp?").forward(request, response);
+                    request.setAttribute("eventID", eventID);
+                    request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
                     
                     
 
@@ -359,6 +371,7 @@ public class ParticipantServlet extends HttpServlet {
         } catch (ClassNotFoundException | SQLException e) {
             // Handle exceptions (e.g., log or display an error message)
             e.printStackTrace();
+            request.setAttribute("loggedInUsername", pname);
             request.setAttribute("eventRegistrationSuccess", false);
             request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
         }
@@ -814,8 +827,11 @@ public class ParticipantServlet extends HttpServlet {
         throws ServletException, IOException {
     
   // Retrieve form parameters
-    String e_id = request.getParameter("event-id");
+    int e_id = Integer.parseInt(request.getParameter("event-id"));
     String loggeduser = request.getParameter("loggedParticipant");
+    String viewer = request.getParameter("viewer");
+//    String status;
+//    status = request.getParameter("status");
 
     try {
         // Load JDBC driver
@@ -827,7 +843,7 @@ public class ParticipantServlet extends HttpServlet {
             String sql = "SELECT * FROM events WHERE event_id = ?";
             
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
-                statement.setString(1, e_id);
+                statement.setInt(1, e_id);
                 
 
                 // Execute the query
@@ -886,7 +902,9 @@ public class ParticipantServlet extends HttpServlet {
         
                     request.setAttribute("loggedInParticipant", loggeduser);
                     request.setAttribute("event-id", e_id);
-                        
+                    if("participant".equals(viewer)){
+                        request.setAttribute("status", "Registered");
+                    }   
                     RequestDispatcher dispatcher = request.getRequestDispatcher("vieweventdetails.jsp");
                     dispatcher.forward(request, response);  
                    
@@ -909,11 +927,10 @@ public class ParticipantServlet extends HttpServlet {
     
     }
         
-private void deleteAnEvent(HttpServletRequest request, HttpServletResponse response)
+private void cancelEventRegistration(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-    // Extract event ID from request parameter
-    int eID = Integer.parseInt(request.getParameter("eventID"));
-    String username = request.getParameter("eventOrg");
+    String regID = request.getParameter("reg_id");
+    String participant = request.getParameter("p_username");
 
     try {
         // Load JDBC driver
@@ -922,10 +939,10 @@ private void deleteAnEvent(HttpServletRequest request, HttpServletResponse respo
         // Establish connection
         try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
             // Prepare SQL query
-            String sql = "DELETE FROM events WHERE event_id = ?";
+            String sql = "DELETE FROM registrations WHERE reg_id = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 // Set event ID parameter
-                statement.setInt(1, eID);
+                statement.setString(1, regID);
 
                 // Execute query
                 int rowsDeleted = statement.executeUpdate();
@@ -933,15 +950,15 @@ private void deleteAnEvent(HttpServletRequest request, HttpServletResponse respo
                 // Check result of deletion
                 if (rowsDeleted > 0) {
                     // Set success attribute
-                    request.setAttribute("deletionSuccess", true);
+                    request.setAttribute("cancelationSuccess", true);
                 } else {
                     // Set failure attribute
-                    request.setAttribute("deletionSuccess", false);
+                    request.setAttribute("cancelationSuccess", false);
                 }
 
                 // Forward to the same JSP page
-                request.setAttribute("loggedInUsername", username);
-                request.getRequestDispatcher("autoredirectpage.jsp").forward(request, response);
+                request.setAttribute("loggedInUsername", participant);
+                request.getRequestDispatcher("autoredirectparticipant.jsp").forward(request, response);
             }
         }
     } catch (ClassNotFoundException | SQLException | NumberFormatException e) {
@@ -949,6 +966,26 @@ private void deleteAnEvent(HttpServletRequest request, HttpServletResponse respo
         e.printStackTrace();
     }
 }
+
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // Implement logic to handle GET requests
+        PrintWriter out = response.getWriter();
+        out.println("<html>");
+        out.println("<body>");
+        out.println("<h1>Hello, this is a GET request!</h1>");
+        out.println("</body>");
+        out.println("</html>");
+        
+        String redirectURL = request.getRequestURI();
+        if (request.getQueryString() != null) {
+            redirectURL += "?" + request.getQueryString();
+        }
+
+        // Redirect back to the same page
+        response.sendRedirect(redirectURL);
+    
+    }
 
     
 }

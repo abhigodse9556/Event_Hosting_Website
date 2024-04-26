@@ -6,7 +6,8 @@
 <%@ page import="java.io.*, java.sql.*" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <% String loggedInUsername = (String) request.getAttribute("loggedInParticipant"); %>
-<% String eventID = request.getParameter("event-id"); %>
+<% String status = (String) request.getAttribute("status"); %>
+<% int eventID = (Integer)request.getAttribute("event-id"); %>
 <!DOCTYPE html>
 <html>
      <head>
@@ -211,10 +212,10 @@ h4:nth-of-type(3) {
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="#" class="nav__button-link" onclick="openEditEvent()"><%= loggedInUsername %></a>
-                    <form class="postevent" action="#postevent.jsp" method="post">
-    <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <button type="submit" class="nav__link">Register for Event</button>
+                    <!--<a href="#" class="nav__button-link" onclick="openEditEvent()"><%= loggedInUsername %></a>-->
+                    <form class="postevent" action="ParticipantServlet?id=loadParticipant" method="post">
+    <input type="hidden" name="username" value="<%= loggedInUsername %>">
+    <button type="submit" class="nav__button-ghost"><%= loggedInUsername %></button>
 </form>
                 </div>
 
@@ -264,6 +265,7 @@ h4:nth-of-type(3) {
         <div id="text-section" class="text-section">
             
          
+            <h2 id="status"><%= status %></h2>
             <h2><%= e_name %></h2>
     
             <h4>Category: <%= e_type %></h4>
@@ -279,14 +281,25 @@ h4:nth-of-type(3) {
             <h4>Email ID: <%= e_contactemail %></h4>
             <h4>Mobile Number: <%= e_contactnumber %></h4>
             <h5>Will event be recorded?: <%= e_isrecord %></h5>
-            <form action="ParticipantServlet?id=register_for_event" method="post">
+            <form action="ParticipantServlet?id=register_for_event" method="post" style="display: none;">
                 <input type="hidden" name="e_id" value="<%= eventID %>"/>
                 <input type="hidden" name="org_username" value="<%= e_organizer %>"/>
                 <input type="hidden" name="p_username" value="<%= loggedInUsername %>"/>
+                <input type="hidden" name="reg_id" value="<%= eventID %>__<%= loggedInUsername %>"/>
                 <button id="reg_btn" type="submit"></button>
             </form><br><br>
-            <a href="#" class="view-button" onclick="regForEvent()">Register for the event</a>
-            
+            <form action="ParticipantServlet?id=cancelReg" method="post" style="display: none;">
+                <input type="hidden" name="e_id" value="<%= eventID %>"/>
+                <input type="hidden" name="p_username" value="<%= loggedInUsername %>"/>
+                <input type="hidden" name="reg_id" value="<%= eventID %>__<%= loggedInUsername %>"/>
+                <button id="cancelRegbtn" type="submit"></button>
+            </form><br><br>
+            <div id="regbtn">
+                <a href="#" class="view-button" onclick="regForEvent()">Register for the event</a>
+            </div>
+            <div id="cancel_regbtn" style="display: none;">
+                <a href="#" class="view-button" onclick="cancelReg()">Cancel Registration</a>
+            </div>
             
     </div>
         
@@ -312,9 +325,23 @@ h4:nth-of-type(3) {
 </body>
 
 <script>
+    window.onload = function(){
+        hideRegBtn();
+    };
     function regForEvent(){
         document.getElementById("reg_btn").click();
     }
+    function cancelReg(){
+        document.getElementById("cancelRegbtn").click();
+    }
+    function hideRegBtn(){
+    var st = document.getElementById("status").textContent;
+    if (st === "Registered") {
+        document.getElementById("regbtn").style.display = "none";
+        document.getElementById("cancel_regbtn").style.display = "block";
+    }
+}
+
 </script>
    
 <script src="assets/js/gsap.min.js"></script>

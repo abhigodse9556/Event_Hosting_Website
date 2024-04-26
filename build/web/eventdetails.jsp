@@ -57,7 +57,7 @@
         }
         
         .view-button{
-                background-color: #a82877;
+                background: linear-gradient(to right bottom, #000000, #0018ff);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -67,7 +67,7 @@
                 margin-left: 5px;
             }
             .view-button:hover{
-                background-color: black;
+                background: linear-gradient(to right bottom, #0018ff, #000000);
             }
 
             .btn-block button {
@@ -181,6 +181,31 @@ h4:nth-of-type(3) {
                 width: 100%;
             }
         }
+        
+        .popup {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to right bottom, #321974, #ff0095c9);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        text-align: center;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+    }
+        
     </style>
    </head>
    
@@ -210,10 +235,10 @@ h4:nth-of-type(3) {
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="#" class="nav__button-link" onclick="openEditEvent()">Update Profile</a>
+                    <!--<a href="#" class="nav__button-link" onclick="openEditEvent()">Update Profile</a>-->
                     <form class="postevent" action="#postevent.jsp" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <button type="submit" class="nav__link">Register for Event</button>
+    <a href="#" id="popupLink" class="view-button">Register for the event</a>
 </form>
                 </div>
 
@@ -277,9 +302,9 @@ h4:nth-of-type(3) {
             <h4>Contact Person: <%= e_contactpersonfirst %> <%= e_conatactpersonlast %></h4>
             <h4>Email ID: <%= e_contactemail %></h4>
             <h4>Mobile Number: <%= e_contactnumber %></h4>
-            <h5>Will event be recorded?: <%= e_isrecord %></h5>
+            <h5>Will event be recorded?: <%= e_isrecord %></h5><br>
             <p style="display: none">Organizer: <%= e_organizer %></p>
-            <a href="#" class="view-button" onclick="openEditEvent()">Register for the event</a>
+            <a href="#" id="popupLink1" class="view-button">Register for the event</a>
     </div>
         
             
@@ -300,34 +325,34 @@ h4:nth-of-type(3) {
             
     </div>
 
+    <div class="popup" id="popup">
+    <p>To Register for this event, you need to</p>
+    <h2>Login First!</h2><br>
+    <a href="participant_login.jsp" class="view-button">Login</a>
+    <a href="#" class="view-button" onclick="closePopup()">Cancel</a>
+</div>
+
+<div class="overlay" id="overlay"></div>
    
 </body>
 
 <script>
-    function openEditEvent(){
-        document.getElementById("edit-section").style.display = "flex";
-        document.getElementById("text-section").style.display = "none";
-    }
-    function cancelEditEvent(){
-        document.getElementById("edit-section").style.display = "none";
-        document.getElementById("text-section").style.display = "block";
-    }
-    function openEditPoster(){
-        document.getElementById("image-edit").style.display = "flex";
-        document.getElementById("image-section").style.display = "none";
-    }
-    function cancelEditPoster(){
-        document.getElementById("image-edit").style.display = "none";
-        document.getElementById("image-section").style.display = "block";
-    }
-    function showConfirmation(eventID) {
-        var confirmed = confirm("Are you sure you want to delete event?");
-        if (confirmed) {
-            document.getElementById("deleteButton_" + eventID).click();
-        }
-    }
-    function viewEvent(eventID){
-        document.getElementById("viewButton_" + eventID).click();
+    // Open the popup when the link is clicked
+    document.getElementById('popupLink').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    });
+    document.getElementById('popupLink1').addEventListener('click', function(event) {
+        event.preventDefault();
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    });
+
+    // Close the popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
     }
 </script>
    

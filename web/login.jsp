@@ -9,7 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     <!--Stylesheet-->
-    <style media="screen">
+    <style>
+        
+        body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    background: linear-gradient(to right bottom, #000000, #ff00c8);
+    color: var(--text-color);
+}
+        
       *,
 *:before,
 *:after{
@@ -33,26 +42,19 @@
     border-radius: 50%;
 }
 .shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
+    background: linear-gradient(to right bottom, #0018ff, #000000);
     left: -80px;
     top: -80px;
 }
 .shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
+    background: linear-gradient(to right bottom, #000000, #ff00c8);
     right: -30px;
     bottom: -80px;
 }
 form{
     height: 520px;
     width: 400px;
-    background-color: rgba(255,255,255,0.13);
+    background: linear-gradient(to right bottom, #ff00c8, #0013c4);
     position: absolute;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -185,12 +187,12 @@ button{
 
 <body>
     
-    <div class="home__images">
+<!--    <div class="home__images">
             <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
                     <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>
+                </div>-->
     
     <div class="background">
         <div class="shape"></div>
@@ -221,10 +223,10 @@ button{
 </script>
     
 </body>
-<% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
-<% if (loginSuccess != null) { %>
+<% Boolean registrationSuccess = (Boolean) request.getAttribute("registrationSuccess"); %>
+<% if (registrationSuccess != null) { %>
     <script>
-        var message = <%= loginSuccess ? "'Login successful!'" : "'Invalid Crediantials'" %>;
+        var message = <%= registrationSuccess ? "'Registration successful!'" : "'Invalid Crediantials'" %>;
         alert(message);
     </script>
 <% } %>

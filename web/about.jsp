@@ -34,6 +34,7 @@
             overflow: auto;
             scrollbar-width: none;
             padding: 20px;
+            margin: 10px 150px;
         }
         
         .con-btn-div{
@@ -134,7 +135,7 @@
     <br><br><h2 style="text-align:center">Our Team</h2><br><br>
   <div class="column">
     <div class="card">
-      <img src="assets/img/abhi.jpg" alt="Jane" style="width:100%; height: 300px;">
+      <img src="assets/img/dummy.jpg" alt="Jane" style="width:100%; height: 300px;">
       <div class="container">
         <h2>Jane Doe</h2>
         <p class="title">CEO & Founder</p>

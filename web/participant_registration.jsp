@@ -16,6 +16,45 @@
       <link rel="stylesheet" href="assets/css/register.css">
 
       <title>Event Management Website</title>
+      
+      <style>
+          .register{
+              background: linear-gradient(to right bottom, #ffffff, #02effe);
+          }
+          
+          .reg-form {
+              background: linear-gradient(to right bottom, #ff00c8, #0013c4);
+              width: 400px;
+              color: #ffffff;
+              margin: 3px auto;
+              padding: 30px;
+              border-radius: 15px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+          }
+          
+          .column li {
+    color: #401fcc;
+    background-color: rgb(27 239 11 / 0%);
+    text-align: justify;
+    text-justify: inter-word;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+.column p {
+    color: #00d9ff;
+    background-color: rgba(275, 0, 0, 0);
+    text-align: justify;
+    text-justify: inter-word;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 5);
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+      </style>
+      
    </head>
    
    <!--==================== HEADER ====================-->
@@ -68,27 +107,27 @@
          <section class="register">
              <div class="column">
                  <h2 class="headings">Why Register as a Participant?</h2>
-                 <p style="text-align: center;">Welcome to Festa Vista! Here are some benefits of Organizer Registration</p>
+                 <p style="text-align: center;">Welcome to Festa Vista! Here are some benefits of Participant Registration</p>
                  
                  <li>
-                     <b>Showcase Your Event:</b>
-By registering as an organizer, you gain the opportunity to showcase your event to a wider audience. Your event will be featured on our platform, making it visible to potential participants who are actively seeking exciting events to attend.
+                     <b>Event Discovery: </b>
+Participants can easily browse through a wide range of events across various categories and locations.
                  </li>
                  <li>
-                     <b>Expand Your Reach:</b>
-Registration allows you to expand your event's reach beyond your immediate network. With our platform, you have access to a diverse audience of event enthusiasts who may not have otherwise discovered your event.
+                     <b>Detailed Event Information:</b>
+ Provide comprehensive details about each event including date, time, location, agenda, speakers, sponsors, and any other relevant information.
                  </li>
                  <li>
-                     <b>Streamlined Event Management:</b>
-Our registration process simplifies event management tasks such as attendee registration, communication, and updates. You'll have access to tools and features designed to streamline the planning and execution of your event, saving you time and effort.
+                     <b>Registration: </b>
+Allow participants to register for events directly through your website, streamlining the process and eliminating the need for manual registration.
                  </li>
                  <li>
-                     <b>Enhance Credibility:</b>
-Listing your event on a reputable platform like ours enhances its credibility and legitimacy. Visitors to our website trust our recommendations and are more likely to engage with events listed by registered organizers.
+                     <b>Customizable Profiles: </b>
+Enable participants to create personalized profiles where they can manage their event registrations, preferences, and other relevant information.
                  </li>
                  <li>
-                     <b>Increase Participation:</b>
-Registration increases the likelihood of participant engagement with your event. Visitors can easily register for your event through our platform, making it convenient for them to join and participate.
+                     <b>Exclusive Offer:</b>
+ Flat 10% discount on entry fees on registering through our website!
                  </li>
                </div>
              <div class="column">

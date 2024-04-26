@@ -57,6 +57,8 @@ public class Servlet extends HttpServlet {
             break;
             case "updateOrgProfile" : updateProfile(request, response);
             break;
+            case "eventparticipants" : showEventParticipants(request, response);
+            break;
             default : {
             }
         }
@@ -98,17 +100,19 @@ public class Servlet extends HttpServlet {
                     if (rowsInserted > 0) {
                         // Set a response attribute indicating success
                         request.setAttribute("registrationSuccess", true);
+                        request.getRequestDispatcher("login.jsp").forward(request, response);
                     } else {
                         // Set a response attribute indicating failure
                         request.setAttribute("registrationSuccess", false);
+                        request.getRequestDispatcher("register.jsp").forward(request, response);
                     }
                     
-                    // Forward to the same JSP page
-                    request.getRequestDispatcher("register.jsp").forward(request, response);
                 }
-                // Close the connection
             }
-        } catch (ClassNotFoundException | SQLException e) {}
+        } catch (ClassNotFoundException | SQLException e) {
+            request.setAttribute("registrationSuccess", false);
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+        }
     }
     
     private void updateProfile(HttpServletRequest request, HttpServletResponse response)
@@ -980,8 +984,10 @@ private void deleteAnEvent(HttpServletRequest request, HttpServletResponse respo
 
         // Establish connection
         try (Connection connection = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
-            // Prepare SQL query
-            String sql = "DELETE FROM events WHERE event_id = ?";
+            // Prepare SQL query with JOIN to delete related records in registrations table as well
+            String sql = "DELETE events, registrations FROM events " +
+                         "LEFT JOIN registrations ON events.event_id = registrations.e_id " +
+                         "WHERE events.event_id = ?";
             try (PreparedStatement statement = connection.prepareStatement(sql)) {
                 // Set event ID parameter
                 statement.setInt(1, eID);
@@ -1009,5 +1015,53 @@ private void deleteAnEvent(HttpServletRequest request, HttpServletResponse respo
     }
 }
 
+
+private void showEventParticipants(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+    // Retrieve form parameters
+    String eventID = request.getParameter("eventID");
+    String eventName = request.getParameter("eventName");
+    String username = request.getParameter("eventorganizerusername");
+    user = username;
+    
+    List<DataObject> dataList = new ArrayList<>();
+
+try {
+    // Load the MySQL JDBC driver
+    Class.forName("com.mysql.cj.jdbc.Driver");
+
+    // Connect to the MySQL database
+    try (Connection connection1 = DriverManager.getConnection(jdbcURL, dbUser, dbPassword)) {
+        // Execute a query to fetch multiple records
+        String sqlQuery = "SELECT p.p_name, p.p_email, p.p_mobile FROM registrations r JOIN participants p ON r.p_username = p.p_username where r.e_id = ?";
+
+        try (PreparedStatement statement2 = connection1.prepareStatement(sqlQuery)) {
+            statement2.setString(1, eventID);
+
+            try (ResultSet resultSet1 = statement2.executeQuery()) {
+                // Process the result set and store data in a list of DataObject
+                while (resultSet1.next()) {
+                    String name = resultSet1.getString(1);
+                    String email = resultSet1.getString(2);
+                    String mobile = resultSet1.getString(3);
+                    DataObject data = new DataObject(name, email, mobile);
+                    dataList.add(data);
+                }
+            }
+        }
+    }
+} catch (Exception e) {
+    e.printStackTrace();
+}
+
+// Set the data list in request attribute
+request.setAttribute("eventID", eventID);
+request.setAttribute("eventName", eventName);
+request.setAttribute("orgName", user);
+request.setAttribute("dataList", dataList);
+
+RequestDispatcher dispatcher = request.getRequestDispatcher("eventparticipants.jsp");
+dispatcher.forward(request, response);
+}
     
 }

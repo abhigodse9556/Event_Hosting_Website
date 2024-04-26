@@ -266,12 +266,6 @@ p{
          <!--==================== HOME ====================-->
          
                         <div class="contact_container">
-<!--                            <div class="home__images">
-            <img src="assets/img/img-44.png" alt="image" class="home__img-4" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-3.png" alt="image" class="home__img-3" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-2.png" alt="image" class="home__img-2" style="z-index: -1; filter: blur(3px); position: fixed;">
-                    <img src="assets/img/img-11.png" alt="image" class="home__img-1" style="z-index: -1; filter: blur(3px); position: fixed;">
-                </div>-->
       <div class="contact_content">
         <div class="left-side">
           <div class="address details">

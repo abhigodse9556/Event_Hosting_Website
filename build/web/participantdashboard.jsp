@@ -33,6 +33,14 @@
             color: #fff;
             display: block;
         }
+        
+        .nav_link{
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
+        }
+        
+        .nav_link:hover{
+            background: linear-gradient(to right bottom, #0018ff, #000000);
+        }
 
         .poster-image {
             width: 200px; /* Adjust width as needed */
@@ -88,7 +96,7 @@
             font-size: 18px;
         }
         .profile button {
-            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -99,7 +107,7 @@
             font-weight: bold;
         }
         .profile button:hover {
-            background-color: black;
+            background: linear-gradient(to right bottom, #0018ff, #000000);
         }
         
         .edit{
@@ -107,7 +115,7 @@
         }
         
             .cancel-button{
-                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+                background: linear-gradient(to right bottom, #00f0ff, #0018ff);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -117,10 +125,10 @@
                 margin-left: 5px;
             }
             .cancel-button:hover{
-                background-color: black;
+                background: linear-gradient(to right bottom, #0018ff, #000000);
             }
             .logout-button{
-                background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+                background: linear-gradient(to right bottom, #00f0ff, #0018ff);
                 color: #fff;
                 padding-top: 5px;
                 border-radius: 5px;
@@ -131,7 +139,7 @@
                 margin-top: 10px;
             }
             .logout-button:hover{
-                background-color: black;
+                background: linear-gradient(to right bottom, #0018ff, #000000);
             }
             
 
@@ -166,14 +174,15 @@
         }
         .event p {
             margin: 5px 0;
-            font-size: 16px;
+            font-size: 20px;
         }
         .event-info {
             color: rgba(255, 255, 255, 0.7);
         }
         .event-details{
+            width: 280px;
             text-align: center;
-            padding: 50px;
+            padding: 40px 10px 10px 10px;
         }
         .event-actions {
             position: absolute;
@@ -181,7 +190,7 @@
             right: 10px;
             opacity: 0;
             transition: opacity 0.3s;
-            margin-left: 280px;
+            margin-left: 290px;
             margin-top: 140px;
             margin-right: 60px;
         }
@@ -189,7 +198,7 @@
             opacity: 1;
         }
         .event-actions button {
-            background: linear-gradient(to right bottom, #4b4ac7, #319da4c9);
+            background: linear-gradient(to right bottom, #00f0ff, #0018ff);
             color: #fff;
             border: none;
             padding: 5px 10px;
@@ -201,7 +210,7 @@
             width: 150px;
         }
         .event-actions button:hover {
-            background-color: rgba(0, 0, 0, 5);
+            background: linear-gradient(to right bottom, #0018ff, #000000);
         }
 
     </style>
@@ -236,7 +245,7 @@
 <!--                    <a href="login.jsp" class="nav__button-link">Update Profile</a>-->
                     <form action="ParticipantServlet?id=all_events" method="post">
     <input type="hidden" name="loggedinuser" value="<%= loggedInUsername %>">
-    <button type="submit" class="nav__link">Explore Events</button>
+    <button type="submit" class="nav_link">Explore Events</button>
 </form>
                 </div>
 
@@ -257,7 +266,8 @@
    <div class="org_container">
         <!-- Profile Section -->
         <div id="profile" class="section profile">
-            <h3>Welcome, <%= loggedInUsername %>!</h3><br>
+            <h3>Hello, <%= loggedInUsername %>!</h3><br>
+            <h3>Welcome to Participant Dashboard!</h3><br>
             <%
         // Display organizer details if available in request attributes
         String participantName = (String) request.getAttribute("participantName");
@@ -292,7 +302,7 @@
         <!-- Events Section -->
         <div class="section events">
             <div class="heading">
-                <h2>Event History</h2>
+                <h2>Registered Event History</h2>
             </div>
             <%
             List<DataObject> dataList = (List<DataObject>) request.getAttribute("dataList");
@@ -300,42 +310,46 @@
         %>
             <div class="event">
                 <%
-                    Blob posterBlob = data.getPoster();
-                    if (posterBlob != null) {
-                        try (InputStream inputStream = posterBlob.getBinaryStream()) {
-                            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-                            byte[] buffer = new byte[4096];
-                            int bytesRead = -1;
-                            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                                outputStream.write(buffer, 0, bytesRead);
-                            }
-                            byte[] imageBytes = outputStream.toByteArray();
-                            String base64Image = Base64.getEncoder().encodeToString(imageBytes);
-                            out.println("<img src=\"data:image/jpeg;base64," + base64Image + "\" class=\"poster-image\">");
-                        } catch (SQLException | IOException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                %>
+    Blob posterBlob = data.getPoster();
+    if (posterBlob != null) {
+        try (InputStream inputStream = posterBlob.getBinaryStream()) {
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            byte[] imageBytes = outputStream.toByteArray();
+            String base64Image = Base64.getEncoder().encodeToString(imageBytes);
+    %>
+    <img src="data:image/jpeg;base64,<%= base64Image %>" class="poster-image">
+    <%
+        } catch (SQLException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+    %>
                 <div class="event-details">
                 <h3><%= data.getName() %></h3>
                 <p class="event-info"><strong> <%= data.getDate() %></strong></p>
+                <p class="event-info" style="display: none;"><strong> <%= data.getRegId() %></strong></p>
+                <p class="event-info" style="display: none;"><strong> <%= data.getId() %></strong></p>
                 
                 </div>
-                 <form id="deleteEvent_<%= data.getId() %>" action="Servlet?id=deleteEvent" method="post" style="display:none;">
+                 <form id="deleteEvent_<%= data.getId() %>" action="Servlet?id=deleteEvent" method="post" style="display: none;">
                     <input type="hidden" name="eventID" value="<%= data.getId() %>">
                     <input type="hidden" name="eventOrg" value="<%= loggedInUsername %>">
                     <button id="deleteButton_<%= data.getId() %>" type="submit">Delete</button>
                 </form>
-                 <form id="viewEvent_<%= data.getId() %>" action="Servlet?id=event_details" method="post" style="display:none;">
-                    <input type="hidden" name="loggedInUsername" value="<%= loggedInUsername %>">
+                 <form id="viewEvent_<%= data.getId() %>" action="ParticipantServlet?id=event_details" method="post" style="display: none;">
+                    <input type="hidden" name="loggedParticipant" value="<%= loggedInUsername %>">
                     <input type="hidden" name="event-id" value="<%= data.getId() %>">
-                    <input type="hidden" name="viewer" value="organizer">
+                    <input type="hidden" name="viewer" value="participant">
                     <button id="viewButton_<%= data.getId() %>" type="submit">View</button>
                 </form>
                 <div class="event-actions">
                     <button onclick="viewEvent(<%= data.getId() %>)">View</button>
-                    <button onclick="showConfirmation(<%= data.getId() %>)">Delete</button>
+                    <!--<button onclick="showConfirmation(<%= data.getId() %>)">Delete</button>-->
                 </div>
             </div>
                 <%

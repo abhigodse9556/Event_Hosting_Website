@@ -1,5 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); %>
+<% String loggedInUsername = (String) request.getAttribute("loggedInUsername"); 
+%> 
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,16 +9,12 @@
     </head>
     <body style="display: none;">
         
-        <form id="login" action="ParticipantServlet?id=loadOrg" method="post">
+        <form id="login" action="ParticipantServlet?id=loadParticipant" method="post">
 
         <label for="username">Username</label>
         <input type="text" placeholder="Username" id="username" name="username" value="<%= loggedInUsername %>">
 
-<!--        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password" name="password" value="${param.password}">-->
-
         <button id="submitButton" type="submit">Log In</button>
-    </form>
         
 <script>
 function autoredirect(){
@@ -29,7 +26,7 @@ function autoredirect(){
         
 <% Boolean loginSuccess = (Boolean) request.getAttribute("loginSuccess"); %>
 <% Boolean eventRegistrationSuccess = (Boolean) request.getAttribute("eventRegistrationSuccess"); %>
-<% Boolean deletionSuccess = (Boolean) request.getAttribute("eventPostSuccess"); %>
+<% Boolean cancelationSuccess = (Boolean) request.getAttribute("cancelationSuccess"); %>
 <% Boolean updatationSuccess = (Boolean) request.getAttribute("updatationSuccess"); %>
 <% Boolean eventUpdateSuccess = (Boolean) request.getAttribute("eventUpdateSuccess"); %>
 <% Boolean posterUpdateSuccess = (Boolean) request.getAttribute("posterUpdateSuccess"); %>
@@ -47,10 +44,12 @@ function autoredirect(){
         alert(message);
         autoredirect();
     </script>
+    
 <% } %>
-<% if (deletionSuccess != null) { %>
+
+<% if (cancelationSuccess != null) { %>
     <script>
-        var message = <%= deletionSuccess ? "'Event deleted successfully!'" : "'Error in deleting event. Please try again.'" %>;
+        var message = <%= cancelationSuccess ? "'Event Registration Canceled successfully!'" : "'Error in canceling registration of event. Please try again.'" %>;
         alert(message);
         autoredirect();
     </script>
