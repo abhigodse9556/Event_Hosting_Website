@@ -196,6 +196,13 @@ public class AdminServlet extends HttpServlet {
 
                 if (resultSet.next()) {
                     // Successful login
+                    String name = resultSet.getString("admin_name");
+                    String email = resultSet.getString("admin_email");
+                    String mobile = resultSet.getString("admin_mobile");
+                    
+                    request.setAttribute("adminName", name);
+                    request.setAttribute("adminEmail", email);
+                    request.setAttribute("adminMobile", mobile);
                     request.setAttribute("loggedInUsername", username);
                     request.setAttribute("loginSuccess", true);
                     

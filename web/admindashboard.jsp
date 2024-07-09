@@ -279,18 +279,16 @@
             <h3>Welcome to Admin Dashboard!</h3><br>
             <%
         // Display organizer details if available in request attributes
-        String organizerName = (String) request.getAttribute("organizerName");
-        String organizerOrg = (String) request.getAttribute("organizerOrg");
-        String organizerEmail = (String) request.getAttribute("organizerEmail");
-        String organizerMobile = (String) request.getAttribute("organizerMobile");
+        String adminName = (String) request.getAttribute("adminName");
+        String adminEmail = (String) request.getAttribute("adminEmail");
+        String adminMobile = (String) request.getAttribute("adminMobile");
 
-        if (organizerName != null && organizerEmail != null) {
+        if (adminName != null && adminEmail != null) {
     %>
-            <h2>Organizer Profile</h2>
-            <p><strong>Name:</strong> <%= organizerName%></p>
-            <p><strong>Organization:</strong> <%= organizerOrg%></p>
-            <p><strong>Email:</strong> <%= organizerEmail%></p>
-            <p><strong>Mobile:</strong> <%= organizerMobile%></p>
+            <h2>Admin Profile</h2>
+            <p><strong>Name:</strong> <%= adminName%></p>
+            <p><strong>Email:</strong> <%= adminEmail%></p>
+            <p><strong>Mobile:</strong> <%= adminMobile%></p>
             <%
         }
     %>
@@ -302,10 +300,9 @@
                 <h2>Edit Profile</h2>
                 <form id="profileUpdateform" action="Servlet?id=updateOrgProfile" method="post">
                     <p><strong>Username:</strong> <input type="text" name="org_user" value="<%= loggedInUsername%>" readonly></p>
-                    <p><strong>Name:</strong> <input type="text" name="org_name" value="<%= organizerName%>"></p>
-                    <p><strong>Organization:</strong> <input type="text" name="org_organization" value="<%= organizerOrg%>"></p>
-                    <p><strong>Email:</strong> <input type="text" name="org_email" value="<%= organizerEmail%>"></p>
-                    <p><strong>Mobile:</strong> <input type="text" name="org_mobile" value="<%= organizerMobile%>"></p>
+                    <p><strong>Name:</strong> <input type="text" name="org_name" value="<%= adminName%>"></p>
+                    <p><strong>Email:</strong> <input type="text" name="org_email" value="<%= adminEmail%>"></p>
+                    <p><strong>Mobile:</strong> <input type="text" name="org_mobile" value="<%= adminMobile%>"></p>
                     <button type="submit">Save Changes</button>
                     <a class="cancel-button" href="#" onclick="cancelEditProfile()">Cancel</a>
                 </form>
@@ -340,18 +337,23 @@
                     }
                 %>
                 <div class="msg-details">
-                    <div id="msg_info" class="msg_info">
+                    <div id="msg_info_<%= data.getId() %>" class="msg_info">
                 <!--<h3><%= data.getId() %></h3>-->
                 <h3><%= data.getName() %></h3>
                 <h3><%= data.getEmail() %></h3>
                 <!--<p><%= data.getMessage() %><p>-->
                 <h3><%= data.getDate() %></h3>
                     </div>
-                    <div id="msg_detail" class="msg-desc" style="display: none;">
+                    <div id="msg_detail_<%= data.getId() %>" class="msg-desc" style="display: none;">
                 
                         <p><%= data.getMessage() %><p>
                 
                     </div>
+                        <div class="event-actions">
+                    <button id="viewbtn_<%= data.getId() %>" onclick="viewMsg(<%= data.getId() %>)" style="display: block;">View</button>
+                    <button id="deletebtn_<%= data.getId() %>" onclick="showConfirmation(<%= data.getId() %>)" style="display: block;">Delete</button>
+                    <button id="backbtn_<%= data.getId() %>" onclick="back(<%= data.getId() %>)" style="display: none;">Back</button>
+                </div>
                 </div>
                 
                  <form id="deleteEvent_<%= data.getId() %>" action="Servlet?id=deleteEvent" method="post" style="display:none;">
@@ -359,17 +361,10 @@
                     <input type="hidden" name="eventOrg" value="<%= loggedInUsername %>">
                     <button id="deleteButton_<%= data.getId() %>" type="submit">Delete</button>
                 </form>
-                 <form id="viewEvent_<%= data.getId() %>" action="Servlet?id=event_details" method="post" style="display:none;">
-                    <input type="hidden" name="loggedInUsername" value="<%= loggedInUsername %>">
-                    <input type="hidden" name="event-id" value="<%= data.getId() %>">
-                    <input type="hidden" name="viewer" value="organizer">
-                    <button id="viewButton_<%= data.getId() %>" type="submit">View</button>
+                 <form id="viewEvent_<%= data.getId() %>" action="#" style="display:none;">
+                     <button id="viewButton_<%= data.getId() %>" type="" onclick="viewMsg(<%= data.getId() %>)">View</button>
                 </form>
-                <div class="event-actions">
-                    <button id="viewbtn" onclick="viewMsg()" style="display: block;">View</button>
-                    <button id="deletebtn" onclick="showConfirmation(<%= data.getId() %>)" style="display: block;">Delete</button>
-                    <button id="backbtn" onclick="back()" style="display: none;">Back</button>
-                </div>
+                
             </div>
                 <%
             }
@@ -407,19 +402,19 @@
             document.getElementById("deleteButton_" + eventID).click();
         }
     }
-    function viewMsg(){
-        document.getElementById("msg_info").style.display = "none";
-        document.getElementById("msg_detail").style.display = "block";
-        document.getElementById("viewbtn").style.display = "none";
-        document.getElementById("deletebtn").style.display = "none";
-        document.getElementById("backbtn").style.display = "block";
+    function viewMsg(eid){
+        document.getElementById("msg_info_" + eid).style.display = "none";
+        document.getElementById("msg_detail_" + eid).style.display = "block";
+        document.getElementById("viewbtn_" + eid).style.display = "none";
+        document.getElementById("deletebtn_" + eid).style.display = "none";
+        document.getElementById("backbtn_" + eid).style.display = "block";
     }
-    function back(){
-        document.getElementById("msg_info").style.display = "block";
-        document.getElementById("msg_detail").style.display = "none";
-        document.getElementById("viewbtn").style.display = "block";
-        document.getElementById("deletebtn").style.display = "block";
-        document.getElementById("backbtn").style.display = "none";
+    function back(eid){
+        document.getElementById("msg_info_"+eid).style.display = "block";
+        document.getElementById("msg_detail_"+eid).style.display = "none";
+        document.getElementById("viewbtn_"+eid).style.display = "block";
+        document.getElementById("deletebtn_"+eid).style.display = "block";
+        document.getElementById("backbtn_"+eid).style.display = "none";
     }
 </script>
    

@@ -242,7 +242,7 @@ h4:nth-of-type(3) {
                     </li>
                 </ul>
                 <div class="nav__buttons">
-                    <a href="#" class="nav__button-ghost" onclick="viewEventParticipants()">View Participant Registrations</a>
+                    <a href="#" class="nav__button-ghost" onclick="viewEventParticipants()">View Registrations</a>
                     <a href="#" class="nav__button-ghost" onclick="openOrgProfile()"><%= loggedInUsername %></a>
                     <form class="postevent" action="Servlet?id=loadOrg" method="post" style="display: none;">
     <input type="hidden" name="username" value="<%= loggedInUsername %>">
@@ -297,7 +297,7 @@ h4:nth-of-type(3) {
             
          
             <h2><%= e_name %></h2>
-            <h2><%= eventID %></h2>
+<!--            <h2><%= eventID %></h2>-->
     
             <h4>Category: <%= e_type %></h4>
             <h3>Date & Time: <%= e_date %> at <%= e_time %></h3>
@@ -493,7 +493,7 @@ h4:nth-of-type(3) {
     }
     function cancelEditPoster(){
         document.getElementById("image-edit").style.display = "none";
-        document.getElementById("image-section").style.display = "block";
+        document.getElementById("image-section").style.display = "flex";
     }
     function showConfirmation(eventID) {
         var confirmed = confirm("Are you sure you want to delete event?");

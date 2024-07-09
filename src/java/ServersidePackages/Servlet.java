@@ -274,7 +274,7 @@ public class Servlet extends HttpServlet {
             
             
                         // Process the result set and store data in a list of DataObject
-                        try ( // Execute a query to fetch multiple records
+                        try ( 
                                 PreparedStatement statement2 = connection1.prepareStatement("SELECT event_id, event_name, event_date, poster FROM events WHERE org_username='"+user+"' order by event_id desc;");
                                 ResultSet resultSet1 = statement2.executeQuery()) {
                             // Process the result set and store data in a list of DataObject

@@ -265,7 +265,7 @@ h4:nth-of-type(3) {
         <div id="text-section" class="text-section">
             
          
-            <h2 id="status"><%= status %></h2>
+            <h2 id="status" style="display: none;"><%= status %></h2>
             <h2><%= e_name %></h2>
     
             <h4>Category: <%= e_type %></h4>
